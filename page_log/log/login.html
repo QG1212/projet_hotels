@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion / Inscription</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+<h1>Bienvenue</h1>
+<div class="toggle-buttons">
+    <button onclick="showForm('login')">Connexion</button>
+    <button onclick="showForm('signup')">Inscription</button>
+</div>
+
+<div id="login-form" class="form-container active">
+    <h2>Connexion</h2>
+    <form action="login.php" method="post">
+        <input type="hidden" name="action" value="login">
+        <label for="email">Email :</label><br>
+        <input type="email" name="email" required><br>
+        <label for="password">Mot de passe :</label><br>
+        <input type="password" name="password" required><br>
+        <button type="submit">Se connecter</button>
+    </form>
+</div>
+
+<div id="signup-form" class="form-container">
+    <h2>Inscription</h2>
+    <form action="login.php" method="post">
+        <input type="hidden" name="action" value="signup">
+        <label for="prenom">Prénom :</label><br>
+        <input type="text" name="prenom" required><br>
+        <label for="nom">Nom :</label><br>
+        <input type="text" name="nom" required><br>
+        <label for="email">Email :</label><br>
+        <input type="email" name="email" required><br>
+        <label for="tel">Numéro de téléphone :</label><br>
+        <input type="tel" name="tel" pattern="^\+?[0-9]{10,15}$" placeholder="+33123456789" required><br>
+        <label for="password">Mot de passe :</label><br>
+        <input type="password" name="password" required><br>
+        <label for="confirm_password">Confirmer le mot de passe :</label><br>
+        <input type="password" name="confirm_password" required><br>
+        <button type="submit">S'inscrire</button>
+    </form>
+</div>
+
+<script src="log.js"></script>
+</body>
+</html>
