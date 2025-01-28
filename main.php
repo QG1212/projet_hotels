@@ -1,3 +1,3 @@
 <?php
-echo"Gast"
+echo"ce que tu veux"
 ?>
