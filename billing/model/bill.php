@@ -1,6 +1,6 @@
 <?php
 
-namespace billing;
+namespace billing\model;
 
 require "Db.php";
 
@@ -34,11 +34,21 @@ class bill {
 
     static function info($booking){
         $db = Db::connexionBD();
-        $request = "SELECT cl.tel, cl.email, cl.nom , cl.prenom FROM reservation r
+        $request = "SELECT cl.tel, cl.email, cl.nom , cl.prenom, cl.id_client FROM reservation r
                     INNER JOIN client cl on  cl.id_client = r.id_client
                     WHERE r.id_sejour=:id;";
         $requested = $db->prepare($request);
         $requested->bindParam(':id', $booking);
+        $requested->execute();
+        return $requested->fetch();
+    }
+
+    static function bills($client){
+        $db = Db::connexionBD();
+        $request = "SELECT date_debut , date_fin , id_client, id_sejour FROM reservation r
+        WHERE id_client = :id_client;";
+        $requested = $db->prepare($request);
+        $requested->bindParam(':id_client', $client);
         $requested->execute();
         return $requested->fetch();
     }

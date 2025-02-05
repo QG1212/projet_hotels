@@ -1,6 +1,9 @@
 <?php
 
-namespace billing;
+namespace billing\model;
+use billing\PDO;
+use billing\PDOException;
+
 include_once('config.php');
 
 class Db
