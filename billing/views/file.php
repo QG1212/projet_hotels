@@ -1,21 +1,25 @@
 <?php
 
 
+function makefile ($id) {
+    billingController::generate($id);
+    $file= fopen("bill-$id.txt","w") or die("Unable to open file!");;
 
-$file= fopen("bill.txt","w");
-
-$fwrite = fwrite($file,"
+     fwrite($file,"
 <h1>Facture:</h1>
 
 <h2><u>destinéee à</u></h2>
  Nom:".$nom.
-"Prenom:".$prenom.
-"Email:".$email.
-    "tel".$tel.
-    "<h3>Chambre d'hotel</h3>
-    "
+        "Prenom:".$prenom.
+        "Email:".$email.
+        "tel".$tel.
+        "<h3>Chambre d'hotel</h3>
+    ");
 
-);
+
+
+
+
 foreach ($booking as $row){
     fwrite($file,"<tr>
 <td>date:".$row["date_debut"]."-".$row["date_fin"]."</td>
@@ -35,3 +39,5 @@ foreach ($consumptions as $row){
 </tr>");}
 fwrite($file,"</table>");
 fclose($file);
+    return $file;
+};
