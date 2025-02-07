@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Page Client</title>
+    <link rel="stylesheet" href="log.css">
 </head>
 <body>
 <h1>Salut les petits loups</h1>
-
 <?php
 
 //connexion bdd
@@ -37,8 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user['id_client']; //stockage de l'ID utilisateur dans la session
             echo "Connexion réussie !";
 
-            echo '<script>setTimeout(function() {window.location.href = "https://www.booking.com/index.fr.html?aid=2311236;label=fr-fr-booking-desktop-DCpBIW3k2*WIo8XuzMdB9AS652796013276:pl:ta:p1:p2:ac:ap:neg:fi:tikwd-65526620:lp9060737:li:dec:dm;ws=&gad_source=1&gclid=CjwKCAiAneK8BhAVEiwAoy2HYYXoIxUZ7ANuyvsyp45feB-S8wGJa550TdOFEYvbaKDVXFuzzCR5gRoCHNQQAvD_BwE";}, 2500);</script>';
-            header('Refresh: 5; URL=https://www.booking.com/index.fr.html?aid=2311236;label=fr-fr-booking-desktop-DCpBIW3k2*WIo8XuzMdB9AS652796013276:pl:ta:p1:p2:ac:ap:neg:fi:tikwd-65526620:lp9060737:li:dec:dm;ws=&gad_source=1&gclid=CjwKCAiAneK8BhAVEiwAoy2HYQWgjBZPUpiYWiN8Mo_FqmqeBSws9gkTmLxPjNBXEPDPQ8UsbVd8dBoC25UQAvD_BwE');
+            echo '<script>setTimeout(function() {window.location.href = "https://www.booking.com/index.fr.html?aid=2311236;label=fr-fr-booking-desktop-DCpBIW3k2*WIo8XuzMdB9AS652796013276:pl:ta:p1:p2:ac:ap:neg:fi:tikwd-65526620:lp9060737:li:dec:dm;ws=&gad_source=1&gclid=CjwKCAiAneK8BhAVEiwAoy2HYYXoIxUZ7ANuyvsyp45feB-S8wGJa550TdOFEYvbaKDVXFuzzCR5gRoCHNQQAvD_BwE";}, 2000);</script>';
         } else {
             echo "Email ou mot de passe incorrect.";
         }
