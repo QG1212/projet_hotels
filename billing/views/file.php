@@ -21,12 +21,12 @@ function makefile ($id) {
 
 
 foreach ($booking as $row){
-    fwrite($file,"<tr>
-<td>date:".$row["date_debut"]."-".$row["date_fin"]."</td>
-<td>chambre:".$row["numero_chambre"]."</td>
-<td>prix nuitée:".$row["prix_nuitee"]."</td>
-<td>prix total:".$row["prix_total"]."</td>
-</tr>");}
+    fwrite($file,"-------------------------------------
+|date:".$row["date_debut"]."-".$row["date_fin"]."|
+|chambre:".$row["numero_chambre"]."|
+|prix nuitée:".$row["prix_nuitee"]."|
+|prix total:".$row["prix_total"]."|
+");}
 
 fwrite($file,"</table>");
 
