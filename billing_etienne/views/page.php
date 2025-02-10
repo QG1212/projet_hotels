@@ -5,9 +5,10 @@
 
 </head>
 <body>
-<div class="container">
+    <script src="../ajax.js"></script>
+    <div class="container">
     <nav> ...</nav>
         <?php echo $content; ?>
-</div>
+    </div>
 </body>
 </html>

@@ -10,7 +10,7 @@
         foreach($listing as $row){
             echo "<tr>";
                 echo "<td>".$listing['date_debut']."-".$listing['date_fin']."</td>";
-                echo "<td><a href='' download></a></td>";
+                echo "<td><button id='".$row['id_sejour']."' download></td>";
             echo "</tr>";
         }
     ?>
