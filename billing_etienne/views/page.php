@@ -1,3 +1,4 @@
+<!Doctype html>
 <html lang="fr">
 <?php require 'billList.php'?>
 <head>

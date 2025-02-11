@@ -8,7 +8,7 @@ xhr.open("POST","index.php");
 
 
 
-
+//requête la création et le téléchargement du fichier factures quand le bouton y corresspondant est cliqué
 xhr.onload = () =>{
     switch(xhr.status) {
         case 200:
