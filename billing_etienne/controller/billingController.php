@@ -3,7 +3,7 @@
 namespace billing\controller;
 use billing\model\bill;
 
-class billingController
+class BillingController
 {
     static function generate($id)
     {
@@ -15,6 +15,7 @@ class billingController
         $email = bill::info($id)[0]["email"];
         $tel = bill::info($id)[0]["tel"];
         $client = bill::info($id)[0]["id_client"];
+
 
         require_once("views/file.php");
     }
