@@ -5,7 +5,7 @@ require_once 'controller/billingController.php';
 
 
 
-\billing\controller\billingController::generate();
+\billing\controller\billingController::generate($_SESSION['id_user']);
 
 
 $id = $_REQUEST["id"];

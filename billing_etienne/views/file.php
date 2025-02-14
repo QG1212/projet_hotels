@@ -5,21 +5,21 @@ function makefile ($id) {
     billingController::generate($id);
     $file= fopen("bill-$id.txt","w") or die("Unable to open file!");;
 
+    //données de l'utilisateur
      fwrite($file,"
-<h1>Facture:</h1>
+Facture:
 
-<h2><u>destinéee à</u></h2>
- Nom:".$nom.
+
+
+        Nom:".$nom.
         "Prenom:".$prenom.
         "Email:".$email.
-        "tel".$tel.
-        "<h3>Chambre d'hotel</h3>
-    ");
+        "tel".$tel);
 
 
 
 
-
+//gère l'affichage du contenu de la facture
 foreach ($booking as $row){
     fwrite($file,"-------------------------------------
 |date:".$row["date_debut"]."-".$row["date_fin"]."|
@@ -39,5 +39,17 @@ foreach ($consumptions as $row){
 </tr>");}
 fwrite($file,"</table>");
 fclose($file);
-    return $file;
+
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename='.basename("bill-$id.txt"));
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate');
+    header('Pragma: public');
+    header('Content-Length: ' . filesize("bill-$id.txt"));
+    readfile("bill-$id.txt");
+
+
+    exit;
 };
+
+
