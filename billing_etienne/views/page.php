@@ -6,6 +6,10 @@
 
 </head>
 <body>
+
+    <script src="../ajax.js"></script>
+
+    <div class="container">
     <nav> ...</nav>
     Liste des Factures:
     <div class="container">
