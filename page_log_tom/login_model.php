@@ -1,5 +1,4 @@
 <?php
-require_once('constants.php');
 class connexion
 {
 function isEmailValid($pdo,$email)
