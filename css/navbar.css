@@ -1,0 +1,11 @@
+.navbar {
+    background-color: #0d6efd; /* Bleu */
+}
+
+.navbar a, .navbar-brand {
+    color: white !important;
+}
+
+.navbar a:hover {
+    color: #cce5ff !important; /* Bleu clair au survol */
+}

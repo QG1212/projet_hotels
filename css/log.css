@@ -55,3 +55,17 @@ form button {
 form button:hover {
     background-color: #218838;
 }
+.containeur-center {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 1rem;
+    background: #d5d6d6;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;          /* Active Flexbox */
+    flex-direction: column; /* Aligne en colonne */
+    align-items: center;     /* Alignement horizontal */
+}
+h2{
+    text-align: center;
+}

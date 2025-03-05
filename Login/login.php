@@ -1,7 +1,7 @@
 <?php
 require_once("../database/constants.php");
-require_once("../Client/Client_model.php");
-require_once("login_model.php");
+require_once("../model/Client_model.php");
+require_once("../model/login_model.php");
 //connexion bdd
 /*
 $host = 'localhost';
