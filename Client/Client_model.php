@@ -5,13 +5,25 @@ class Client_Model{
      * @param $pdo database connecter
      * @return user Le client qui possede l'email ( toutes ses datas)
      */
-    function GetClientEmail($email,$pdo){
+    static function GetClientEmail($email,$pdo){
         $stmt = $pdo->prepare("SELECT id_client, fleure FROM Client WHERE email = :email");
         $stmt->execute(['email' => $email]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         return $user;
     }
-    function AddClient($pdo,$email, $nom, $prenom, $password,$confirm_password, $tel)
+
+    /**
+     * @param $pdo database
+     * Les Informations du client
+     * @param $email
+     * @param $nom
+     * @param $prenom
+     * @param $password
+     * @param $confirm_password
+     * @param $tel
+     * @return insert dans la bdd le nouveau client et hash le mdp
+     */
+    static function AddClient($pdo,$email, $nom, $prenom, $password,$confirm_password, $tel)
     {
         if ($password !== $confirm_password) {
             die("Les mots de passe ne correspondent pas.");
