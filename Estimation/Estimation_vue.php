@@ -42,8 +42,14 @@
     </div>
 </nav>
 <!-- erreur -->
-<section id="errors" class="container alert alert-danger" style="display: none">
-</section>
+<?php
+if($error){
+    echo "<section id=\"errors\" class=\"container alert alert-danger mt-2\" >
+        Il faut une date de fin posterieur à la date du debut 
+        </section>";
+}
+?>
+
 <!-- Formulaire d'Estimation -->
 <div class="container-form">
     <h1 class="text-center mb-4 text-bleu">Estimez votre séjour</h1>
@@ -102,7 +108,7 @@
         <h3>Estimation du prix :</h3>
         <p id="estimation-prix">
             <?php
-                echo $text;
+                echo $prix;
             ?>
             €</p>
     </div>

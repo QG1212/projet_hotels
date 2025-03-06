@@ -9,7 +9,7 @@ function main(){
     let chambres_Hotel4=document.getElementsByClassName('Hotel-4');
     //tableau qui contient tous les tableaux de chambres
     let allChambres=[chambres_Hotel1,chambres_Hotel2,chambres_Hotel3,chambres_Hotel4];
-// Écoute de l'événement 'change'
+    // Écoute de l'événement 'change'
     selectElement.addEventListener('change', function() {
         //on fait disparaitre toutes les chambres
         for(let C1 of chambres_Hotel1){//pour chaque chambre de la categorie on ajoute le class disparue
