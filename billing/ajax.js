@@ -1,25 +1,26 @@
 'use strict'
 
 
-let buttons= document.querySelector("button");
+function ajaxRequest(){
 let xhr= new XMLHttpRequest();
 xhr.open("POST","index.php");
-
-
 
 
 //requête la création et le téléchargement du fichier factures quand le bouton y corresspondant est cliqué
 xhr.onload = () =>{
     switch(xhr.status) {
         case 200:
-            case 201: buttons.addEventListener("click",function () {
+            case 201:
                 console.log("Request Successful");
-            })
-        break
+
+        break;
     default:
         console.log("Error:"+xhr.status);
-        break
+        break;
     }
 
     xhr.send(this.id);
 }
+
+}
+ window.addEventListener("load",ajaxRequest)

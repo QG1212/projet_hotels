@@ -1,13 +1,15 @@
 <?php
 
-namespace billing\model;
+
+namespace model;
+use database\Db;
 
 require "Db.php";
 
-class bill {
-    static function room($booking)
+class bill
+{
+    static function room($db,$booking)
     {
-        $db = Db::connexionBD();
         $request =
             "SELECT  c.numero_chambre, r.date_debut, r.date_fin, p.prix prix_nuitee , (r.date_fin - r.date_debut) * p.prix prix_total FROM Reservation r
             INNER JOIN Chambre c on c.id_chambre = r.id_chambre
@@ -22,9 +24,8 @@ class bill {
         return $requested->fetch();
     }
 
-    static function consumption($booking)
+    static function consumption($db,$booking)
     {
-        $db = Db::connexionBD();
         $request = "SELECT * FROM conso_client WHERE id_sejour=:nom";
         $requested = $db->prepare($request);
         $requested->bindParam(':nom', $booking);
@@ -32,8 +33,9 @@ class bill {
         return $requested->fetch();
     }
 
-    static function info($booking){
-        $db = Db::connexionBD();
+    static function info($db,$booking)
+    {
+
         $request = "SELECT cl.tel, cl.email, cl.nom , cl.prenom, cl.id_client FROM reservation r
                     INNER JOIN client cl on  cl.id_client = r.id_client
                     WHERE r.id_sejour=:id;";
@@ -43,10 +45,10 @@ class bill {
         return $requested->fetch();
     }
 
-    static function bills($client){
-        $db = Db::connexionBD();
+    static function bills($db,$client)
+    {
         $request = "SELECT date_debut , date_fin , id_client, id_sejour FROM reservation r
-        WHERE id_client = :id_client;";
+                    WHERE id_client = :id_client;";
         $requested = $db->prepare($request);
         $requested->bindParam(':id_client', $client);
         $requested->execute();

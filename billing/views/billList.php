@@ -3,9 +3,10 @@
 $title="invoice list" ?>
 <?php require_once "file.php"?>
 
-<?php ob_start(); ?>
 
-<h2>Liste des factures</h2>
+
+<h2>Liste des factures de <?php echo($nom)?> <?php echo($prenom)?></h2>
+
 
 <table>
     <?php
@@ -22,9 +23,10 @@ $title="invoice list" ?>
     else {
         echo "error: invoices not found";
     }
+
     ?>
 </table>
 
-<?php $content = ob_get_clean() ?>
 
-<?php include 'page.php' ?>
+
+
