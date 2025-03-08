@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hôtel Bleu & Blanc</title>
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/index.css">
     <!-- Lien vers Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Icônes Bootstrap -->
@@ -48,7 +49,7 @@
 <header class="py-5 text-center">
     <div class="container">
         <h1 class="display-4">Bienvenue à l'Hôtel Bleu & Blanc</h1>
-        <p class="lead">Un séjour de rêve au bord de la mer avec tout le confort moderne.</p>
+        <p class="lead">Un séjour de rêve au bord de la mer ou de la ville avec tout le confort moderne.</p>
         <a href="Reservation/Reservation.php" class="btn btn-primary btn-lg">Réservez maintenant</a>
     </div>
 </header>
@@ -58,17 +59,17 @@
     <div class="container">
         <h2 class="text-center mb-4">Nos Services</h2>
         <div class="row text-center">
-            <div class="col-md-4">
+            <div class="col-md-4  bg-light">
                 <i class="bi bi-wifi fs-1"></i>
                 <h3>Wi-Fi Gratuit</h3>
                 <p>Accès Internet haut débit inclus dans toutes les chambres.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 bg-light">
                 <i class="bi bi-cup-hot fs-1"></i>
                 <h3>Petit Déjeuner Offert</h3>
                 <p>Un buffet varié chaque matin pour bien commencer la journée.</p>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 bg-light">
                 <i class="bi bi-water fs-1"></i>
                 <h3>Piscine & Spa</h3>
                 <p>Relaxez-vous dans notre piscine chauffée ou notre espace bien-être.</p>
@@ -78,7 +79,7 @@
 </section>
 
 <!-- Pied de page -->
-<footer class="py-4 bg-light text-center">
+<footer class="py-4 text-center">
     <p>&copy; 2025 Hôtel Bleu & Blanc - Tous droits réservés.</p>
 </footer>
 

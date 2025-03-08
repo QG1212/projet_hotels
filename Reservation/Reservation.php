@@ -1,6 +1,10 @@
 <?php
 require_once("../model/Hotel_model.php");
 require_once("../database/constants.php");
+session_start();
+if(!isset($_SESSION["user_id"])){
+    header("../login/login.php");
+}
 $pdo=dbConnect();
 $hotel=Hotel::getSelectHotels($pdo);
 $error="";
