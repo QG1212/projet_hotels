@@ -1,0 +1,9 @@
+<?php
+session_start();
+$lien="";
+if(isset($_SESSION['user_id'])){
+    $lien="<li class=\"nav-item\"><a class=\"nav-link\" href=\"../Client/Client_Controleur.php\">Mes Réservations</a></li>
+    <li class=\"nav-item\"><a class=\"nav-link\" href=\"../Reservation/Reservation.php\">Réserver un nouveau séjour</a></li>";
+}
+
+require("Contact_vue.php");

@@ -31,18 +31,19 @@
                 <li class="nav-item"><a class="nav-link" href="../Estimation/Estimation.php">Estimation prix</a></li>
                 <!--Idées future de css/html mais la pas le temps -->
                 <!--<li class="nav-item"><a class="nav-link" href="#chambres">Chambres</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="#">Mes Reservations</a></li>
-                <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation.php">Réserver un nouveau séjour</a></li>
-                <li class="nav-item"><a class="nav-link" href="../Contact/Contact.php">Contact</a></li>            </ul>
+                <?php
+                echo $lien;
+                ?>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>            </ul>
+
+            </ul>
 
             <!-- Icône de connexion -->
             <a href="Profil_Client/Profil.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
         </div>
     </div>
 </nav>
-<h1>Page client (en dev)</h1>
-<?php
- echo"<p>Vous êtes le client d'id : ".$_SESSION['user_id']." </p>";
-?>
-<p> Cette page affichera les différents réservations du clients </p>
+<h1>Page Contact (en dev)</h1>
+<p>En cas de pépin contactez le dev disparu => Tom CABANO au 07 85 50 10 51</p>
+<p> Cette page affichera les différents contacts des admins il faut donc crée les admins dans la bdd pour ensuite les afficher ici en fonction de l'hotel</p>
 </body>

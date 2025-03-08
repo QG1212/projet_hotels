@@ -35,11 +35,11 @@ class Chambre
         $select="";
         while($chambre = $stmt->fetch()) {
             if($chambre["id_hotel"]==1){
-                $select.="<option value=\"".$chambre["id_chambre"]."\" class='Hotel-".$chambre["id_hotel"]."'>".$chambre["denomination"]." Chambre  ".$chambre["id_chambre"]."</option>";
+                $select.="<option value=\"".$chambre["id_categorie"]."\" class='Hotel-".$chambre["id_hotel"]."'>".$chambre["denomination"]."</option>";
             }
             else{
                 //si ça ne fait pas partie de l'hotel 1 qui est afficher par défault on ajoute la classe disparu dans les chambres pour ne pas les affichers
-                $select.="<option value=\"".$chambre["id_chambre"]."\" class='disparu Hotel-".$chambre["id_hotel"]."'>".$chambre["denomination"]." Chambre  ".$chambre["id_chambre"]."</option>";
+                $select.="<option value=\"".$chambre["id_categorie"]."\" class='disparu Hotel-".$chambre["id_hotel"]."'>".$chambre["denomination"]."</option>";
             }
 
         }
@@ -64,15 +64,14 @@ class Chambre
      $stmt->execute();
      return $stmt->fetch()["prix"]*$nbJour;
  }
-    static function GetPrixChambre($pdo,$idCategorie,$nbJour=1)
+    static function GetPrixCategorie($pdo,$idCategorie,$idHotel,$nbJour=1)
     {
-        $stmt=$pdo->prepare(  "Select prix_chambre.prix, chambre.id_chambre from chambre
-                            inner join hotel using(id_hotel)
-                            inner join categorie using(id_categorie)
-                            inner join classe on hotel.id_classe=classe.id_classe
-                            inner join prix_chambre on classe.id_classe=prix_chambre.id_classe and categorie.id_categorie=prix_chambre.id_categorie
-                            where chambre.id_chambre=:ID;");
-        $stmt->bindParam(":ID",$idCategorie);
+        $stmt=$pdo->prepare(  "Select prix from prix_chambre
+                                inner join hotel on hotel.id_classe=prix_chambre.id_classe
+                                where hotel.id_hotel=:hotel
+                                and prix_chambre.id_categorie=:categorie;");
+        $stmt->bindParam(":hotel",$idHotel);
+        $stmt->bindParam(":categorie",$idCategorie);
         $stmt->execute();
         return $stmt->fetch()["prix"]*$nbJour;
     }
