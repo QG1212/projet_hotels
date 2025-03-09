@@ -10,41 +10,24 @@ if(empty($_SESSION["user_id"])){
 $pdo=dbConnect();
 $hotel=Hotel::getSelectHotels($pdo);
 $error="";
-$disponible=false;
-$chambre="";
-$debut=null;$fin=null;
+$retour="";
 
-if(!empty($_POST["hotel"]) && !empty($_POST["date_debut"]) && !empty($_POST["date_fin"])) {
-    $debut=$_POST["date_debut"];$fin=$_POST["date_fin"];
-    $chambre=Chambre::GetSelectChambreDisponible($pdo,$_POST["hotel"],$_POST["date_debut"],$_POST["date_fin"]);
-    if($chambre==""){
-        $error="<section id=\"errors\" class=\"container alert alert-danger mt-2\" >
-                 Aucune chambre de disponible !
-                 </section>";
-    }
-    else{
-        $disponible=true;
-    }
-}
-if(!empty($_POST["chambre"]) && $debut!=null && $fin!=null){
-    \model\Reservation::AddReservation($pdo,$_POST["chambre"],$debut,$fin,$_SESSION["user_id"]);
-    if(true){
+if(!empty($_POST["chambre"])){
+    if(\model\Reservation::AddReservation($pdo,$_SESSION["user_id"],$_POST["date_debut"],$_POST["date_fin"],$_POST["chambre"])){
         header("Location: ../client/Client_Controleur.php");
         //ajout réussit on envoie sur la page des réservations clients
     }
     else{
         $error="<section id=\"errors\" class=\"container alert alert-danger mt-2\" >
-                    Echec de la réservation, veillez recharger la page et réessayer
+                    Echec de la réservation, veillez remplir le questionnaire à nouveau
                   </section>";
-        $_POST["chambre"]=null;
-        $debut=null;$fin=null;
-        $disponible=false;
+
     }
 }
-$form_hotel="<!-- Formulaire 1 : Sélection de l'hôtel et des dates -->
+$form="<!-- Formulaire 1 : Sélection de l'hôtel et des dates -->
     <div class=\"form-section\">
         <h3>Étape 1 : Choisissez votre hôtel et vos dates</h3>
-        <form id=\"hotel-form\" method=\"post\">
+        <form id=\"hotel-form\" method=\"post\" action='Reservation_E2.php'>
             <div class=\"mb-3\">
                 <label for=\"hotel\" class=\"form-label\">Sélectionner un hôtel :</label>
                 <select id=\"hotel\" name=\"hotel\" class=\"form-select\" required>
@@ -67,21 +50,5 @@ $form_hotel="<!-- Formulaire 1 : Sélection de l'hôtel et des dates -->
         </form>
     </div>";
 
-$form_chambre="<!-- Formulaire 2 : Sélection des chambres -->
-<div id=\"chambre-section\" class=\"form-section\">
-    <h3>Étape 2 : Sélectionnez votre chambre</h3>
-    <form id=\"chambre-form\" method='post'>
-        <div class=\"mb-3\">
-            <label for=\"chambre\" class=\"form-label\">Choisissez une chambre :</label>
-            <select id=\"chambre\" name='chambre' class=\"form-select\" required>
-                <option value=\"\">-- Choisissez une chambre --</option>
-                $chambre
-            </select>
-        </div>
-
-        <input type=\"submit\" class=\"btn btn-success\" value='Confirmer la réservation'>
-    </form>
-</div>";
 require "Reservation_vue.php";
-?>
 

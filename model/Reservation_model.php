@@ -9,7 +9,7 @@ class Reservation
         $stmt->bindParam(":chambre",$idChambre);
         $stmt->bindParam(":date_debut",$dateDebut);
         $stmt->bindParam(":date_fin",$dateFin);
-        $stmt->bindParam(":lient",$idClient);
+        $stmt->bindParam(":client",$idClient);
         try {
             $stmt->execute();
             echo "Réservation réussie !";

@@ -47,16 +47,15 @@
 <?php
 echo $error;
 ?>
+<!-- Bouton retour à l'étape 1-->
+<?php
+echo $retour;
+?>
 <!-- Formulaire de Réservation -->
 <div class="container-form">
     <h1 class="text-center mb-4">Formulaire de Réservation</h1>
     <?php
-    if($disponible){
-        echo $form_chambre;
-    }
-    else{
-        echo $form_hotel;
-    }
+    echo $form;
     ?>
 
 </div>

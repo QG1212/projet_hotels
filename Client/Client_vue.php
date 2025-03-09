@@ -31,8 +31,8 @@
                 <li class="nav-item"><a class="nav-link" href="../Estimation/Estimation.php">Estimation prix</a></li>
                 <!--Idées future de css/html mais la pas le temps -->
                 <!--<li class="nav-item"><a class="nav-link" href="#chambres">Chambres</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="#">Mes Reservations</a></li>
-                <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation.php">Réserver un nouveau séjour</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mes Réservations</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation_E1.php">Réserver un nouveau séjour</a></li>
                 <li class="nav-item"><a class="nav-link" href="../Contact/Contact.php">Contact</a></li>            </ul>
 
             <!-- Icône de connexion -->

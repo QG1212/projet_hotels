@@ -75,7 +75,7 @@ class Chambre
         $stmt->execute();
         return $stmt->fetch()["prix"]*$nbJour;
     }
-    static function GetSelectChambreDisponible($pdo,$idHotel,$date_debut,$date_fin){
+        static function GetSelectChambreDisponible($pdo,$idHotel,$date_debut,$date_fin){
         $stmt=$pdo->prepare(  "Select hotel.nom, id_chambre ,categorie.denomination
                                 from chambre
                                 inner join categorie using(id_categorie)

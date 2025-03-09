@@ -35,7 +35,7 @@
                 <!--Idées future de css/html mais la pas le temps -->
                 <!--<li class="nav-item"><a class   ="nav-link" href="#chambres">Chambres</a></li>-->
                 <li class="nav-item"><a class="nav-link" href="../Client/Client_Controleur.php">Mes Réservations</a></li>
-                <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation.php">Réserver un nouveau séjour</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation_E1.php">Réserver un nouveau séjour</a></li>
                 <li class="nav-item"><a class="nav-link" href="../Contact/Contact.php">Contact</a></li>            </ul>
 
             <!-- Icône de connexion -->
