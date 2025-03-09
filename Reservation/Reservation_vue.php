@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réservation - Hôtel Bleu & Blanc</title>
 
+    <!-- Icônes Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Css -->
     <link href="../css/navbar.css" rel="stylesheet">
     <link href="../css/Estimation.css" rel="stylesheet">
 </head>
@@ -36,7 +39,7 @@
                 <li class="nav-item"><a class="nav-link" href="../Contact/Contact.php">Contact</a></li>            </ul>
 
             <!-- Icône de connexion -->
-            <a href="Profil_Client/Profil.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
+            <a href="../Profil_Client/Profil.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
         </div>
     </div>
 </nav>

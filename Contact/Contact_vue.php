@@ -34,12 +34,12 @@
                 <?php
                 echo $lien;
                 ?>
-                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>            </ul>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
 
             </ul>
 
             <!-- Icône de connexion -->
-            <a href="Profil_Client/Profil.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
+            <a href="../Profil_Client/Profil.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
         </div>
     </div>
 </nav>
