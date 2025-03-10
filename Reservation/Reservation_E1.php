@@ -13,7 +13,8 @@ $error="";
 $retour="";
 
 if(!empty($_POST["chambre"])){
-    if(\model\Reservation::AddReservation($pdo,$_SESSION["user_id"],$_POST["date_debut"],$_POST["date_fin"],$_POST["chambre"])){
+    $bool=\model\Reservation::AddReservation($pdo,$_SESSION["user_id"],$_POST["date_debut"],$_POST["date_fin"],$_POST["chambre"]);
+    if($bool){
         header("Location: ../client/Client_Controleur.php");
         //ajout réussit on envoie sur la page des réservations clients
     }
@@ -21,7 +22,6 @@ if(!empty($_POST["chambre"])){
         $error="<section id=\"errors\" class=\"container alert alert-danger mt-2\" >
                     Echec de la réservation, veillez remplir le questionnaire à nouveau
                   </section>";
-
     }
 }
 $form="<!-- Formulaire 1 : Sélection de l'hôtel et des dates -->
