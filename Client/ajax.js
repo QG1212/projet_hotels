@@ -1,5 +1,5 @@
 'use strict';
-
+let global_reservation;
 function ajaxRequest(type,url,callback,data=null){
     let xhr= new XMLHttpRequest();
     xhr.open(type,url);

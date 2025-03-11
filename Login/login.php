@@ -15,6 +15,11 @@ try {
     die("Erreur de connexion à la base de données : " . $e->getMessage());
 }
 */
+session_start();
+if(!empty($_POST["deconnection"])){
+    session_destroy();
+    //echo "<h1>destroyyyyyyyyyyyy</h1>".$_SESSION["user_id"];
+}
 $pdo=dbConnect();
 //gestion formulaire
 //if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -24,9 +29,8 @@ $pdo=dbConnect();
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL); //filtrage pour vérifier que conforme pas de balise ou autre
         $password = $_POST['password'];
         $user=Client_Model::GetClientEmail($email,$pdo);
-
+        session_start(); //démarre session
         if ($user && password_verify($password, $user['fleure'])) { //si utilisateur existe et mdp correct
-            session_start(); //démarre session
             $_SESSION['user_id'] = $user['id_client']; //stockage de l'ID utilisateur dans la session
             echo "Connexion réussie vous allez être redirigé vers la page client";
             header('Location: ../Client/Client_Controleur.php');
