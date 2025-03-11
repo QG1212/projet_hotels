@@ -50,7 +50,7 @@
     <div class="container">
         <h1 class="display-4">Bienvenue à l'Hôtel Bleu & Blanc</h1>
         <p class="lead">Un séjour de rêve au bord de la mer ou de la ville avec tout le confort moderne.</p>
-        <a href="Reservation/Reservation.php" class="btn btn-primary btn-lg">Réservez maintenant</a>
+        <a href="Reservation/Reservation_E1.php" class="btn btn-primary btn-lg">Réservez maintenant</a>
     </div>
 </header>
 

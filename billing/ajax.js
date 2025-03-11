@@ -1,18 +1,18 @@
 'use strict'
 
 
-function ajaxRequest(){
+function ajaxRequest(type, url, callback, data = null){
 let xhr= new XMLHttpRequest();
-xhr.open("POST","index.php");
+    url += '?' + data;
+    xhr.open(type, url);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-
-//requête la création et le téléchargement du fichier factures quand le bouton y corresspondant est cliqué
 xhr.onload = () =>{
     switch(xhr.status) {
         case 200:
             case 201:
-                console.log("Request Successful");
-
+                console.log(xhr.responseText);
+                callback(xhr.responseText)
         break;
     default:
         console.log("Error:"+xhr.status);

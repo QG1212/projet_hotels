@@ -7,6 +7,8 @@
     <title>Client - Hôtel Bleu & Blanc</title>
 
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/Reservation.css">
+
     <!-- Icônes Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
@@ -31,18 +33,55 @@
                 <li class="nav-item"><a class="nav-link" href="../Estimation/Estimation.php">Estimation prix</a></li>
                 <!--Idées future de css/html mais la pas le temps -->
                 <!--<li class="nav-item"><a class="nav-link" href="#chambres">Chambres</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="#">Mes Reservations</a></li>
-                <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation.php">Réserver un nouveau séjour</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Mes Réservations</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation_E1.php">Réserver un nouveau séjour</a></li>
                 <li class="nav-item"><a class="nav-link" href="../Contact/Contact.php">Contact</a></li>            </ul>
 
             <!-- Icône de connexion -->
-            <a href="Profil_Client/Profil.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
+            <a href="../Profil_Client/Profil.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
         </div>
     </div>
 </nav>
-<h1>Page client (en dev)</h1>
-<?php
- echo"<p>Vous êtes le client d'id : ".$_SESSION['user_id']." </p>";
-?>
-<p> Cette page affichera les différents réservations du clients </p>
+<div id="ALL"></div>
+<div id="template" style="display: none">
+    <div class="container-reservation container" >
+        <h1 class="text-center mb-4">Détails de la Réservation n° <span class="numero_resa">22</span></h1>
+        <div class="row">
+        <div class="mb-2 col">
+            <h5>🏨 Hôtel :</h5>
+            <p class="hotel"></p>
+        </div>
+
+        <div class="mb-2 col">
+            <h5>📅 Date de séjour :</h5>
+            <p>Du <span class="date-debut"></span> au <span class="date-fin"></span></p>
+        </div>
+        </div>
+        <div class="row">
+        <div class="mb-2 col">
+            <h5>🛏️ Chambre :</h5>
+            <p class="chambre"></p>
+        </div>
+
+        <div class="mb-2 col">
+            <h5>🏷️ Catégorie :</h5>
+            <p class="categorie"></p>
+        </div>
+        </div>
+        <div class="row">
+        <div class="mb-2 col">
+            <h5>💳 Statut de paiement :</h5>
+            <span class="statut-paiement badge badge-paid"></span>
+        </div>
+            <div class="mb-2 col">
+            <button class="btn btn-primary btn-download">Télécharger la facture</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="ajax.js"></script>
+
 </body>

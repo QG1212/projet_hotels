@@ -1,0 +1,23 @@
+.container-reservation {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.badge-paid {
+    background-color: #28a745;
+}
+
+.badge-unpaid {
+    background-color: #dc3545;
+}
+
+.btn-download {
+    margin-top: 20px;
+}
+#template{
+    display: none;
+}

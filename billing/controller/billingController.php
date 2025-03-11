@@ -2,11 +2,12 @@
 
 use model\bill;
 
-require_once("../../model/bill.php");
 
-require_once("../../database/constants.php");
 
-require_once("../views/billList.php");
+
+
+
+
 
 
 
@@ -14,20 +15,27 @@ class BillingController{
 
     static function generate($id)
     {
+        require_once("../../database/constants.php");
         $pdo=dbConnect();
-
+        require_once("../../model/bill.php");
+        $info=bill::info($pdo,$id);
         $booking = bill::room($pdo,$id);
         $consumptions = bill::consumption($pdo,$id);
-        $nom = bill::info($pdo,$id)[0]["nom"];
-        $prenom = bill::info($pdo,$id)[0]["prenom"];
-        $email = bill::info($pdo,$id)[0]["email"];
-        $tel = bill::info($pdo,$id)[0]["tel"];
-        $client = bill::info($pdo,$id)[0]["id_client"];
+        $nom = $info[0]["nom"];
+        $prenom = $info[0]["prenom"];
+        $email = $info[0]["email"];
+        $tel = $info[0]["tel"];
+        $client = $info[0]["id_client"];
+        require_once("../views/File.php");
     }
-    static function listing($pdo,$client){
+    static function listing($client){
+        $pdo=dbConnect();
+        require_once("../../database/constants.php");
+        require_once("../../model/bill.php");
+        $info= bill::info($pdo,$client);
         $listing= bill::bills($pdo,$client);
-        $nom = bill::info($pdo,$client)[0]["nom"];
-        $prenom = bill::info($pdo,$client)[0]["prenom"];
+        $nom = $info[0]["nom"];
+        $prenom = $info[0]["prenom"];
+        require_once("../views/billList.php");
     }
-
 }

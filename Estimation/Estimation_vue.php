@@ -41,7 +41,7 @@
             </ul>
 
             <!-- Icône de connexion -->
-            <a href="../Login/login.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
+            <a href="../Profil_Client/Profil.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
         </div>
     </div>
 </nav>

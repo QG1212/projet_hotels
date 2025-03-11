@@ -47,55 +47,16 @@
 <?php
 echo $error;
 ?>
+<!-- Bouton retour à l'étape 1-->
+<?php
+echo $retour;
+?>
 <!-- Formulaire de Réservation -->
 <div class="container-form">
     <h1 class="text-center mb-4">Formulaire de Réservation</h1>
-
-    <!-- Formulaire 1 : Sélection de l'hôtel et des dates -->
-    <div class="form-section">
-        <h3>Étape 1 : Choisissez votre hôtel et vos dates</h3>
-        <form id="hotel-form">
-            <div class="mb-3">
-                <label for="hotel" class="form-label">Sélectionner un hôtel :</label>
-                <select id="hotel" name="hotel" class="form-select" required>
-                    <option value="">-- Choisir un hôtel --</option>
-                    <?php
-                    echo $hotel
-                    ?>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="date-debut" class="form-label">Date de début :</label>
-                <input type="date" id="date-debut" class="form-control" required>
-            </div>
-
-            <div class="mb-3">
-                <label for="date-fin" class="form-label">Date de fin :</label>
-                <input type="date" id="date-fin" class="form-control" required>
-            </div>
-
-            <button type="button" class="btn btn-primary" onclick="afficherChambres()">Voir les chambres disponibles</button>
-        </form>
-    </div>
-
-    <!-- Formulaire 2 : Sélection des chambres -->
-    <div id="chambre-section" class="form-section" style="display:none;">
-        <h3>Étape 2 : Sélectionnez votre chambre</h3>
-        <form id="chambre-form">
-            <div class="mb-3">
-                <label for="chambre" class="form-label">Choisissez une chambre :</label>
-                <select id="chambre" class="form-select" required>
-                    <option value="">-- Sélectionner une chambre --</option>
-                    <option value="standard">Chambre Standard - 100€/nuit</option>
-                    <option value="superieure">Chambre Supérieure - 150€/nuit</option>
-                    <option value="suite">Suite de Luxe - 250€/nuit</option>
-                </select>
-            </div>
-
-            <button type="submit" class="btn btn-success">Confirmer la réservation</button>
-        </form>
-    </div>
+    <?php
+    echo $form;
+    ?>
 
 </div>
 

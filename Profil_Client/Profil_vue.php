@@ -35,7 +35,7 @@
                 <!--Idées future de css/html mais la pas le temps -->
                 <!--<li class="nav-item"><a class   ="nav-link" href="#chambres">Chambres</a></li>-->
                 <li class="nav-item"><a class="nav-link" href="../Client/Client_Controleur.php">Mes Réservations</a></li>
-                <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation.php">Réserver un nouveau séjour</a></li>
+                <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation_E1.php">Réserver un nouveau séjour</a></li>
                 <li class="nav-item"><a class="nav-link" href="../Contact/Contact.php">Contact</a></li>            </ul>
 
             <!-- Icône de connexion -->
@@ -76,7 +76,10 @@
         <!-- Bouton de mise à jour -->
         <button type="button" class="btn btn-primary w-100" onclick="mettreAJourProfil()">Mettre à jour</button>
     </form>
-
+<form action="../Login/login.php" method="post" class="mt-3">
+    <input type="hidden" name="deconnection" value="true">
+    <input type="submit" value="Se déconnecter" class="btn btn-outline-danger w-100">
+</form>
 </div>
 
 <!-- Script Bootstrap -->
