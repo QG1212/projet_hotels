@@ -52,25 +52,25 @@
         <!-- Prénom -->
         <div class="mb-3">
             <label for="prenom" class="form-label">Prénom :</label>
-            <input type="text" id="prenom" class="form-control" value="Jean" required>
+            <input type="text" id="prenom" class="form-control" value="<?php $prenom ?>" required>
         </div>
 
         <!-- Nom -->
         <div class="mb-3">
             <label for="nom" class="form-label">Nom :</label>
-            <input type="text" id="nom" class="form-control" value="Dupont" required>
+            <input type="text" id="nom" class="form-control" value="<?php $nom ?>" required>
         </div>
 
         <!-- Email -->
         <div class="mb-3">
             <label for="email" class="form-label">Email :</label>
-            <input type="email" id="email" class="form-control" value="jean.dupont@example.com" required>
+            <input type="email" id="email" class="form-control" value="<?php $email ?>" required>
         </div>
 
         <!-- Téléphone -->
         <div class="mb-3">
             <label for="tel" class="form-label">Numéro de téléphone :</label>
-            <input type="tel" id="tel" class="form-control" value="+33123456789" pattern="^\+?[0-9]{10,15}$" required>
+            <input type="tel" id="tel" class="form-control" value="<?php $tel ?>" pattern="^\+?[0-9]{10,15}$" required>
         </div>
 
         <!-- Bouton de mise à jour -->
