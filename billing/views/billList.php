@@ -1,4 +1,4 @@
-
+<!-- Eventuellement inutile -->
 <?php
 $title="invoice list" ?>
 <?php require_once "file.php"?>
