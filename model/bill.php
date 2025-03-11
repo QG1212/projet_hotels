@@ -1,13 +1,12 @@
 <?php
 
-
-namespace model;
-use database\Db;
-
-require "Db.php";
-
 class bill
 {
+    /**
+     * @param $db database
+     * @param $booking id de la reservation
+     * @return mixed les information de la réservation
+     */
     static function room($db,$booking)
     {
         $request =
@@ -24,6 +23,12 @@ class bill
         return $requested->fetch();
     }
 
+    /**
+     * @param $db database
+     * @param $booking id de la réservation
+     * @return mixed les consomations en lien d'une réservation
+     */
+
     static function consumption($db,$booking)
     {
         $request = "SELECT * FROM conso_client WHERE id_sejour=:nom";
@@ -32,6 +37,12 @@ class bill
         $requested->execute();
         return $requested->fetch();
     }
+
+    /**
+     * @param $db database
+     * @param $booking id du
+     * @return mixed
+     */
 
     static function info($db,$booking)
     {
