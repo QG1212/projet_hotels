@@ -3,11 +3,11 @@
 
 <head>
     <title> Mes factures </title>
-
+    <link rel="stylesheet" href="../../css/navbar.css">
 </head>
 <body>
-<link rel="stylesheet" href="../../css/navbar.css">
-    <script src="../ajax.js"></script>
+
+
 
 
 <!-- Barre de Navigation -->
@@ -23,16 +23,17 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
-                <li class="nav-item"><a class="nav-link" href="../Estimation/Estimation.php">Estimation prix</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../index.php">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../Estimation/Estimation.php">Estimation prix</a></li>
                 <li class="nav-item"><a class="nav-link" href="#chambres">Chambres</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
 
             <!-- Icône de connexion -->
-            <a href="../Login/login.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
+            <a href="../../Login/login.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
         </div>
     </div>
+
 </nav>
 
 
@@ -40,3 +41,4 @@
 <?php require 'billList.php'?>
 
     <script src="../ajax.js"></script>
+

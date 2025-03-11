@@ -1,9 +1,18 @@
 <?php
 
 
-function makefile ($id) {
+$id = array_shift($request);
+if($id!=''){
     billingController::generate($id);
     $file= fopen("bill-$id.txt","w") or die("Unable to open file!");;
+
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename='.basename("bill-$id.txt"));
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate');
+    header('Pragma: public');
+    header('Content-Length: ' . filesize("bill-$id.txt"));
+
 
     //données de l'utilisateur
      fwrite($file,"
@@ -40,16 +49,15 @@ foreach ($consumptions as $row){
 fwrite($file,"</table>");
 fclose($file);
 
-    header('Content-Type: application/octet-stream');
-    header('Content-Disposition: attachment; filename='.basename("bill-$id.txt"));
-    header('Expires: 0');
-    header('Cache-Control: must-revalidate');
-    header('Pragma: public');
-    header('Content-Length: ' . filesize("bill-$id.txt"));
-    readfile("bill-$id.txt");
+
+    readfile("bill-$id.txt");}
 
 
+else {
     exit;
-};
+}
+
+
+
 
 
