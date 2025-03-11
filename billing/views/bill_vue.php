@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand" href="../index.php">Hôtel Bleu & Blanc</a>
+            <a class="navbar-brand" href="../bill.php">Hôtel Bleu & Blanc</a>
 
             <!-- Menu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +29,7 @@
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.php">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../bill.php">Accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="../Estimation/Estimation.php">Estimation prix</a></li>
                     <li class="nav-item"><a class="nav-link" href="#chambres">Chambres</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>

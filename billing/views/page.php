@@ -14,7 +14,7 @@
 <nav class="navbar navbar-expand-lg">
     <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="../index.php">Hôtel Bleu & Blanc</a>
+        <a class="navbar-brand" href="../bill.php">Hôtel Bleu & Blanc</a>
 
         <!-- Menu -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
