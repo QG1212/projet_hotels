@@ -76,7 +76,10 @@
         <!-- Bouton de mise à jour -->
         <button type="button" class="btn btn-primary w-100" onclick="mettreAJourProfil()">Mettre à jour</button>
     </form>
-
+<form action="../Login/login.php" method="post" class="mt-3">
+    <input type="hidden" name="deconnection" value="true">
+    <input type="submit" value="Se déconnecter" class="btn btn-outline-danger w-100">
+</form>
 </div>
 
 <!-- Script Bootstrap -->
