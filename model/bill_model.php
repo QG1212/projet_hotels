@@ -10,12 +10,12 @@ class Bill
     static function room($db, $booking)
     {
         $request =
-            "SELECT  c.numero_chambre, r.date_debut, r.date_fin, p.prix prix_nuitee , (r.date_fin - r.date_debut) * p.prix prix_total FROM Reservation r
+            "SELECT  c.numero_chambre, r.date_debut, r.date_fin, p.prix prix_nuitee , (r.date_fin - r.date_debut) * p.prix prix_total , h.nom hotel, cat.denomination categorie FROM Reservation r
             INNER JOIN Chambre c on c.id_chambre = r.id_chambre
             INNER JOIN Hotel h on h.id_hotel = c.id_hotel
-            INNER JOIN Prix_chambre p on p.id_categorie=c.id_categorie
-            INNER JOIN client cl on  cl.id_client = r.id_client
-            AND p.id_classe = h.id_classe
+            INNER JOIN Prix_chambre p on p.id_categorie=c.id_categorie AND h.id_classe=p.id_classe
+            INNER JOIN client cl on  cl.id_client = r.id_client 
+            INNER JOIN Categorie cat ON cat.id_categorie=c.id_categorie
             WHERE r.id_sejour=:id_resa;";
         $requested = $db->prepare($request);
         $requested->bindParam(':id_resa', $booking);
@@ -63,29 +63,44 @@ class Bill
     }
 
     /**
-     * @param $db DatabaseObject
      * @param $data_client array-key un tableau contenant les infos des clients
      * @return string un text représentant l'entète de la facture avec les infos du client
      */
-    static function GenererClientFacture($db, $data_client){
-        return "";
+    static function GenererClientFacture($data_client){
+        $content="_______________________________________________________________\n";
+        $content.="Nom :".$data_client['nom']."\n";
+        $content.="Prenom :".$data_client['prenom']."\n";
+        $content.="Tel :".$data_client['tel']."\n";
+        $content.="Email :".$data_client['email']."\n";
+        return $content;
     }
 
     /**
-     * @param $db DatabaseObject
      * @param $data_reservation array-key les information ser la réservation (nb nuitée, date, prix, id..)
      * @return string un text représentant le prix de la chambre pour le nombre de nuit réservé
      */
-    static function GenererReservationFacture($db, $data_reservation){
-        return "";
+    static function GenererReservationFacture($data_reservation){
+        $content="_____________________________________________________________\n";
+        $content.="Reservation à l'hotel ".$data_reservation["hotel"]."\n\n";
+        $content.="Chambre N°".$data_reservation["numero_chambre"]."                                        | Prix   \n";
+        $content.="___________________________________________________|________\n";
+        $line=$data_reservation["categorie"];
+        $line.=str_repeat(" ",51-strlen($line));//on essaie de tout aligner les prix
+        //51 =nombre de _ jusque le |
+        $line.="|".$data_reservation["prix_nuitee"]."\n";
+        $content.=$line;
+        $line="  ".$data_reservation["date_debut"]." - ".$data_reservation["date_fin"];//15 caractère
+        $line.=str_repeat(" ",51-strlen($line));
+        $line.="|".$data_reservation["prix_total"]."\n";
+        $content.=$line;
+        return $content;
     }
 
     /**
-     * @param $db DatabaseObject
      * @param $data_consomation array-key les information ser les consomation (nombre, date, prix, id..)
      * @return string un text représentant la partie de la facture sur les consomation
      */
-    static function GenererConsomationFacture($db, $data_consomation){
+    static function GenererConsomationFacture($data_consomation){
         return "";
     }
 
@@ -94,7 +109,7 @@ class Bill
      * @param $data_total float prix total des nuitée plus consomation
      * @return string un text représantant le bas de la facture
      */
-    static function GenererTotalFacture($db, $data_total)
+    static function GenererTotalFacture($data_total)
     {
         return "";
     }

@@ -12,7 +12,8 @@ $pdo=dbConnect();
 $error="";
 if(isset($_POST["id_reservation"])){
     // 1.On récupère les datas de la bdd
-    $data_client=Bill::info($pdo,$_SESSION['user_id']);
+    $data_client=Bill::info($pdo,$_POST["id_reservation"]);
+    //mieu vaut utiliser le model client et récupérer ses datas avec son id dans la session
     $data_book=Bill::room($pdo,$_POST["id_reservation"]);
     $data_consomations=Bill::consumption($pdo,$_POST["id_reservation"]);
 
@@ -20,15 +21,15 @@ if(isset($_POST["id_reservation"])){
     $content = "Sejour hotel Blanc et Bleu.\n";
     $content.="Vous etes la réservation : ".$_POST["id_reservation"]."\n";
     //on génère les différents contenue de la réservations :
-    $content.=Bill::GenererClientFacture($pdo,$_SESSION["user_id"]);
-    $content.=Bill::GenererReservationFacture($pdo,$_POST["id_reservation"]);
-    $content.=Bill::GenererConsomationFacture($pdo,$_POST["id_reservation"]);
+    $content.=Bill::GenererClientFacture($data_client);
+    $content.=Bill::GenererReservationFacture($data_book);
+    $content.=Bill::GenererConsomationFacture($data_consomations);
     $prix_total=$data_book["prix_total"];
     foreach ($data_consomations as $prix){
         $prix_total+=$prix["prix_total"];
         //calcule du prix total somme de la chambre et des consomations
     }
-    $content.=Bill::GenererTotalFacture($pdo,$prix_total);
+    $content.=Bill::GenererTotalFacture($prix_total);
 
 
     // 3. Définir le nom du fichier
