@@ -1,9 +1,9 @@
 let global_reservation;
 function load_sejour(reservation){
-    console.log(reservation);
+    //console.log(reservation);
     let template=document.getElementById("template").children[0];
     let AllSejour=document.getElementById("ALL");
-    console.log(template.innerHTML);
+    //console.log(template.innerHTML);
     reservation.forEach(sejour =>{
         let resa=template.cloneNode(true);
         resa.querySelector(".hotel").innerText="Hotel Blanc & Bleu - "+sejour["hotel"];
@@ -23,6 +23,8 @@ function load_sejour(reservation){
             payer.classList.remove("badge-unpaid");
             payer.innerText="Payer";
         }
+        let t=resa.querySelector(".id_reservation");
+        t.setAttribute("value",sejour["id_sejour"])
         AllSejour.appendChild(resa);
     })
 }

@@ -74,7 +74,10 @@
             <span class="statut-paiement badge badge-paid"></span>
         </div>
             <div class="mb-2 col">
-            <button class="btn btn-primary btn-download">Télécharger la facture</button>
+                <form method="post" action="../billing/bill.php">
+                    <input type="hidden" name="id_reservation" class="id_reservation">
+                    <input type="submit" class="btn btn-primary btn-download" value="Télécharger la facture">
+                </form>
             </div>
         </div>
     </div>

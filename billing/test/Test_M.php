@@ -1,7 +1,7 @@
 <?php
 if (isset($_POST['download'])) {
     // 1. Définir le contenu du fichier
-    $content = "Bonjour, ceci est un fichier généré en PHP.\n";
+    $content = "Sejour hotel Blanc et Bleu.\n";
 
     // 2. Définir le nom du fichier
     $filename = "fichier_generé.txt";
