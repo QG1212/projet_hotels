@@ -14,6 +14,19 @@ class Client_Model{
         return $user;
     }
 
+    /** permet d'obtenir les coordonnées d'un client
+     * @param $id id du client
+     * @param $pdo base de données où on se connecte
+     * @return user Le client correspondant
+     */
+    static function GetCoordsFromId($id_client,$pdo){
+        $stmt = $pdo->prepare("SELECT id_client, email, tel FROM Client WHERE $id_client = :id_client");
+        $stmt->bindParam(':id_client', $id_client);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $user;
+    }
+
     /**
      * @param $pdo database
      * Les Informations du client

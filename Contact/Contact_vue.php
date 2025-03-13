@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -43,7 +44,17 @@
         </div>
     </div>
 </nav>
-<h1>Page Contact (en dev)</h1>
-<p>En cas de pépin contactez le dev disparu => Tom CABANO au 07 85 50 10 51</p>
-<p> Cette page affichera les différents contacts des admins il faut donc crée les admins dans la bdd pour ensuite les afficher ici en fonction de l'hotel</p>
-</body>
+<h1>Nous Contacter</h1>
+<?php
+echo "<p>Contacter l'hotel: <i class='bi bi-envelope'></i> Email:".$admin['email']." <i class='bi bi-phone'></i> Téléphone:".$admin['tel'].'</p>
+<p>Contacter à:</p>
+<p>-Caen: 
+<i class="bi bi-envelope"></i>  Email: '.$caen["email"].' <i class="bi bi-phone"></i> Téléphone: '.$caen['tel'].'</p>
+<p>-Brest: 
+<i class="bi bi-envelope"></i> Email: '.$brest["email"].' <i class="bi bi-phone"></i> Téléphone: '.$brest["tel"].'</p>
+<p>-Nantes: 
+<i class="bi bi-envelope"></i> Email: '.$nantes["email"].' <i class="bi bi-phone"></i> Téléphone: '.$nantes["tel"].'</p>
+<p>-Paris:  
+<i class="bi bi-envelope"></i> Email: '.$paris["email"].' <i class="bi bi-phone"></i> Téléphone: '.$paris["tel"].'</p>
+
+</body>';
