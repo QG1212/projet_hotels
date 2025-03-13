@@ -13,7 +13,7 @@ $error="";
 if(isset($_POST["id_reservation"])){
     // 1.On récupère les datas de la bdd
     $data_client=Bill::info($pdo,$_POST["id_reservation"]);
-    //mieu vaut utiliser le model client et récupérer ses datas avec son id dans la session
+    //mieux vaut utiliser le model client et récupérer ses datas avec son id dans la session
     $data_book=Bill::room($pdo,$_POST["id_reservation"]);
     $data_consomations=Bill::consumption($pdo,$_POST["id_reservation"]);
 

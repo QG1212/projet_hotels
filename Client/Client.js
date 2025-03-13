@@ -1,3 +1,4 @@
+'use strict'
 let global_reservation;
 function load_sejour(reservation){
     //console.log(reservation);
@@ -24,7 +25,7 @@ function load_sejour(reservation){
             payer.innerText="Payer";
         }
         let t=resa.querySelector(".id_reservation");
-        t.setAttribute("value",sejour["id_sejour"])
+        t.setAttribute("value",sejour["id_sejour"]);
         AllSejour.appendChild(resa);
     })
 }
