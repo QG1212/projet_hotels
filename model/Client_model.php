@@ -20,8 +20,8 @@ class Client_Model{
      * @return user Le client correspondant
      */
     static function GetCoordsFromId($id_client,$pdo){
-        $stmt = $pdo->prepare("SELECT id_client, email, tel FROM Client WHERE $id_client = :id_client");
-        $stmt->bindParam(':id_client', $id_client);
+        $stmt = $pdo->prepare("SELECT id_client, email, tel FROM Client WHERE id_client = :id_client");
+        $stmt->bindValue(':id_client', $id_client);
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         return $user;
