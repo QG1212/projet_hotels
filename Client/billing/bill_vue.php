@@ -13,8 +13,6 @@
 </head>
 <body>
 
-    <script src="../ajax.js"></script>
-
 
     <!-- Barre de Navigation -->
     <nav class="navbar navbar-expand-lg">
@@ -33,7 +31,7 @@
                     <li class="nav-item"><a class="nav-link" href="../Estimation/Estimation.php">Estimation prix</a></li>
                     <!--Idées future de css/html mais la pas le temps -->
                     <!--<li class="nav-item"><a class="nav-link" href="#chambres">Chambres</a></li>-->
-                    <li class="nav-item"><a class="nav-link" href="../Client/Client_Controleur.php">Mes Réservations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../affichage_reservation/Client_Controleur.php">Mes Réservations</a></li>
                     <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation_E1.php">Réserver un nouveau séjour</a></li>
                     <li class="nav-item"><a class="nav-link" href="../Contact/Contact.php">Contact</a></li>            </ul>
 
@@ -51,5 +49,5 @@
     <!-- Script Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../ajax.js"></script>
+    <script src="../../Serveur/database/ajax.js"></script>
 </body>

@@ -1,6 +1,6 @@
 <?php
 
-require_once ('../database/constants.php');
+
 class Client_Model{
     /**
      * @param $email email du client rechercher

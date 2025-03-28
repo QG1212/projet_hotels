@@ -34,12 +34,12 @@
                 <li class="nav-item"><a class="nav-link" href="../Estimation/Estimation.php">Estimation prix</a></li>
                 <!--Idées future de css/html mais la pas le temps -->
                 <!--<li class="nav-item"><a class   ="nav-link" href="#chambres">Chambres</a></li>-->
-                <li class="nav-item"><a class="nav-link" href="../Client/Client_Controleur.php">Mes Réservations</a></li>
+                <li class="nav-item"><a class="nav-link" href="../affichage_reservation/Client_Controleur.php">Mes Réservations</a></li>
                 <li class="nav-item"><a class="nav-link" href="../Reservation/Reservation_E1.php">Réserver un nouveau séjour</a></li>
                 <li class="nav-item"><a class="nav-link" href="../Contact/Contact.php">Contact</a></li>            </ul>
 
             <!-- Icône de connexion -->
-            <a href="Profil_Client/Profil.php" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
+            <a href="#" class="nav-link"><i class="bi bi-person-circle fs-4"></i></a>
         </div>
     </div>
 </nav>

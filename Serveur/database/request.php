@@ -1,5 +1,5 @@
 <?php
-require_once('../database/constants.php');
+require_once('constants.php');
 require_once('../model/Reservation_model.php');
 // Database connexion.
 $pdo = dbConnect();

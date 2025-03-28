@@ -1,7 +1,7 @@
 <?php
 
-require_once("../database/constants.php");
-require_once("../model/bill_model.php");
+require_once("../../Serveur/database/constants.php");
+require_once("../../Serveur/model/bill_model.php");
 
 session_start();
 if(empty($_SESSION["user_id"])){

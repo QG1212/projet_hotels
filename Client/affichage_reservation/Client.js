@@ -31,7 +31,7 @@ function load_sejour(reservation){
 }
 function main(){
     //const MyIntervall=setInterval(ajaxRequest,1000,"GET","php/timestamp.php",displayTimestamp);
-    ajaxRequest("GET","../database/request.php/sejour",load_sejour);
+    ajaxRequest("GET","../../Serveur/database/request.php/sejour",load_sejour);
 }
 
 window.addEventListener("DOMContentLoaded",main ,false);

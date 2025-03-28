@@ -1,7 +1,7 @@
 <?php
-require_once("../database/constants.php");
-require_once("../model/Client_model.php");
-require_once("../model/login_model.php");
+require_once("../../Serveur/database/constants.php");
+require_once("../../Serveur/model/Client_model.php");
+require_once("../../Serveur/model/login_model.php");
 //connexion bdd
 /*
 $host = 'localhost';
@@ -33,7 +33,7 @@ $pdo=dbConnect();
         if ($user && password_verify($password, $user['fleure'])) { //si utilisateur existe et mdp correct
             $_SESSION['user_id'] = $user['id_client']; //stockage de l'ID utilisateur dans la session
             echo "Connexion réussie vous allez être redirigé vers la page client";
-            header('Location: ../Client/Client_Controleur.php');
+            header('Location: ../affichage_reservation/Client_Controleur.php');
         } else {
             echo "Email ou mot de passe incorrect.";
         }

@@ -1,8 +1,8 @@
 <?php
-require_once("../model/Hotel_model.php");
-require_once("../model/Chambre_model.php");
-require_once("../database/constants.php");
-require_once("../model/Reservation_model.php");
+require_once("../../Serveur/model/Hotel_model.php");
+require_once("../../Serveur/model/Chambre_model.php");
+require_once("../../Serveur/database/constants.php");
+require_once("../../Serveur/model/Reservation_model.php");
 session_start();
 if(empty($_SESSION["user_id"])){
     header("Location: ../login/login.php");
@@ -15,7 +15,7 @@ $retour="";
 if(!empty($_POST["chambre"])){
     $bool=\model\Reservation::AddReservation($pdo,$_SESSION["user_id"],$_POST["date_debut"],$_POST["date_fin"],$_POST["chambre"]);
     if($bool){
-        header("Location: ../client/Client_Controleur.php");
+        header("Location: ../affichage_reservation/Client_Controleur.php");
         //ajout réussit on envoie sur la page des réservations clients
     }
     else{

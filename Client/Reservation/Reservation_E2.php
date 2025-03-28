@@ -1,8 +1,8 @@
 <?php
-require_once("../model/Hotel_model.php");
-require_once("../model/Chambre_model.php");
-require_once("../database/constants.php");
-require_once("../model/Reservation_model.php");
+require_once("../../Serveur/model/Hotel_model.php");
+require_once("../../Serveur/model/Chambre_model.php");
+require_once("../../Serveur/database/constants.php");
+require_once("../../Serveur/model/Reservation_model.php");
 session_start();
 if(empty($_SESSION["user_id"])){
     header("Location: ../login/login.php");
