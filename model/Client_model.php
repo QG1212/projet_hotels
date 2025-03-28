@@ -1,4 +1,6 @@
 <?php
+
+require_once ('../database/constants.php');
 class Client_Model{
     /**
      * @param $email email du client rechercher
@@ -8,6 +10,19 @@ class Client_Model{
     static function GetClientEmail($email,$pdo){
         $stmt = $pdo->prepare("SELECT id_client, fleure FROM Client WHERE email = :email");
         $stmt->execute(['email' => $email]);
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $user;
+    }
+
+    /** permet d'obtenir les coordonnées d'un client
+     * @param $id id du client
+     * @param $pdo base de données où on se connecte
+     * @return user Le client correspondant
+     */
+    static function GetCoordsFromId($id_client,$pdo){
+        $stmt = $pdo->prepare("SELECT id_client, email, tel FROM Client WHERE id_client = :id_client");
+        $stmt->bindValue(':id_client', $id_client);
+        $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         return $user;
     }
