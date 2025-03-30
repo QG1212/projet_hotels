@@ -3,7 +3,7 @@
 
 class Client_Model{
 
-    static function GetClient($id_client){
+    static function getClient($id_client){
         $pdo = dbConnect();
         $stmt = $pdo->prepare("SELECT prenom, nom, email, tel FROM Client WHERE id_client = id_client");
         $stmt->execute();

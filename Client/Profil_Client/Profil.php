@@ -1,6 +1,5 @@
 <?php
-require_once ("chemin tah les ouf")
-session_start();
+require_once ("../../Serveur/model/Client_model.php");
 if(!isset($_SESSION['user_id'])){
     header('Location: ../login/login.php');
 }
