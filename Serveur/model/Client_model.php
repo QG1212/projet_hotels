@@ -2,6 +2,14 @@
 
 
 class Client_Model{
+
+    static function GetClient($id_client){
+        $pdo = dbConnect();
+        $stmt = $pdo->prepare("SELECT prenom, nom, email, tel FROM Client WHERE id_client = id_client");
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $user;
+    }
     /**
      * @param $email email du client rechercher
      * @param $pdo database connecter
