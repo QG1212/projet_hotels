@@ -1,3 +1,4 @@
+
 drop table if exists Classe CASCADE ;
 create table Classe
 (
@@ -6,6 +7,13 @@ create table Classe
 PRIMARY KEY(id_classe)
 );
 
+drop table if exists Localisation CASCADE ;
+create table Localisation
+(
+    id_localisation int not null UNIQUE ,
+    denomination varchar(50) not null,
+    PRIMARY KEY(id_localisation)
+);
 
 drop table if exists Categorie CASCADE ;
 create table Categorie
@@ -33,8 +41,10 @@ create table Hotel
 	id_hotel SERIAL,
 	nom varchar(50) not null,
 	id_classe int not null,
+    id_localisation int not null,
 PRIMARY KEY(id_hotel),
-FOREIGN KEY (id_classe) REFERENCES Classe (id_classe)
+FOREIGN KEY (id_classe) REFERENCES Classe (id_classe),
+FOREIGN KEY (id_localisation) REFERENCES Localisation (id_localisation)
 );
 
 
@@ -109,4 +119,34 @@ create table Conso_client
 PRIMARY KEY(id_cc),
 FOREIGN KEY (id_conso) REFERENCES Conso (id_conso),
 FOREIGN KEY (id_sejour) REFERENCES Reservation (id_sejour)
+);
+
+drop table if exists Employe CASCADE ;
+create table Employe
+(
+    id_employe SERIAL,
+    email varchar(320) not null UNIQUE,
+    CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
+	metier varchar(100) not null,
+	id_localisation in not null,
+	fleure varchar(255) not null,
+	tel varchar(20),
+PRIMARY KEY(id_client),
+FOREIGN KEY (id_localisation) REFERENCES Localisation (id_localisation)
+);
+
+drop table if exists Perm CASCADE ;
+create table Perm
+(
+    id_perm SERIAL,
+    denomination varchar(320) not null UNIQUE,
+PRIMARY KEY(id_perm)
+);
+
+drop table if exists employe_perm CASCADE;
+create table  employe_perm
+(
+    id_perm int not null,
+    id_employe int not null,
+PRIMARY KEY(id_perm,id_employe)
 );

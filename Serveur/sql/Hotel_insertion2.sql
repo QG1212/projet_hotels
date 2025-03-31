@@ -1,4 +1,10 @@
 insert into Classe(denomination) values ('*'), ('**'), ('***');
+insert into Localisation(id_localisation,denomination) values
+                                                           (1,"Siege"),
+                                                    (2,"Caen"),
+                                                    (3,"Paris"),
+                                                    (4,"Nantes"),
+                                                    (5,"Brest");
 
 insert into Categorie(denomination) values ('Simple'), ('Double'), ('Double avec salle de bain');
 
@@ -19,11 +25,11 @@ insert into Prix_chambre(id_classe, id_categorie, prix) values
 (2, 1, 59), (2, 2, 89), (2, 3, 99),
 (3, 1, 69), (3, 2, 99), (3, 3, 109);
 
-insert into Hotel(nom, id_classe) values
-('Hotel de Caen', 1),
-('Hotel de Brest', 1),
-('Hotel de Paris', 2),
-('Hotel de Nantes', 2);
+insert into Hotel(nom, id_classe,id_localisation) values
+('Hotel de Caen', 1,2),
+('Hotel de Brest', 1,5),
+('Hotel de Paris', 2,3),
+('Hotel de Nantes', 2,4);
 
 insert into Conso(denomination)
 values ('Petit déjeuner'),
