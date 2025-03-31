@@ -2,6 +2,13 @@ insert into Classe(denomination) values ('*'), ('**'), ('***');
 
 insert into Categorie(denomination) values ('Simple'), ('Double'), ('Double avec salle de bain');
 
+INSERT INTO Client(email,nom,prenom,fleure,tel) values
+                                                    ('caen_secretary@gmail.com','caen','secretary','$2y$10$yeJoaQaPnsuiRibgSAE/IeUQkqDfJm4CPMMzGaIcdLmMrJuWl4Y26','021408099'),
+                                                    ('nantes_secretary@hotmail.com','nantes','secretary','$2y$10$iaC3DUq60Ph5VWphPj/iGuWtmvj.9g3yNm5e3tt4Ok3SbwK0XIgMW','024450151'),
+                                                    ('brest_secretary@gmail.com','brest','secretary','$2y$10$Q0Dwfh5AlkAgkasHT4J17O5L9mUYBgFlIr7RuV9ciABbnpsdZBvS.','022930878'),
+                                                    ('paris_secretary@gmail.com','paris','secretary','$2y$10$rdeELM94Fqll6PxLMzzboeYO.tYGSHT3xqrXCZeRFe3B6vW2Zp46u','017573186'),
+                                                    ('hotel_admin@gmail.com','hotel','admin','$2y$10$uxnDjDxAvolv61t/hEJ79uOHIoEXBUScAoQDP7OLgqGhC.bn.tgsS','017525159');;
+
 insert into Client(email,nom,prenom,fleure,tel) values 
 ('jean-dupond@gmail.com','dupond','jean','$2y$10$ye91quGnMYKhCQz4S93F7uADqWY.KW3tRI3kIrxA9qx2dqwTMLJGq','0607080990'),
 ('tom_cabane@hotmail.com','cabanau','tom','$2y$10$vQnMth9coGt/43lmCT0CXeEeOV851ZrRWu.QozEuO4HGxpadbTs.G','0785501051'),
@@ -72,31 +79,31 @@ insert into Chambre(id_hotel, id_categorie, numero_chambre)
 select id_hotel+2, id_categorie,numero_chambre from Chambre;
 
 insert into Reservation(id_chambre, date_debut, date_fin, date_arrivee, id_client, paiement) values
-(1,'2022-02-01', '2022-02-12', '2022-02-01', 1, NULL),
-(1,'2022-02-12', '2022-02-13', '2022-02-12', 1, NULL),
-(1,'2022-02-15', '2022-02-21', NULL, 1, NULL),
-(1,'2022-02-25', '2022-02-26', NULL, 1, NULL),
-(1,'2022-02-27', '2022-02-28', NULL, 2, NULL),
-(2,'2022-02-15', '2022-02-18', NULL, 2, NULL),
-(2,'2022-02-20', '2022-02-25', NULL, 2, NULL),
-(2,'2022-02-25', '2022-02-28', NULL, 2, NULL),
-(3,'2022-02-20', '2022-02-27', NULL, 2, NULL),
+(1,'2022-02-01', '2022-02-12', '2022-02-01', 6, NULL),
+(1,'2022-02-12', '2022-02-13', '2022-02-12', 6, NULL),
+(1,'2022-02-15', '2022-02-21', NULL, 6, NULL),
+(1,'2022-02-25', '2022-02-26', NULL, 6, NULL),
+(1,'2022-02-27', '2022-02-28', NULL, 6, NULL),
+(2,'2022-02-15', '2022-02-18', NULL, 6, NULL),
+(2,'2022-02-20', '2022-02-25', NULL, 6, NULL),
+(2,'2022-02-25', '2022-02-28', NULL, 6, NULL),
+(3,'2022-02-20', '2022-02-27', NULL, 6, NULL),
 
-(4,'2022-02-15', '2022-02-16', NULL, 3, NULL),
-(4,'2022-02-16', '2022-02-22', NULL, 3, NULL),
-(4,'2022-02-27', '2022-02-28', NULL, 3, NULL),
-(5,'2022-02-16', '2022-02-18', NULL, 2, NULL),
-(5,'2022-02-19', '2022-02-21', NULL, 2, NULL),
-(5,'2022-02-22', '2022-02-23', NULL, 1, NULL),
-(5,'2022-02-27', '2022-02-28', NULL, 2, NULL),
-(6,'2022-02-05', '2022-02-15', '2022-02-05', 1, NULL),
-(6,'2022-02-16', '2022-02-22', NULL, 3, NULL),
-(6,'2022-02-24', '2022-02-26', NULL, 3, NULL),
-(6,'2022-02-27', '2022-02-28', NULL, 1, NULL),
-(7,'2022-02-15', '2022-02-20', NULL, 1, NULL),
+(4,'2022-02-15', '2022-02-16', NULL, 7, NULL),
+(4,'2022-02-16', '2022-02-22', NULL, 7, NULL),
+(4,'2022-02-27', '2022-02-28', NULL, 7, NULL),
+(5,'2022-02-16', '2022-02-18', NULL, 7, NULL),
+(5,'2022-02-19', '2022-02-21', NULL, 7, NULL),
+(5,'2022-02-22', '2022-02-23', NULL, 7, NULL),
+(5,'2022-02-27', '2022-02-28', NULL, 6, NULL),
+(6,'2022-02-05', '2022-02-15', '2022-02-05', 7, NULL),
+(6,'2022-02-16', '2022-02-22', NULL, 6, NULL),
+(6,'2022-02-24', '2022-02-26', NULL, 7, NULL),
+(6,'2022-02-27', '2022-02-28', NULL, 8, NULL),
+(7,'2022-02-15', '2022-02-20', NULL, 8, NULL),
 
-(8,'2022-02-01', '2022-02-12', '2022-02-01', 1, NULL),
-(8,'2022-02-16', '2025-01-31', '2022-02-16', 1, NULL);
+(8,'2022-02-01', '2022-02-12', '2022-02-01', 8, NULL),
+(8,'2022-02-16', '2025-01-31', '2022-02-16', 8, NULL);
 
 INSERT INTO Conso_client(id_sejour, id_conso, date_conso, nombre) VALUES
 (1, 1, '2022-02-02', 2),
