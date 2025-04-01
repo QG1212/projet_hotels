@@ -59,6 +59,8 @@ PRIMARY KEY(id_chambre),
 FOREIGN KEY (id_hotel) REFERENCES Hotel (id_hotel),
 FOREIGN KEY (id_categorie) REFERENCES Categorie (id_categorie)
 );
+
+
 drop table if exists Client CASCADE;
 create table Client 
 (	
@@ -149,4 +151,12 @@ create table  employe_perm
     id_perm int not null,
     id_employe int not null,
 PRIMARY KEY(id_perm,id_employe)
+);
+
+drop table if exists metier CASCADE;
+create table  metier
+(
+    id_metier SERIAL,
+    denomination varchar(50) not null,
+    PRIMARY KEY(id_metier)
 );

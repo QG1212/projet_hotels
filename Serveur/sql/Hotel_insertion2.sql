@@ -1,12 +1,13 @@
 insert into Classe(denomination) values ('*'), ('**'), ('***');
-insert into Localisation(id_localisation,denomination) values
-                                                           (1,"Siege"),
-                                                    (2,"Caen"),
-                                                    (3,"Paris"),
-                                                    (4,"Nantes"),
-                                                    (5,"Brest");
+
+insert into Localisation(id_localisation,denomination) values (1,'Siege'),
+                                                    (2,'Caen'),
+                                                    (3,'Paris'),
+                                                    (4,'Nantes'),
+                                                    (5,'Brest');
 
 insert into Categorie(denomination) values ('Simple'), ('Double'), ('Double avec salle de bain');
+
 
 INSERT INTO Client(email,nom,prenom,fleure,tel) values
                                                     ('caen_secretary@gmail.com','caen','secretary','$2y$10$yeJoaQaPnsuiRibgSAE/IeUQkqDfJm4CPMMzGaIcdLmMrJuWl4Y26','021408099'),
@@ -139,4 +140,16 @@ INSERT INTO Conso_client(id_sejour, id_conso, date_conso, nombre) VALUES
 (22, 4, '2022-02-05', 3),
 (22, 5, '2022-02-05', 2),
 (22, 1, '2022-02-06', 2);
+
+insert into perm (id_perm, denomination) values (default,'All'),
+                                                (default,'Gestion hotel'),
+                                                (default,'Gestion reservation'),
+                                                (default,'Gestion Consomation'),
+                                                (default,'Gestion paiment');
+insert into metier(id_metier, denomination) values (default,'PDG'),
+                                                   (default,'Responsable hotel'),
+                                                   (default,'Secretère'),
+                                                   (default,'Comptable'),
+                                                   (default,'Bar tender'),
+                                                   (default,'Logistique');
 
