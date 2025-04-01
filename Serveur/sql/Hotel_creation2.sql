@@ -130,10 +130,10 @@ create table Employe
     email varchar(320) not null UNIQUE,
     CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
 	metier varchar(100) not null,
-	id_localisation in not null,
+	id_localisation int not null,
 	fleure varchar(255) not null,
 	tel varchar(20),
-PRIMARY KEY(id_client),
+PRIMARY KEY(id_employe),
 FOREIGN KEY (id_localisation) REFERENCES Localisation (id_localisation)
 );
 
@@ -145,14 +145,6 @@ create table Perm
 PRIMARY KEY(id_perm)
 );
 
-drop table if exists employe_perm CASCADE;
-create table  employe_perm
-(
-    id_perm int not null,
-    id_employe int not null,
-PRIMARY KEY(id_perm,id_employe)
-);
-
 drop table if exists metier CASCADE;
 create table  metier
 (
@@ -160,3 +152,15 @@ create table  metier
     denomination varchar(50) not null,
     PRIMARY KEY(id_metier)
 );
+
+drop table if exists employe_perm CASCADE;
+create table  employe_perm
+(
+    id_perm int not null,
+    id_employe int not null,
+PRIMARY KEY(id_perm,id_employe),
+FOREIGN KEY (id_perm) REFERENCES Perm (id_perm),
+FOREIGN KEY (id_employe) REFERENCES Employe (id_employe)
+);
+
+

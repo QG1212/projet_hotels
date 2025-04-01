@@ -10,16 +10,14 @@ insert into Categorie(denomination) values ('Simple'), ('Double'), ('Double avec
 
 
 INSERT INTO Client(email,nom,prenom,fleure,tel) values
-                                                    ('caen_secretary@gmail.com','caen','secretary','$2y$10$yeJoaQaPnsuiRibgSAE/IeUQkqDfJm4CPMMzGaIcdLmMrJuWl4Y26','021408099'),
-                                                    ('nantes_secretary@hotmail.com','nantes','secretary','$2y$10$iaC3DUq60Ph5VWphPj/iGuWtmvj.9g3yNm5e3tt4Ok3SbwK0XIgMW','024450151'),
-                                                    ('brest_secretary@gmail.com','brest','secretary','$2y$10$Q0Dwfh5AlkAgkasHT4J17O5L9mUYBgFlIr7RuV9ciABbnpsdZBvS.','022930878'),
-                                                    ('paris_secretary@gmail.com','paris','secretary','$2y$10$rdeELM94Fqll6PxLMzzboeYO.tYGSHT3xqrXCZeRFe3B6vW2Zp46u','017573186'),
-                                                    ('hotel_admin@gmail.com','hotel','admin','$2y$10$uxnDjDxAvolv61t/hEJ79uOHIoEXBUScAoQDP7OLgqGhC.bn.tgsS','017525159');;
-
-insert into Client(email,nom,prenom,fleure,tel) values 
-('jean-dupond@gmail.com','dupond','jean','$2y$10$ye91quGnMYKhCQz4S93F7uADqWY.KW3tRI3kIrxA9qx2dqwTMLJGq','0607080990'),
-('tom_cabane@hotmail.com','cabanau','tom','$2y$10$vQnMth9coGt/43lmCT0CXeEeOV851ZrRWu.QozEuO4HGxpadbTs.G','0785501051'),
-('quentino_vibes@gmail.com','vibes','quentin','$2y$10$Q0Dwfh5AlkAgkasHT4J17O5L9mUYBgFlIr7RuV9ciABbnpsdZBvS.','0769300878');
+                                                    ('mathis_letellier@isen.com','amazone','jean','$2y$10$lJpP6clTxzGbWoka7hBl8OPMGDV.XLMIve4G8IqZbvTVu3teg5FoO','021408099'),
+                                                    ('tom_cabano@isen.com','youstone','jean','$2y$10$Av8ZaBSvCH2SdvweGQ2wWOVX2qNpVJ6eUjySIA9ToncNn8jldc3Hq','024450151'),
+                                                    ('etienne_dupres@isen.com','patrique','jean','$2y$10$btWHDum0Qgat2OGhZgUIautbs6VLSE0IRUHQjRpcI9b0rZgCsmpCi','022930878'),
+                                                    ('quentin_godefroid@isen.com','jeremy','jean','$2y$10$rfwx5U520NYjerP/g.aRxeVg19p9eE5c4YHup7VX.erM1uiCsIwlu','017573186'),
+                                                    ('roi_du_jeux@oui.gaga','antoine','jean','$2y$10$Y/uxTygOTob1jLz9kApNreGufryWq5IODkCxFOq5UuI6DAVZsNH5u','017525159'),
+                                                    ('jean-dupond@gmail.com','dupond','jean','$2y$10$ye91quGnMYKhCQz4S93F7uADqWY.KW3tRI3kIrxA9qx2dqwTMLJGq','0607080990'),
+                                                    ('tom_cabane@hotmail.com','cabanau','tom','$2y$10$vQnMth9coGt/43lmCT0CXeEeOV851ZrRWu.QozEuO4HGxpadbTs.G','0785501051'),
+                                                    ('quentino_vibes@gmail.com','vibes','quentin','$2y$10$Q0Dwfh5AlkAgkasHT4J17O5L9mUYBgFlIr7RuV9ciABbnpsdZBvS.','0769300878');
 
 insert into Prix_chambre(id_classe, id_categorie, prix) values
 (1, 1, 39), (1, 2, 59), (1, 3, 69),
@@ -146,6 +144,7 @@ insert into perm (id_perm, denomination) values (default,'All'),
                                                 (default,'Gestion reservation'),
                                                 (default,'Gestion Consomation'),
                                                 (default,'Gestion paiment');
+
 insert into metier(id_metier, denomination) values (default,'PDG'),
                                                    (default,'Responsable hotel'),
                                                    (default,'Secretère'),
@@ -153,3 +152,16 @@ insert into metier(id_metier, denomination) values (default,'PDG'),
                                                    (default,'Bar tender'),
                                                    (default,'Logistique');
 
+INSERT INTO Employe(email, metier, id_localisation, fleure, tel) values
+                                                    ('caen_secretary@gmail.com',3,2,'$2y$10$CIaoqKE3RoDvdYNSqFysl.1yUfEI.QJQSBACzFCo1ASPYxmw04whi','021408099'),
+                                                    ('nantes_secretary@hotmail.com',3,4,'$2y$10$CIaoqKE3RoDvdYNSqFysl.1yUfEI.QJQSBACzFCo1ASPYxmw04whi','024450151'),
+                                                    ('brest_secretary@gmail.com',3,5,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','022930878'),
+                                                    ('paris_secretary@gmail.com',3,3,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017573186'),
+                                                    ('hotel_pdg@gmail.com',1,1,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159');
+
+INSERT INTO employe_perm(id_perm, id_employe) values
+                                                  (2,1),
+                                                  (2,2),
+                                                  (2,3),
+                                                  (2,4),
+                                                  (1,5);
