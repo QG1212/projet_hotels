@@ -48,38 +48,38 @@
 <div class="container-form">
     <h1 class="text-center mb-4">Votre Profil</h1>
 
-    <form id="profile-form">
+    <form id="profile-form" action="Profil.php" method="post">
         <!-- Prénom -->
         <div class="mb-3">
             <label for="prenom" class="form-label">Prénom :</label>
-            <input type="text" id="prenom" class="form-control" value="<?php $prenom ?>" required>
+            <input type="text" id="prenom" name="prenom" class="form-control" value="<?php echo $prenom ?>" required>
         </div>
 
         <!-- Nom -->
         <div class="mb-3">
             <label for="nom" class="form-label">Nom :</label>
-            <input type="text" id="nom" class="form-control" value="<?php $nom ?>" required>
+            <input type="text" id="nom" name="nom" class="form-control" value="<?php echo $client["nom"] ?>" required>
         </div>
 
         <!-- Email -->
         <div class="mb-3">
             <label for="email" class="form-label">Email :</label>
-            <input type="email" id="email" class="form-control" value="<?php $email ?>" required>
+            <input type="email" id="email" name="email" class="form-control" value="<?php echo $client["email"] ?>" required>
         </div>
 
         <!-- Téléphone -->
         <div class="mb-3">
             <label for="tel" class="form-label">Numéro de téléphone :</label>
-            <input type="tel" id="tel" class="form-control" value="<?php $tel ?>" pattern="^\+?[0-9]{10,15}$" required>
+            <input type="tel" id="tel" name="tel" class="form-control" value="<?php echo $client["tel"] ?>" pattern="^\+?[0-9]{10,15}$" required>
         </div>
 
         <!-- Bouton de mise à jour -->
-        <button type="button" class="btn btn-primary w-100" onclick="mettreAJourProfil()">Mettre à jour</button>
+        <input type="submit" class="btn btn-primary w-100" value="Modifier Profil">
     </form>
-<form action="../Login/login.php" method="post" class="mt-3">
-    <input type="hidden" name="deconnection" value="true">
-    <input type="submit" value="Se déconnecter" class="btn btn-outline-danger w-100">
-</form>
+    <form action="../Login/login.php" method="post" class="mt-3">
+        <input type="hidden" name="deconnection" value="true">
+        <input type="submit" value="Se déconnecter" class="btn btn-outline-danger w-100">
+    </form>
 </div>
 
 <!-- Script Bootstrap -->
