@@ -63,5 +63,31 @@ class Client_Model{
             die("Erreur lors de l'inscription : " . $e->getMessage());
         }
     }
+
+    /**
+     * Modifie les datas d'un client
+     *
+     * @param $pdo DatabaseObject
+     * @param $id_client int id du client dont on modifie ses datas
+     * @param $nom string nouveau nom
+     * @param $prenom string nouveau prenom
+     * @param $tel string nouveau numero de tel
+     * @param $mail string nouveau mail
+     * @return void
+     */
+    static function UpdateClient($pdo, $id_client, $nom, $prenom, $tel,$email){
+        $stmt=$pdo->prepare("UPDATE Client 
+                                SET prenom = :prenom, 
+                                    nom = :nom, 
+                                    email = :mail, 
+                                    tel = :tel 
+                                WHERE id_client = :id_client;");
+        $stmt->bindParam(':prenom', $prenom);
+        $stmt->bindParam(':nom', $nom);
+        $stmt->bindParam(':mail', $email);
+        $stmt->bindParam(':tel', $tel);
+        $stmt->bindParam(':id_client', $id_client);
+        $stmt->execute();
+    }
     }
 ?>
