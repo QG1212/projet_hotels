@@ -3,6 +3,17 @@
 
 class Client_Model{
     /**
+     * @param $id_client id du client qu'on recherche
+     * @return mixed data du client
+     *
+     */
+    static function getClient($id_client,$pdo){
+        $stmt = $pdo->prepare("SELECT prenom, nom, email, tel FROM Client WHERE id_client = :id_client;");
+        $stmt->bindParam(":id_client", $id_client);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    /**
      * @param $email email du client rechercher
      * @param $pdo database connecter
      * @return user Le client qui possede l'email ( toutes ses datas)
