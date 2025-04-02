@@ -48,7 +48,7 @@
 <div class="container-form">
     <h1 class="text-center mb-4">Votre Profil</h1>
 
-    <form id="profile-form">
+    <form id="profile-form" action="Profil.php" method="post">
         <!-- Prénom -->
         <div class="mb-3">
             <label for="prenom" class="form-label">Prénom :</label>
@@ -74,7 +74,7 @@
         </div>
 
         <!-- Bouton de mise à jour -->
-        <button type="button" class="btn btn-primary w-100" onclick="mettreAJourProfil()">Mettre à jour</button>
+        <button type="submit" class="btn btn-primary w-100" value="Mettre à jour"></button>
     </form>
 <form action="../Login/login.php" method="post" class="mt-3">
     <input type="hidden" name="deconnection" value="true">
