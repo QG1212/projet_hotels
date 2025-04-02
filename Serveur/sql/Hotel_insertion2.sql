@@ -152,12 +152,12 @@ insert into metier(id_metier, denomination) values (default,'PDG'),
                                                    (default,'Bar tender'),
                                                    (default,'Logistique');
 
-INSERT INTO Employe(email, metier, id_localisation, fleure, tel) values
-                                                    ('caen_secretary@gmail.com',3,2,'$2y$10$CIaoqKE3RoDvdYNSqFysl.1yUfEI.QJQSBACzFCo1ASPYxmw04whi','021408099'),
-                                                    ('nantes_secretary@hotmail.com',3,4,'$2y$10$CIaoqKE3RoDvdYNSqFysl.1yUfEI.QJQSBACzFCo1ASPYxmw04whi','024450151'),
-                                                    ('brest_secretary@gmail.com',3,5,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','022930878'),
-                                                    ('paris_secretary@gmail.com',3,3,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017573186'),
-                                                    ('hotel_pdg@gmail.com',1,1,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159');
+INSERT INTO Employe(email, metier, id_localisation, fleure, tel,nom) values
+                                                    ('caen_secretary@gmail.com',3,2,'$2y$10$CIaoqKE3RoDvdYNSqFysl.1yUfEI.QJQSBACzFCo1ASPYxmw04whi','021408099','dupont'),
+                                                    ('nantes_secretary@hotmail.com',3,4,'$2y$10$CIaoqKE3RoDvdYNSqFysl.1yUfEI.QJQSBACzFCo1ASPYxmw04whi','024450151','lucu'),
+                                                    ('brest_secretary@gmail.com',3,5,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','022930878','Mauvaka'),
+                                                    ('paris_secretary@gmail.com',3,3,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017573186','Atonio'),
+                                                    ('hotel_pdg@gmail.com',1,1,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','Ramos');
 
 INSERT INTO employe_perm(id_perm, id_employe) values
                                                   (2,1),

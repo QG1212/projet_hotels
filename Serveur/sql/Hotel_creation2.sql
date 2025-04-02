@@ -133,6 +133,7 @@ create table Employe
 	id_localisation int not null,
 	fleure varchar(255) not null,
 	tel varchar(20),
+	nom varchar(50),
 PRIMARY KEY(id_employe),
 FOREIGN KEY (id_localisation) REFERENCES Localisation (id_localisation)
 );
