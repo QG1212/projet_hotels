@@ -28,7 +28,6 @@ class Bill
      * @param $booking id de la réservation
      * @return mixed les consomations en lien d'une réservation
      */
-
     static function consumption($db, $booking)
     {
         $request = "select id_cc, conso_client.id_conso, conso_client.id_sejour, date_conso, nombre, prix_conso.prix,prix_conso.prix*nombre sous_total, conso.denomination
@@ -44,6 +43,8 @@ class Bill
         $requested->execute();
         return $requested->fetchALL();
     }
+
+
 
     /**
      * @param $db database
@@ -98,11 +99,29 @@ class Bill
     }
 
     /**
-     * @param $data_consomation array-key les information ser les consomation (nombre, date, prix, id..)
+     * @param $data_consomation array les information ser les consomation
+     * id_cc,id_conso,id_sejour, date_conso, nombre,prix,sous_total,denomination)
      * @return string un text représentant la partie de la facture sur les consomation
      */
     static function GenererConsomationFacture($data_consomation){
-        return "";
+        $content="\n\n";
+        $content.="_____________________________________________________________\n";
+        $content.="Consomation durant le sejour :\n";
+        $content.="___________________________________________________|________\n";
+        foreach ($data_consomation as $conso){
+            $line=$conso["denomination"];
+            $line.="  -  ".$conso["date_conso"];
+            $line.=str_repeat(" ",51-strlen($line));//on essaie de tout aligner les prix
+            //51 =nombre de _ jusque le |
+            $line.="|".$conso["prix"]."\n";
+            $content.=$line;
+            $line="    "."Nombre de produit :".$conso["sous_total"];//15 caractère
+            $line.=str_repeat(" ",51-strlen($line));
+            $line.="|".$conso["sous_total"]."\n";
+            $content.=$line;
+        }
+
+        return $content;
     }
 
     /**
@@ -112,7 +131,13 @@ class Bill
      */
     static function GenererTotalFacture($data_total)
     {
-        return "";
+        $content="\n\n";
+        $content.="___________________________________________________|________\n";
+        $line="Total TTC : ";
+        $line.=str_repeat(" ",51-strlen($line));//on essaie de tout aligner les prix
+        $line.="|".$data_total."\n";
+        $content.=$line;
+        return $content;
     }
 
 

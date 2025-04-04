@@ -107,8 +107,8 @@ insert into Reservation(id_chambre, date_debut, date_fin, date_arrivee, id_clien
 (6,'2022-02-27', '2022-02-28', NULL, 8, NULL),
 (7,'2022-02-15', '2022-02-20', NULL, 8, NULL),
 
-(8,'2022-02-01', '2022-02-12', '2022-02-01', 8, NULL),
-(8,'2022-02-16', '2025-01-31', '2022-02-16', 8, NULL);
+(8,'2022-02-01', '2022-02-12', '2022-02-01', 7, NULL),
+(8,'2022-02-16', '2025-01-31', '2022-02-16', 7, NULL);
 
 INSERT INTO Conso_client(id_sejour, id_conso, date_conso, nombre) VALUES
 (1, 1, '2022-02-02', 2),
