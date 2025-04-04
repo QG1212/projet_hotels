@@ -76,10 +76,12 @@ class Chambre
         return $stmt->fetch()["prix"]*$nbJour;
     }
         static function GetSelectChambreDisponible($pdo,$idHotel,$date_debut,$date_fin){
-        $stmt=$pdo->prepare(  "Select hotel.nom, id_chambre ,categorie.denomination
+        $stmt=$pdo->prepare(  "Select hotel.nom, id_chambre ,categorie.denomination,prix_chambre.prix
                                 from chambre
                                 inner join categorie using(id_categorie)
                                 inner join hotel using(id_hotel)
+                                inner join classe on hotel.id_classe=classe.id_classe
+                                inner join prix_chambre on classe.id_classe=prix_chambre.id_classe and categorie.id_categorie=prix_chambre.id_categorie
                                 where hotel.id_hotel= :hotel and id_chambre not in (
                                 select id_chambre from reservation
                                 inner join chambre using(id_chambre)
@@ -91,8 +93,10 @@ class Chambre
         $stmt->bindParam(":date_fin",$date_fin);
         $stmt->execute();
         $select="";
+        $debut=new DateTime($date_debut);
+        $fin=new DateTime($date_fin);
         while($chambre = $stmt->fetch()) {
-            $select.="<option value=\"".$chambre["id_chambre"]."\">".$chambre["denomination"]." -- "." Chambre  n° ".$chambre["id_chambre"]."</option>";
+            $select.="<option value=\"".$chambre["id_chambre"]."\">".$chambre["denomination"]." -- "." Chambre  n° ".$chambre["id_chambre"]." - ".$chambre["prix"]*($debut->diff($fin))->days." €</option>";
         }
         return $select;
     }
