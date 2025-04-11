@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client - Hôtel Bleu & Blanc</title>
-
     <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <!-- Icônes Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 <body>
 <!-- Navigation -->
@@ -44,17 +44,21 @@
         </div>
     </div>
 </nav>
+<div id="content">
+<br>
 <h1>Nous Contacter</h1>
 <?php
-echo "<p>Contacter l'hotel: <i class='bi bi-envelope'></i> Email:".$admin['email']." <i class='bi bi-phone'></i> Téléphone:".$admin['tel'].'</p>
-<p>Contacter à:</p>
-<p>-Caen: 
-<i class="bi bi-envelope"></i>  Email: '.$caen["email"].' <i class="bi bi-phone"></i> Téléphone: '.$caen['tel'].'</p>
-<p>-Brest: 
-<i class="bi bi-envelope"></i> Email: '.$brest["email"].' <i class="bi bi-phone"></i> Téléphone: '.$brest["tel"].'</p>
-<p>-Nantes: 
-<i class="bi bi-envelope"></i> Email: '.$nantes["email"].' <i class="bi bi-phone"></i> Téléphone: '.$nantes["tel"].'</p>
-<p>-Paris:  
-<i class="bi bi-envelope"></i> Email: '.$paris["email"].' <i class="bi bi-phone"></i> Téléphone: '.$paris["tel"].'</p>
-
-</body>';
+echo "<br><p><h3>Pour contacter l'hotel:</h3><br><h5> <i class='bi bi-envelope'></i> Email: ".$admin['email']." <i class='bi bi-phone'></i> Téléphone: ".$admin['tel']."</h5></p>
+<br><p><h3>Pour le site de:</h3></p>
+<h5>
+<p><br><b>Caen</b>: 
+<i class='bi bi-envelope'></i>   Email: ".$caen["email"]."   <i class='bi bi-phone'></i> Téléphone: ".$caen['tel']."</p>
+<p><br><b>Brest</b>: 
+<i class='bi bi-envelope'></i>  Email: ".$brest["email"]."   <i class='bi bi-phone'></i> Téléphone: ".$brest["tel"]."</p>
+<p><br><b>Nantes</b>: 
+<i class='bi bi-envelope'></i>  Email: ".$nantes["email"]."   <i class='bi bi-phone'></i> Téléphone: ".$nantes["tel"]."</p>
+<p><br><b>Paris</b>:  
+<i class='bi bi-envelope'></i>  Email: ".$paris["email"]."   <i class='bi bi-phone'></i> Téléphone: ".$paris["tel"]."</p>
+</h5>
+</div>
+</body>";
