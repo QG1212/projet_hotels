@@ -20,15 +20,15 @@ if(isset($_POST["id_reservation"])){
     // 2. Définir le contenu du fichier
     $content = "Sejour hotel Blanc et Bleu.\n";
     $content.="Vous etes la réservation : ".$_POST["id_reservation"]."\n";
+    $prix_total=$data_book["prix_total"];
+    foreach ($data_consomations as $prix){
+        $prix_total+=$prix["sous_total"];
+        //calcule du prix total somme de la chambre et des consomations
+    }
     //on génère les différents contenue de la réservations :
     $content.=Bill::GenererClientFacture($data_client);
     $content.=Bill::GenererReservationFacture($data_book);
     $content.=Bill::GenererConsomationFacture($data_consomations);
-    $prix_total=$data_book["prix_total"];
-    foreach ($data_consomations as $prix){
-        $prix_total+=$prix["prix_total"];
-        //calcule du prix total somme de la chambre et des consomations
-    }
     $content.=Bill::GenererTotalFacture($prix_total);
 
 

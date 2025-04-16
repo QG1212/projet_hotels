@@ -108,6 +108,7 @@ class Bill
         $content.="_____________________________________________________________\n";
         $content.="Consomation durant le sejour :\n";
         $content.="___________________________________________________|________\n";
+        $prix=0;
         foreach ($data_consomation as $conso){
             $line=$conso["denomination"];
             $line.="  -  ".$conso["date_conso"];
@@ -119,8 +120,13 @@ class Bill
             $line.=str_repeat(" ",51-strlen($line));
             $line.="|".$conso["sous_total"]."\n";
             $content.=$line;
+            $prix=$prix+$conso["sous_total"];
         }
-
+        $content.="___________________________________________________|________\n";
+        $line="   Sous total consomation :";
+        $line.=str_repeat(" ",51-strlen($line));
+        $line.="|".$prix."\n";
+        $content.=$line;
         return $content;
     }
 
