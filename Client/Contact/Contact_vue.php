@@ -75,25 +75,11 @@
 <div class="container-contact">
     <h1>Nous Contacter</h1>
     <?php
-    echo "<div class='contact-info'><strong>Contacter l'hôtel :</strong><br>
-        <i class='bi bi-envelope'></i> Email: " . $admin['email'] . "<br>
-        <i class='bi bi-phone'></i> Téléphone: " . $admin['tel'] . "</div>";
-
-    echo "<div class='contact-info'><strong>Caen :</strong><br>
-        <i class='bi bi-envelope'></i> Email: " . $caen["email"] . "<br>
-        <i class='bi bi-phone'></i> Téléphone: " . $caen['tel'] . "</div>";
-
-    echo "<div class='contact-info'><strong>Brest :</strong><br>
-        <i class='bi bi-envelope'></i> Email: " . $brest["email"] . "<br>
-        <i class='bi bi-phone'></i> Téléphone: " . $brest["tel"] . "</div>";
-
-    echo "<div class='contact-info'><strong>Nantes :</strong><br>
-        <i class='bi bi-envelope'></i> Email: " . $nantes["email"] . "<br>
-        <i class='bi bi-phone'></i> Téléphone: " . $nantes["tel"] . "</div>";
-
-    echo "<div class='contact-info'><strong>Paris :</strong><br>
-        <i class='bi bi-envelope'></i> Email: " . $paris["email"] . "<br>
-        <i class='bi bi-phone'></i> Téléphone: " . $paris["tel"] . "</div>";
+    foreach ($Secretaires as $secretaire){
+        echo "<div class='contact-info'><strong>". $secretaire['localisation'] ." :</strong><br>
+        <i class='bi bi-envelope'></i> Email: " . $secretaire['email'] . "<br>
+        <i class='bi bi-phone'></i> Téléphone: " . $secretaire['tel'] . "</div>";
+    }
     ?>
 </div>
 
