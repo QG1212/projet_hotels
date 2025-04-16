@@ -152,7 +152,7 @@ insert into metier(id_metier, denomination) values (default,'PDG'),
                                                    (default,'Bar tender'),
                                                    (default,'Logistique');
 
-INSERT INTO Employe(email, metier, id_localisation, fleure, tel,nom) values
+INSERT INTO Employe(email, id_metier, id_localisation, fleure, tel,nom) values
                                                     ('caen_secretary@gmail.com',3,2,'$2y$10$CIaoqKE3RoDvdYNSqFysl.1yUfEI.QJQSBACzFCo1ASPYxmw04whi','021408099','dupont'),
                                                     ('nantes_secretary@hotmail.com',3,4,'$2y$10$CIaoqKE3RoDvdYNSqFysl.1yUfEI.QJQSBACzFCo1ASPYxmw04whi','024450151','lucu'),
                                                     ('brest_secretary@gmail.com',3,5,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','022930878','Mauvaka'),

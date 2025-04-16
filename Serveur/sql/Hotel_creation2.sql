@@ -123,19 +123,28 @@ FOREIGN KEY (id_conso) REFERENCES Conso (id_conso),
 FOREIGN KEY (id_sejour) REFERENCES Reservation (id_sejour)
 );
 
+drop table if exists metier CASCADE;
+create table  metier
+(
+    id_metier SERIAL,
+    denomination varchar(50) not null,
+    PRIMARY KEY(id_metier)
+);
+
 drop table if exists Employe CASCADE ;
 create table Employe
 (
     id_employe SERIAL,
     email varchar(320) not null UNIQUE,
     CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
-	metier varchar(100) not null,
+	id_metier int not null,
 	id_localisation int not null,
 	fleure varchar(255) not null,
 	tel varchar(20),
 	nom varchar(50),
 PRIMARY KEY(id_employe),
-FOREIGN KEY (id_localisation) REFERENCES Localisation (id_localisation)
+FOREIGN KEY (id_localisation) REFERENCES Localisation (id_localisation),
+FOREIGN KEY (id_metier) REFERENCES metier (id_metier)
 );
 
 drop table if exists Perm CASCADE ;
@@ -146,13 +155,7 @@ create table Perm
 PRIMARY KEY(id_perm)
 );
 
-drop table if exists metier CASCADE;
-create table  metier
-(
-    id_metier SERIAL,
-    denomination varchar(50) not null,
-    PRIMARY KEY(id_metier)
-);
+
 
 drop table if exists employe_perm CASCADE;
 create table  employe_perm
