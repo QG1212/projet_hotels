@@ -15,6 +15,29 @@ class Consomation
         $requested = $db->prepare($request);
         $requested->bindParam(':id_resa', $booking);
         $requested->execute();
-        return $requested->fetchALL();
+        return $requested->fetchALL();}
+
+    static function set_consommation($db, $product,$prix,$hotel)
+    {
+            $request = "UPDATE prix_conso
+                    SET prix=:prix
+                    WHERE id_conso=:product AND id_hotel=:hotel";
+        $requested = $db->prepare($request);
+            $requested->bindParam(':product', $product);
+            $requested->bindParam(':prix', $prix);
+            $requested->bindParam(':hotel', $hotel);
+            $requested->execute();
     }
+
+    static function get_all_consomation($db,$hotel)
+    {
+        $request = "SELECT  p.prix, c.denomination
+                    FROM prix_conso p
+                    INNER JOIN conso c on c.id_conso= p.id_conso
+                    WHERE p.id_hotel=:hotel
+                ;";
+        $requested = $db->prepare($request);
+        $requested->bindParam(':hotel', $hotel);
+        $requested->execute();
+        return $requested->fetchALL();}
 }
