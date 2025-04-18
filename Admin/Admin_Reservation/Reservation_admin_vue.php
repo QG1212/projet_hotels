@@ -17,9 +17,9 @@
 <!-- Barre latérale -->
 <div class="sidebar">
     <h4>Admin Panel</h4>
-    <a href="../index.php"><i class="bi bi-house"></i> Accueil </a>
+    <a href="../index_vue.php"><i class="bi bi-house"></i> Accueil </a>
     <a href="../Admin_Reservation/Reservation_admin_vue.php">Réservations</a>
-
+    <a href="../Admin_Consommation/Consommation_Vue_Admin.php">Consomation</a>
 </div>
 
 <!-- Contenu principal -->

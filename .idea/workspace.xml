@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f25f19-7893-406f-a141-39edec036723" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Admin/Admin_Reservation/Reservation_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/Admin_Perm/Admin_perm.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_Perm/Admin_perm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Admin/index_vue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Admin_Consommation/Consommation_Vue_Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_Consommation/Consommation_Vue_Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/Admin_Perm/Admin_perm_vue.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_Perm/Admin_perm_vue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Serveur/model/Reservation_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/Serveur/model/Reservation_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Admin_Reservation/Reservation_admin_vue.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_Reservation/Reservation_admin_vue.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +80,8 @@
       <updated>1744901697668</updated>
       <workItem from="1744901698998" duration="1501000" />
       <workItem from="1744903224993" duration="3519000" />
-      <workItem from="1744978274101" duration="2327000" />
+      <workItem from="1744978274101" duration="3184000" />
+      <workItem from="1745011887970" duration="3063000" />
     </task>
     <servers />
   </component>
