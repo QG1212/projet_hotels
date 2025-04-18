@@ -17,9 +17,8 @@
 <!-- Barre latérale -->
 <div class="sidebar">
     <h4>Admin Panel</h4>
-    <a href="../"><i class="bi bi-house"></i> Accueil </a>
-    <a href="../Admin_Reservation/Reservation_admin_vue.php">Réservations</a>
-    <a href="../Admin_Consommation/Consommation_Vue_Admin.php">Consomation</a>
+    <a href="Admin_Reservation/Reservation_admin_vue.php">Réservations</a>
+    <a href="Admin_Consommation/Consommation_Vue_Admin.php">Consomation</a>
 </div>
 
 <!-- Contenu principal -->
@@ -28,6 +27,11 @@
         <h1>Accueil Admin</h1>
     </div>
 </div>
+
+
+<button id="disco" onclick="startDisco()">Disco</button>
+
+<script src="script/script.js"></script>
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
