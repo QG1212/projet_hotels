@@ -24,5 +24,10 @@ switch ($_SESSION['employe_id']){
 }
 $consoList= Consomation::get_all_consomation($db,$hotel);
 
+foreach ($consoList as $conso){
+    if (isset($_GET['conso_id'])){
+        Consomation::set_consommation($db,$conso,$_GET['conso_id'],$hotel);
+    }
+}
 
 require "Consommation_Vue_Admin.php";
