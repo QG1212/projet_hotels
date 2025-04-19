@@ -35,6 +35,9 @@
             </div>
             <input type="submit" value="Se connecter" class="btn btn-green w-100">
         </form>
+        <div class="text-center">
+            <a href="../Client" >Aller sur la page client</a>
+        </div>
     </div>
 </div>
 
