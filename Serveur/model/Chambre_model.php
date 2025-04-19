@@ -100,5 +100,49 @@ class Chambre
         }
         return $select;
     }
+    static function GetSelectClass($pdo)
+    {
+        $stmt = $pdo->prepare("Select distinct classe, id_hotel,classe.denomination from chambre natural join classe;");
+        $stmt->execute();
+        $select="";
+        while($chambre = $stmt->fetch()) {
+            if($chambre["id_hotel"]==1){
+                $select.="<option value=\"".$chambre["classe"]."\" class='Hotel-".$chambre["id_hotel"]."'>".$chambre["denomination"]."</option>";
+            }
+            else{
+                //si ça ne fait pas partie de l'hotel 1 qui est afficher par défault on ajoute la classe disparu dans les chambres pour ne pas les affichers
+                $select.="<option value=\"".$chambre["classe"]."\" class='disparu Hotel-".$chambre["id_hotel"]."'>".$chambre["denomination"]."</option>";
+            }
+
+        }
+        return $select;
+    }
+
+    static function UpdateClass($pdo){
+        $select = self::GetSelectClass();
+        $chambre = self::GetSelectChambre();
+        $stmt = $pdo->prepare("UPADTE chambre SET id_hotel=$select WHERE id_chambre=:$chambre;");
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+    static function UpdateCategorie($pdo){
+        $select = self::GetSelectCategorie();
+        $chambre = self::GetSelectChambre();
+        $stmt = $pdo->prepare("UPADTE chambre SET id_categorie=$select WHERE id_chambre=:$chambre;");
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+    static function UpdatePrice($pdo,$id_class,$id_categorie,$nouveau_prix){
+        $stmt = $pdo->prepare("UPADTE prix_chambre 
+                                SET prix=:nouveau_prix 
+                                WHERE id_class=:id_class 
+                                AND id_categorie=:id_categorie;");
+        $stmt->bindParam(":id_class",$id_class);
+        $stmt->bindParam(":id_categorie",$id_categorie);
+        $stmt->bindParam(":nouveau_prix",$nouveau_prix);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+
 
 }
