@@ -20,28 +20,34 @@
     <a href="../index_vue.php"><i class="bi bi-house"></i> Accueil </a>
     <a href="../Admin_Reservation/Reservation_admin_vue.php">Réservations</a>
     <a href="../Admin_Consommation/Consommation_Vue_Admin.php">Consomation</a>
-
-
 </div>
 
 <!-- Contenu principal -->
 <div class="main-content">
     <div class="form-container">
-        <h1>Liste des consomations</h1>
-        <?php
-        if ($hotel==""){
-            echo "ERROR: hotel was not found";
-        }
-        else{
-            echo "Prix des consommation de l'hotel de".$hotel.":";
-            echo"<br><form>";
-            foreach ($consoList as $conso ){
-                echo $conso["denomination"]."<br>";
-                echo "<input type='number' value=".$conso["prix"]."></input>"." €";
-            }
-            echo "<button type='submit'>Valider les modifications</button> </form>";
-        }
-        ?>
+        <h1>Liste des réservations</h1>
+        <?php if (empty($reservations)): ?>
+            <p>Aucune réservation trouvée.</p>
+        <?php else: ?>
+            <table>
+                <tr>
+                    <th>Nom</th>
+                    <th>Email</th>
+                    <th>Chambre</th>
+                    <th>Date début</th>
+                    <th>Date fin</th>
+                </tr>
+                <?php foreach ($reservations as $r): ?>
+                    <tr>
+                        <td><?= htmlspecialchars($r['nom']) ?></td>
+                        <td><?= htmlspecialchars($r['email']) ?></td>
+                        <td><?= htmlspecialchars($r['id_chambre']) ?></td>
+                        <td><?= htmlspecialchars($r['date_debut']) ?></td>
+                        <td><?= htmlspecialchars($r['date_fin']) ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        <?php endif; ?>
     </div>
 </div>
 
@@ -52,5 +58,4 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
 

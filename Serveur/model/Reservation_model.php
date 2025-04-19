@@ -49,4 +49,16 @@ class Reservation
         }
 
     }
+    function getReservationsByHotel($id_hotel) {
+        global $bdd;
+        $sql = "SELECT r.*, u.nom, u.email
+            FROM reservations r
+            JOIN utilisateurs u ON r.id_utilisateur = u.id
+            JOIN chambres c ON r.id_chambre = c.id
+            WHERE c.id_hotel = ?";
+        $stmt = $bdd->prepare($sql);
+        $stmt->execute([$id_hotel]);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
