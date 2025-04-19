@@ -132,6 +132,14 @@ class Chambre
         $stmt->execute();
         return $stmt->fetch();
     }
+
+    /**
+     * @param $pdo \mysql_xdevapi\DatabaseObject
+     * @param $id_class int id de la classe (nb d'*) d'ou il faut changer le prix
+     * @param $id_categorie int id de la categorie simple,double,double avec sdb
+     * @param $nouveau_prix float nouveau prix
+     * @return bool réussite de l'update
+     */
     static function UpdatePrice($pdo,$id_class,$id_categorie,$nouveau_prix){
         $stmt = $pdo->prepare("UPADTE prix_chambre 
                                 SET prix=:nouveau_prix 
@@ -143,6 +151,5 @@ class Chambre
         $stmt->execute();
         return $stmt->fetch();
     }
-
-
+    
 }
