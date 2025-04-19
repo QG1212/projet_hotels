@@ -17,7 +17,7 @@ class Employe
         return $requested->fetchALL();
     }
     static function GetEmployeEmail($db,$email){
-        $stmt = $db->prepare("SELECT id_employe, fleure FROM employe WHERE email = :email");
+        $stmt = $db->prepare("SELECT id_employe, fleure,id_localisation FROM employe WHERE email = :email");
         $stmt->execute(['email' => $email]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         return $user;

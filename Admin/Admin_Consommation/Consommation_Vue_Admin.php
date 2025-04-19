@@ -17,9 +17,11 @@
 <!-- Barre latérale -->
 <div class="sidebar">
     <h4>Admin Panel</h4>
-    <a href="../index_vue.php"><i class="bi bi-house"></i> Accueil </a>
-    <a href="../Admin_Reservation/Reservation_admin_vue.php">Réservations</a>
-    <a href="../Admin_Consommation/Consommation_Vue_Admin.php">Consomation</a>
+    <a href="../../index.php"><i class="bi bi-person-badge"></i> Accueil Client</a>
+    <a href="../Admin_log/admin_log.php"><i class="bi bi-box-arrow-in-left"></i> Login </a>
+    <a href="../Admin_Perm/Admin_perm.php"><i class="bi bi-house-door"></i>Permissons</a>
+    <a href="../Admin_Reservation/Reservation_admin.php"><i class="bi bi-calendar2-week"></i> Reservation</a>
+    <a href="../Admin_Consommation/Consommation_admin.php"><i class="bi bi-cup-straw"></i>Consomation Client</a>
 
 
 </div>

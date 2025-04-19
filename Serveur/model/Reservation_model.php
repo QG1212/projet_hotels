@@ -38,7 +38,7 @@ class Reservation
     }
     static function GetReservation($pdo,$idReservation)
     {
-        $stmt = $pdo->prepare("select * from reservation where id_sejour=:client order by date_debut desc;");
+        $stmt = $pdo->prepare("select * from reservation where id_sejour=:client;");
         $stmt->bindParam(":client",$idReservation);
         try {
             $stmt->execute();
@@ -49,16 +49,14 @@ class Reservation
         }
 
     }
-    function getReservationsByHotel($id_hotel) {
-        global $bdd;
-        $sql = "SELECT r.*, u.nom, u.email
-            FROM reservations r
-            JOIN utilisateurs u ON r.id_utilisateur = u.id
-            JOIN chambres c ON r.id_chambre = c.id
-            WHERE c.id_hotel = ?";
-        $stmt = $bdd->prepare($sql);
-        $stmt->execute([$id_hotel]);
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    static function getReservationsByHotel($pdo,$id_hotel){
+        $stmt = $pdo->prepare("SELECT r.*, u.nom, u.email
+                                FROM reservation r
+                                JOIN client u ON r.id_client = u.id_client
+                                JOIN chambre c ON r.id_chambre = c.id_chambre
+                                WHERE c.id_hotel =:id_hotel;");
+        $stmt->bindParam(":id_hotel",$id_hotel);
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
-
 }
