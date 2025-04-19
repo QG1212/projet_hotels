@@ -69,4 +69,7 @@ body {
     background-color: #21c64f;
     color: white;
 }
-
+.prix{
+    max-width: 100px;
+    margin-right: 5px;
+}

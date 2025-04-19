@@ -45,7 +45,7 @@
                 echo "<label class='form-label fw-bold'>" . $conso['denomination'] . "</label>";
                 echo "</div>";
                 echo "<div class='col-4 d-flex align-items-center'>";
-                echo "<input class='form-control' value='" . $conso['prix'] . "' name='" . $conso['conso_id'] . "' style='max-width: 100px; margin-right: 5px;'> €";
+                echo "<input class='form-control prix' value='" . $conso['prix'] . "' name='" . $conso['conso_id'] . "'> €";
                 echo "</div>";
                 echo "</div>";
             }
