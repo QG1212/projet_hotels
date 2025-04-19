@@ -1,8 +1,11 @@
 <?php
-require "../../Serveur/model/Consomation_model.php";
-
+require_once("../../Serveur/model/Consomation_model.php");
+require_once("../../Serveur/model/Hotel_model.php");
+require_once("../../Serveur/database/constants.php");
+session_start();
 $db=dbConnect();
-
+//employe_id ne permet pas de savoir à quelle hotel il appartient à moin de faire une requete sql qui recupère sa localisation avec son id
+/*
 switch ($_SESSION['employe_id']){
     case 5:
     $hotel= "Caen";
@@ -20,8 +23,11 @@ switch ($_SESSION['employe_id']){
     default:
         $hotel="";
             break;
-
 }
+*/
+//on récupère l'hotel grace à l'id localisation de l'employe
+$hotel=Hotel::getEmployeHotel($db,$_SESSION['id_loc']);
+
 $consoList= Consomation::get_all_consomation($db,$hotel);
 
 foreach ($consoList as $conso){

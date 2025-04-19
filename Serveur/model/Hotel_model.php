@@ -23,13 +23,13 @@ class Hotel
      * Si l'employé est associée au siege la fonction renvoi l'hotel de Caen
      *
      */
- static function getEmployeHotel($pdo,$id_localistaion){
-     if($id_localistaion==1){
+ static function getEmployeHotel($pdo,$id_localisation){
+     if($id_localisation==1){
          return 1;
      }
      else{
          $stmt = $pdo->prepare("select id_hotel from hotel where id_localisation=:loc;");
-         $stmt->bindParam(":loc",$id_localistaion);
+         $stmt->bindParam(":loc",$id_localisation);
          try {
              $stmt->execute();
              return $stmt->fetch()[0];

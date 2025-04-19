@@ -35,7 +35,7 @@ class Consomation
                     FROM prix_conso p
                     INNER JOIN conso c on c.id_conso= p.id_conso
                     WHERE p.id_hotel=:hotel
-                ;";
+                    ;";
         $requested = $db->prepare($request);
         $requested->bindParam(':hotel', $hotel);
         $requested->execute();

@@ -31,17 +31,28 @@
     <div class="form-container">
         <h1>Liste des consomations</h1>
         <?php
-        if ($hotel==""){
+        if ($hotel == null) {
             echo "ERROR: hotel was not found";
         }
-        else{
-            echo "Prix des consommation de l'hotel de".$hotel.":";
-            echo"<br><form>";
-            foreach ($consoList as $conso ){
-                echo $conso["denomination"]."<br>";
-                echo "<input type='number' value=".$conso["prix"]." name=".$conso['conso_id']."></input>"." €";
+        else {
+            echo "<h2 class='mb-4'>Prix des consommations de l'hôtel de " . $hotel . " :</h2>";
+            echo "<form>";
+            echo "<div class='container'>";
+
+            foreach ($consoList as $conso) {
+                echo "<div class='row align-items-center mb-3'>";
+                echo "<div class='col-8'>";
+                echo "<label class='form-label fw-bold'>" . $conso['denomination'] . "</label>";
+                echo "</div>";
+                echo "<div class='col-4 d-flex align-items-center'>";
+                echo "<input type='number' class='form-control' value='" . $conso['prix'] . "' name='" . $conso['conso_id'] . "' style='max-width: 100px; margin-right: 5px;'> €";
+                echo "</div>";
+                echo "</div>";
             }
-            echo "<button type='submit'>Valider les modifications</button> </form>";
+
+            echo "<button type='submit' class='btn btn-success mt-3'>Valider les modifications</button>";
+            echo "</div>";
+            echo "</form>";
         }
         ?>
     </div>
