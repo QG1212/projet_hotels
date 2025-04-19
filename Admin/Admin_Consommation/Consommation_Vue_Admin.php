@@ -33,7 +33,7 @@
         <?php
         if ($hotel == null) {
             echo "ERROR: hotel was not found";
-        }
+        } 
         else {
             echo "<h2 class='mb-4'>Prix des consommations de l'hôtel de " . $hotel . " :</h2>";
             echo "<form>";
@@ -45,7 +45,7 @@
                 echo "<label class='form-label fw-bold'>" . $conso['denomination'] . "</label>";
                 echo "</div>";
                 echo "<div class='col-4 d-flex align-items-center'>";
-                echo "<input type='number' class='form-control' value='" . $conso['prix'] . "' name='" . $conso['conso_id'] . "' style='max-width: 100px; margin-right: 5px;'> €";
+                echo "<input class='form-control' value='" . $conso['prix'] . "' name='" . $conso['conso_id'] . "' style='max-width: 100px; margin-right: 5px;'> €";
                 echo "</div>";
                 echo "</div>";
             }
