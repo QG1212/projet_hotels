@@ -26,29 +26,36 @@
 
 <!-- Contenu principal -->
 <div class="main-content">
+
     <div class="form-container">
-        <h1>Liste des réservations</h1>
+        <h1 class="text-center">Liste des réservations</h1>
         <?php if (empty($reservations)): ?>
             <p>Aucune réservation trouvée.</p>
         <?php else: ?>
-            <table>
-                <tr>
-                    <th>Nom</th>
-                    <th>Email</th>
-                    <th>Chambre</th>
-                    <th>Date début</th>
-                    <th>Date fin</th>
-                </tr>
-                <?php foreach ($reservations as $r): ?>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover text-center align-middle">
+                    <thead class="table-success">
                     <tr>
-                        <td><?= htmlspecialchars($r['nom']) ?></td>
-                        <td><?= htmlspecialchars($r['email']) ?></td>
-                        <td><?= htmlspecialchars($r['id_chambre']) ?></td>
-                        <td><?= htmlspecialchars($r['date_debut']) ?></td>
-                        <td><?= htmlspecialchars($r['date_fin']) ?></td>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Chambre</th>
+                        <th>Date début</th>
+                        <th>Date fin</th>
                     </tr>
-                <?php endforeach; ?>
-            </table>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($reservations as $r): ?>
+                        <tr>
+                            <td><?= htmlspecialchars($r['nom']) ?></td>
+                            <td><?= htmlspecialchars($r['email']) ?></td>
+                            <td><?= htmlspecialchars($r['id_chambre']) ?></td>
+                            <td><?= htmlspecialchars($r['date_debut']) ?></td>
+                            <td><?= htmlspecialchars($r['date_fin']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
         <?php endif; ?>
     </div>
 </div>
