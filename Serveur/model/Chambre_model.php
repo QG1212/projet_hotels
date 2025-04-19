@@ -129,10 +129,14 @@ class Chambre
         $stmt->execute();
         return $stmt->fetch();
     }
-    static function UpdatePrice($pdo){
-        $select = self::GetSelectClass();
-        $chambre = self::GetSelectChambre();
-        $stmt = $pdo->prepare("UPADTE chambre SET id_hotel=$select WHERE id_chambre=:$chambre;");
+    static function UpdatePrice($pdo,$id_class,$id_categorie,$nouveau_prix){
+        $stmt = $pdo->prepare("UPADTE prix_chambre 
+                                SET prix=:nouveau_prix 
+                                WHERE id_class=:id_class 
+                                AND id_categorie=:id_categorie;");
+        $stmt->bindParam(":id_class",$id_class);
+        $stmt->bindParam(":id_categorie",$id_categorie);
+        $stmt->bindParam(":nouveau_prix",$nouveau_prix);
         $stmt->execute();
         return $stmt->fetch();
     }
