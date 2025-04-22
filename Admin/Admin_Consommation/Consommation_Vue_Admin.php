@@ -29,14 +29,14 @@
 <!-- Contenu principal -->
 <div class="main-content">
     <div class="form-container">
-        <h1>Liste des consomations</h1>
+        <h1>Liste des consommations</h1>
         <?php
         if ($hotel == null) {
             echo "ERROR: hotel was not found";
         } 
         else {
-            echo "<h2 class='mb-4'>Prix des consommations de l'hôtel de " . $hotel . " :</h2>";
-            echo "<form>";
+            echo "<h3 class='mb-4'>Prix des consommations de l'hôtel de " . $hotel . " :</h3>";
+            echo "<form action='Consommation_admin.php' method='POST'>";
             echo "<div class='container'>";
 
             foreach ($consoList as $conso) {

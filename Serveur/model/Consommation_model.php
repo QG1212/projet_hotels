@@ -29,7 +29,7 @@ class Consomation
             $requested->execute();
     }
 
-    static function get_all_consomation($db,$hotel)
+    static function get_all_consommation($db,$hotel)
     {
         $request = "SELECT  p.prix, c.denomination
                     FROM prix_conso p
