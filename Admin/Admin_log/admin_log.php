@@ -3,7 +3,7 @@ require_once("../../Serveur/database/constants.php");
 require_once("../../Serveur/model/Employe_model.php");
 require_once("../../Serveur/model/login_model.php");
 //connexion bdd
-
+session_destroy();
 session_start();
 $pdo=dbConnect();
 
