@@ -151,5 +151,17 @@ class Chambre
         $stmt->execute();
         return $stmt->fetch();
     }
-    
+
+    static function price($pdo){
+        $stmt = $pdo->prepare("SELECT prix FROM prix_chambre");
+        $stmt->execute();
+        $result = $stmt->fetchAll();
+        return $result;
+    }
+
+//    static function classe($pdo){
+//        $stmt = $pdo->prepare(" SELECT * FROM categorie;");
+//        $stmt->execute();
+//        return $stmt->fetch();
+//    }
 }
