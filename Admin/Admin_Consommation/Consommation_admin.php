@@ -34,7 +34,15 @@ foreach ($consoList as $conso){
     if (isset($_POST[$conso['id_conso']])){
         Consomation::set_consommation($db,$conso['id_conso'],$_POST[$conso['id_conso']],$hotel);
     }
+    if (isset($_POST[$conso['delete'.$conso['id_conso']]])){
+        Consomation::remove_consommation($db,$hotel,$conso['id_conso']);
+    }
 }
+
+if(isset($_POST['nom']) && isset($_POST['prix'])){
+    Consomation::add_consommation($db,$hotel,$_POST['nom'],$_POST['prix']);
+}
+
 
 $consoList= Consomation::get_all_consommation($db,$hotel);
 require "Consommation_Vue_Admin.php";

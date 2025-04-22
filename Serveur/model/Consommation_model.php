@@ -40,4 +40,34 @@ class Consomation
         $requested->bindParam(':hotel', $hotel);
         $requested->execute();
         return $requested->fetchALL();}
+
+    static function add_consommation($db,$hotel,$price,$name)
+    {
+        $request1 = "INSERT  INTO prix_conso(id_conso, id_hotel, prix) VALUES(default,:hotel,:price);";
+
+        $requested1 = $db->prepare($request1);
+        $requested1->bindParam(':hotel', $hotel);
+        $requested1->bindParam(':price', $price);
+        $requested1->execute();
+
+        $request2 = "INSERT INTO conso(id_conso, denomination) VALUES(default,:name);";
+        $requested2 = $db->prepare($request2);
+        $requested2->bindParam(':name', $name);
+        $requested2->execute();
+    }
+
+    static function remove_consommation($db,$hotel,$id)
+    {
+        $request1 = "DELETE FROM prix_conso WHERE id_conso=:id AND id_hotel=:hotel;";
+        $requested1 = $db->prepare($request1);
+        $requested1->bindParam(':id', $id);
+        $requested1->bindParam(':hotel', $hotel);
+        $requested1->execute();
+
+        $request2 = "DELETE FROM conso WHERE id_conso=:id;";
+        $requested2 = $db->prepare($request2);
+        $requested2->bindParam(':id', $id);
+        $requested2->bindParam(':hotel', $hotel);
+        $requested2->execute();
+        ;}
 }

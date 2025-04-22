@@ -45,15 +45,24 @@
                 echo "<label class='form-label fw-bold'>" . $conso['denomination'] . "</label>";
                 echo "</div>";
                 echo "<div class='col-4 d-flex align-items-center'>";
-                echo "<input class='form-control prix' value='" . $conso['prix'] . "' name='" . $conso['id_conso'] . "'> €";
+                echo "<input class='form-control prix'  value='" . $conso['prix'] . "' name='" . $conso['id_conso'] . "'> €  ";
+                echo "<button type='submit' class='btn btn-success mt-3' name='delete'".$conso['id_conso'].">delete</button>";
                 echo "</div>";
-                echo "</div>";
+                echo "</div><";
             }
 
             echo "<button type='submit' class='btn btn-success mt-3'>Valider les modifications</button>";
             echo "</div>";
             echo "</form>";
         }
+        echo "<br><br>
+            <h3>Ajouter une consommation:</h3>
+            <form action='Consommation_admin.php' method='POST'>
+            Nom: <input type='text' class='form-control prix' name='nom'>
+            Prix: <input type='number' class='form-control prix' name='prix'>€
+            <button type='submit' class='btn btn-success mt-3'>Insérer</button>
+            </form>
+        "
         ?>
     </div>
 </div>
