@@ -4,6 +4,12 @@ require_once("../../Serveur/model/Hotel_model.php");
 require_once("../../Serveur/database/constants.php");
 session_start();
 $db=dbConnect();
+
+if (!isset($_SESSION['perm']) || !in_array(2, $_SESSION['perm'])) { // perm 4 pour gestion consomation
+    echo "pas la perm";
+    exit;
+}
+
 //employe_id ne permet pas de savoir à quelle hotel il appartient à moin de faire une requete sql qui recupère sa localisation avec son id
 /*
 switch ($_SESSION['employe_id']){
