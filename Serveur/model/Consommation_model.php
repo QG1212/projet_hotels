@@ -31,7 +31,7 @@ class Consomation
 
     static function get_all_consommation($db,$hotel)
     {
-        $request = "SELECT  p.prix, c.denomination
+        $request = "SELECT  p.prix, c.denomination,c.id_conso
                     FROM prix_conso p
                     INNER JOIN conso c on c.id_conso= p.id_conso
                     WHERE p.id_hotel=:hotel
