@@ -20,8 +20,8 @@ class Consomation
     static function set_consommation($db, $product,$prix,$hotel)
     {
             $request = "UPDATE prix_conso
-                    SET prix=:prix
-                    WHERE id_conso=:product AND id_hotel=:hotel";
+                            SET prix=:prix
+                            WHERE id_conso=:product AND id_hotel=:hotel";
         $requested = $db->prepare($request);
             $requested->bindParam(':product', $product);
             $requested->bindParam(':prix', $prix);

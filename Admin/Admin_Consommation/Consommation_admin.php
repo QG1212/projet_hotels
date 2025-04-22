@@ -32,8 +32,9 @@ $consoList= Consomation::get_all_consommation($db,$hotel);
 
 foreach ($consoList as $conso){
     if (isset($_POST[$conso['id_conso']])){
-        Consomation::set_consommation($db,$conso,$_POST['conso_id'],$hotel);
+        Consomation::set_consommation($db,$conso['id_conso'],$_POST[$conso['id_conso']],$hotel);
     }
 }
 
+$consoList= Consomation::get_all_consommation($db,$hotel);
 require "Consommation_Vue_Admin.php";
