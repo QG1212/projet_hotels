@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7f25f19-7893-406f-a141-39edec036723" name="Changes" comment="" />
+    <list default="true" id="f7f25f19-7893-406f-a141-39edec036723" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Admin_Consommation/Consommation_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_Consommation/Consommation_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Admin_Perm/Admin_perm.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_Perm/Admin_perm.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Admin_Reservation/Reservation_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_Reservation/Reservation_admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/Admin_log/admin_log.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_log/admin_log.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,9 +22,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2w5CqHAW91d9eAsQOoPUgpNuXd4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,12 +34,17 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/to1ca/Documents/GitHub/projet_hotels",
+    "last_opened_file_path": "C:/Users/to1ca/PhpstormProjects/TP_php/GitHub/projet_hotels",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="SharedIndexes">
@@ -52,7 +63,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1745322236982</updated>
-      <workItem from="1745322238086" duration="445000" />
+      <workItem from="1745322238086" duration="1971000" />
+      <workItem from="1745325097712" duration="2864000" />
     </task>
     <servers />
   </component>
