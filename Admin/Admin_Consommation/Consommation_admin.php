@@ -1,5 +1,5 @@
 <?php
-require_once("../../Serveur/model/Consomation_model.php");
+require_once("../../Serveur/model/Consommation_model.php");
 require_once("../../Serveur/model/Hotel_model.php");
 require_once("../../Serveur/database/constants.php");
 session_start();
@@ -34,12 +34,13 @@ switch ($_SESSION['employe_id']){
 //on récupère l'hotel grace à l'id localisation de l'employe
 $hotel=Hotel::getEmployeHotel($db,$_SESSION['id_loc']);
 
-$consoList= Consomation::get_all_consomation($db,$hotel);
+$consoList= Consomation::get_all_consommation($db,$hotel);
 
 foreach ($consoList as $conso){
-    if (isset($_GET['conso_id'])){
-        Consomation::set_consommation($db,$conso,$_GET['conso_id'],$hotel);
+    if (isset($_POST[$conso['id_conso']])){
+        Consomation::set_consommation($db,$conso['id_conso'],$_POST[$conso['id_conso']],$hotel);
     }
 }
 
+$consoList= Consomation::get_all_consommation($db,$hotel);
 require "Consommation_Vue_Admin.php";

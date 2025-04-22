@@ -20,8 +20,8 @@ class Consomation
     static function set_consommation($db, $product,$prix,$hotel)
     {
             $request = "UPDATE prix_conso
-                    SET prix=:prix
-                    WHERE id_conso=:product AND id_hotel=:hotel";
+                            SET prix=:prix
+                            WHERE id_conso=:product AND id_hotel=:hotel";
         $requested = $db->prepare($request);
             $requested->bindParam(':product', $product);
             $requested->bindParam(':prix', $prix);
@@ -29,9 +29,9 @@ class Consomation
             $requested->execute();
     }
 
-    static function get_all_consomation($db,$hotel)
+    static function get_all_consommation($db,$hotel)
     {
-        $request = "SELECT  p.prix, c.denomination
+        $request = "SELECT  p.prix, c.denomination,c.id_conso
                     FROM prix_conso p
                     INNER JOIN conso c on c.id_conso= p.id_conso
                     WHERE p.id_hotel=:hotel
