@@ -157,11 +157,36 @@ INSERT INTO Employe(email, id_metier, id_localisation, fleure, tel,nom) values
                                                     ('nantes_secretary@hotmail.com',3,4,'$2y$10$CIaoqKE3RoDvdYNSqFysl.1yUfEI.QJQSBACzFCo1ASPYxmw04whi','024450151','lucu'),
                                                     ('brest_secretary@gmail.com',3,5,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','022930878','Mauvaka'),
                                                     ('paris_secretary@gmail.com',3,3,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017573186','Atonio'),
-                                                    ('hotel_pdg@gmail.com',1,1,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','Ramos');
+                                                    ('hotel_pdg@gmail.com',1,1,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','Ramos'),
+                                                    ('hotel_caen_responsable@gmail.com',2,2,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','BAILLE'),
+                                                    ('hotel_paris_responsable@gmail.com',2,3,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','Armary'),
+                                                    ('hotel_nantes_responsable@gmail.com',2,4,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','Camberabero'),
+                                                    ('hotel_brest_responsable@gmail.com',2,5,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','BUROS'),
+                                                    ('hotel_caen_bartender@gmail.com',5,2,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','BAILLE'),
+                                                    ('hotel_paris_bartender@gmail.com',5,3,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','Armary'),
+                                                    ('hotel_nantes_bartender@gmail.com',5,4,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','Camberabero'),
+                                                    ('hotel_brest_bartender@gmail.com',5,5,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','BUROS'),
+                                                    ('hotel_caen_comptable@gmail.com',4,2,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','BAILLE'),
+                                                    ('hotel_paris_comptable@gmail.com',4,3,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','Armary'),
+                                                    ('hotel_nantes_comptable@gmail.com',4,4,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','Camberabero'),
+                                                    ('hotel_brest_comptable@gmail.com',4,5,'$2y$10$SDWm0T2WB61P6Ww7MqmxZO0nS2Ztb5DIyuemguAdEhfXs4cRh5LcG','017525159','BUROS')
+                                                    ;
 
 INSERT INTO employe_perm(id_perm, id_employe) values
-                                                  (2,1),
-                                                  (2,2),
-                                                  (2,3),
-                                                  (2,4),
-                                                  (1,5);
+                                                  (3,1),
+                                                  (3,2),
+                                                  (3,3),
+                                                  (3,4),
+                                                  (1,5),
+                                                  (2,6),
+                                                  (2,7),
+                                                  (2,8),
+                                                  (2,9),
+                                                  (4,10),
+                                                  (4,11),
+                                                  (4,12),
+                                                  (4,13),
+                                                  (5,14),
+                                                  (5,15),
+                                                  (5,16),
+                                                  (5,17);
