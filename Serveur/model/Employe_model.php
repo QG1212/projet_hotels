@@ -36,4 +36,30 @@ class Employe
         return $perm;
     }
 
+    static function getEmployeName($db, $id_employe){
+        $stmt = $db->prepare("SELECT nom FROM employe
+                                WHERE id_employe=:id_employe;");
+        $stmt->bindParam(':id_employe',$id_employe);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $user['nom'];
+    }
+
+    static function getEmployeTel($db, $id_employe){
+        $stmt = $db->prepare("SELECT tel FROM employe
+                                 WHERE id_employe=:id_employe;");
+        $stmt->bindParam(':id_employe',$id_employe);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $user['tel'];
+    }
+
+    static function getEmployeEmail2($db,$id_employe){
+        $stmt = $db->prepare("SELECT email FROM employe
+                                 WHERE id_employe=:id_employe;");
+        $stmt->bindParam(':id_employe',$id_employe);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $user['email'];
+    }
 }
