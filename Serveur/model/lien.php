@@ -4,11 +4,10 @@
 class lien
 {
     /**
-     * @param $db \mysql_xdevapi\DatabaseObject
-     * @param $droit non-empty-array les perms de l'employé
+     * @param $droits non-empty-array les perms de l'employé
      * @return string tous les liens au quelle les perms de l'employé lui offre accée
      */
-    static function getLien($db,$droit){
+    static function getLien($droits){
         $lien="";
         $all_lien=[
                 "<a href=\"../Admin_Reservation/Reservation_admin.php\"><i class=\"bi bi-calendar2-week\"></i> Reservation</a>
@@ -20,7 +19,9 @@ class lien
 
                 "<a href=\"../Admin_Reservation/Reservation_admin.php\"><i class=\"bi bi-calendar2-week\"></i> Reservation</a>"
         ];
-
+        foreach($droits as $droit){
+            $lien.=$all_lien[$droit];
+        }
         return $lien;
     }
 }
