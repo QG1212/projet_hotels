@@ -5,23 +5,14 @@ require_once("../../Serveur/database/constants.php");
 $db=dbConnect();
 session_start();
 
-$array_price = Chambre::price($db);
-//var_dump($array_price);
-
-$classes = $_POST['classes'];
-$categories = $_POST['categories'];
-$prices = $_POST['prices'];
 
 
 
-
-if(isset($classes) && isset($categories) && isset($prices)){
-    Chambre::GetSelectClass($classes);
-    Chambre::GetSelectCategorie($categories);
-
-    Chambre::UpdateClass($db);
-    Chambre::UpdateCategorie($db);
-    Chambre::UpdatePrice($db, $classes,  $categories ,$prices);
+if(isset($_POST['classes']) && isset($_POST['categories']) && isset($_POST['price'])){
+    Chambre::UpdatePrice($db, $_POST['classes'], $_POST['categories'], $_POST['price']);
 }
+
+$array_price = Chambre::price($db);
+
 
 require_once("eddit_room_vue.php");

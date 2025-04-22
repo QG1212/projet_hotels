@@ -81,18 +81,18 @@
             <form action="eddit_room.php" method="post">
                 <div class="mb-3 form-floating">
                     <select id="class" class="form-select" name="classes">
-                        <option>*</option>
-                        <option>**</option>
-                        <option>***</option>
+                        <option value="1">*</option>
+                        <option value="2">**</option>
+                        <option value="3">***</option>
                     </select>
                     <label for="class" class="form-label">Nouvelle classe :</label>
                 </div>
 
                 <div class="mb-3 form-floating">
                     <select id="categorie" class="form-select" name="categories">
-                        <option>Simple</option>
-                        <option>Double</option>
-                        <option>Double avec salle de bain</option>
+                        <option value="1">Simple</option>
+                        <option value="2">Double</option>
+                        <option value="3">Double avec salle de bain</option>
                     </select>
                     <label for="categorie">Nouvelle catégorie :</label>
                 </div>
