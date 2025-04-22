@@ -20,6 +20,12 @@ if (!$id_hotel) {
     exit;
 }
 
+
+if (!isset($_SESSION['perm']) || !in_array(2, $_SESSION['perm'])) { // perm 3 pour gestion reservation
+    echo "pas la perm";
+    exit;
+}
+
 // recuperer les réservations de cet hôtel
 $reservations = \model\Reservation::getReservationsByHotel($db,$id_hotel);
 
