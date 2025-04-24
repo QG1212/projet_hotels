@@ -40,7 +40,7 @@ foreach ($consoList as $conso){
     if (isset($_POST[$conso['id_conso']])){
         Consomation::set_consommation($db,$conso['id_conso'],$_POST[$conso['id_conso']],$hotel);
     }
-    if (isset($_POST[$conso['delete'.$conso['id_conso']]])){
+    if (isset($_POST['delete'.$conso['id_conso']])){
         Consomation::remove_consommation($db,$hotel,$conso['id_conso']);
     }
 }

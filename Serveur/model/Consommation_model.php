@@ -43,28 +43,23 @@ class Consomation
 
     static function add_consommation($db,$hotel,$name,$price)
     {
-        $query= "SELECT id_conso FROM conso ORDER BY id_conso DESC LIMIT 1";
-        $queried = $db->query($query);
-        $queried->execute();
-        $id= $queried->fetch["id_conso"] +1;
+        $query= "SELECT COUNT( id_conso) AS count FROM conso ";
+        $queried= $db->query($query);
+        $id= $queried->fetchColumn();
 
-
-
-
-        $request1 = "INSERT  INTO prix_conso(id_conso, id_hotel, prix) VALUES(:id,:hotel,:price);";
+        $request1 = "INSERT INTO conso(id_conso, denomination) VALUES($id,:name);";
 
         $requested1 = $db->prepare($request1);
-        $requested1->bindParam(':hotel', $hotel);
-        $requested1->bindParam(':id', $id);
-        $requested1->bindParam(':price', $price);
+        $requested1->bindParam(':name', $name);
         $requested1->execute();
 
-        $request2 = "INSERT INTO conso(id_conso, denomination) VALUES(default,:name);";
+        $request2 = "INSERT  INTO prix_conso(id_conso, id_hotel, prix) VALUES(:id,:hotel,:price);";
 
         $requested2 = $db->prepare($request2);
-        $requested2->bindParam(':name', $name);
+        $requested2->bindParam(':hotel', $hotel);
+        $requested2->bindParam(':id', $id);
+        $requested2->bindParam(':price', $price);
         $requested2->execute();
-
 
     }
 
