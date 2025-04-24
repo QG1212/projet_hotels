@@ -3,15 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>1||-9223372036854775808|c|G
-1||10|c|G
-1||10|C|G
-1||10|T|G
-13758||-9223372036854775808|c|G
-13758||10|c|G
-13758||10|C|G
-13758||10|T|G
-49160||-9223372036854775808|c|G
+      <Grants>49160||-9223372036854775808|c|G
 49160||49159|c|G
 49160||49163|c|G
 49160||49159|C|G
@@ -27,7 +19,7 @@
 65543||-9223372036854775808|T|G
 65543||10|T|G
 65543||65544|T|G</Grants>
-      <IntrospectionStateNumber>1078</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1266</IntrospectionStateNumber>
       <ServerVersion>14.17</ServerVersion>
       <StartupTime>1745325262</StartupTime>
       <TimeZones>true ACDT
@@ -1457,7 +1449,7 @@ true posixrules
 13393||10|C|G
 13393||-9223372036854775808|U|G
 13393||10|U|G</Grants>
-      <IntrospectionStateNumber>1078</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1266</IntrospectionStateNumber>
       <ObjectId>73736</ObjectId>
       <OwnerName>dev</OwnerName>
     </database>
@@ -4954,187 +4946,187 @@ true posixrules
     <schema id="285" parent="10" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1078</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2025-04-22.12:45:12</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1266</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2025-04-22.13:35:03</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>526</StateNumber>
       <OwnerName>postgres</OwnerName>
     </schema>
     <sequence id="286" parent="285" name="categorie_id_categorie_seq">
-      <ObjectId>123089</ObjectId>
+      <ObjectId>123658</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1053</StateNumber>
+      <StateNumber>1241</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <sequence id="287" parent="285" name="chambre_id_chambre_seq">
-      <ObjectId>123128</ObjectId>
+      <ObjectId>123697</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1059</StateNumber>
+      <StateNumber>1247</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <sequence id="288" parent="285" name="classe_id_classe_seq">
-      <ObjectId>123077</ObjectId>
+      <ObjectId>123646</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1049</StateNumber>
+      <StateNumber>1237</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <sequence id="289" parent="285" name="client_id_client_seq">
-      <ObjectId>123145</ObjectId>
+      <ObjectId>123714</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1061</StateNumber>
+      <StateNumber>1249</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <sequence id="290" parent="285" name="conso_client_id_cc_seq">
-      <ObjectId>123196</ObjectId>
+      <ObjectId>123765</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1069</StateNumber>
+      <StateNumber>1257</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <sequence id="291" parent="285" name="conso_id_conso_seq">
-      <ObjectId>123174</ObjectId>
+      <ObjectId>123743</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1065</StateNumber>
+      <StateNumber>1253</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <sequence id="292" parent="285" name="employe_id_employe_seq">
-      <ObjectId>123220</ObjectId>
+      <ObjectId>123789</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1073</StateNumber>
+      <StateNumber>1261</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <sequence id="293" parent="285" name="hotel_id_hotel_seq">
-      <ObjectId>123111</ObjectId>
+      <ObjectId>123680</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1057</StateNumber>
+      <StateNumber>1245</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <sequence id="294" parent="285" name="metier_id_metier_seq">
-      <ObjectId>123213</ObjectId>
+      <ObjectId>123782</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1071</StateNumber>
+      <StateNumber>1259</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <sequence id="295" parent="285" name="perm_id_perm_seq">
-      <ObjectId>123242</ObjectId>
+      <ObjectId>123811</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1075</StateNumber>
+      <StateNumber>1263</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <sequence id="296" parent="285" name="reservation_id_sejour_seq">
-      <ObjectId>123157</ObjectId>
+      <ObjectId>123726</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>1063</StateNumber>
+      <StateNumber>1251</StateNumber>
       <StoredType>integer|0s</StoredType>
       <OwnerName>dev</OwnerName>
     </sequence>
     <table id="297" parent="285" name="categorie">
-      <ObjectId>123090</ObjectId>
-      <StateNumber>1055</StateNumber>
+      <ObjectId>123659</ObjectId>
+      <StateNumber>1243</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="298" parent="285" name="chambre">
-      <ObjectId>123129</ObjectId>
-      <StateNumber>1059</StateNumber>
+      <ObjectId>123698</ObjectId>
+      <StateNumber>1247</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="299" parent="285" name="classe">
-      <ObjectId>123078</ObjectId>
-      <StateNumber>1055</StateNumber>
+      <ObjectId>123647</ObjectId>
+      <StateNumber>1243</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="300" parent="285" name="client">
-      <ObjectId>123146</ObjectId>
-      <StateNumber>1063</StateNumber>
+      <ObjectId>123715</ObjectId>
+      <StateNumber>1251</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="301" parent="285" name="conso">
-      <ObjectId>123175</ObjectId>
-      <StateNumber>1067</StateNumber>
+      <ObjectId>123744</ObjectId>
+      <StateNumber>1255</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="302" parent="285" name="conso_client">
-      <ObjectId>123197</ObjectId>
-      <StateNumber>1069</StateNumber>
+      <ObjectId>123766</ObjectId>
+      <StateNumber>1257</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="303" parent="285" name="employe">
-      <ObjectId>123221</ObjectId>
-      <StateNumber>1073</StateNumber>
+      <ObjectId>123790</ObjectId>
+      <StateNumber>1261</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="304" parent="285" name="employe_perm">
-      <ObjectId>123251</ObjectId>
-      <StateNumber>1077</StateNumber>
+      <ObjectId>123820</ObjectId>
+      <StateNumber>1265</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="305" parent="285" name="hotel">
-      <ObjectId>123112</ObjectId>
-      <StateNumber>1057</StateNumber>
+      <ObjectId>123681</ObjectId>
+      <StateNumber>1245</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="306" parent="285" name="localisation">
-      <ObjectId>123084</ObjectId>
-      <StateNumber>1057</StateNumber>
+      <ObjectId>123653</ObjectId>
+      <StateNumber>1245</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="307" parent="285" name="metier">
-      <ObjectId>123214</ObjectId>
-      <StateNumber>1073</StateNumber>
+      <ObjectId>123783</ObjectId>
+      <StateNumber>1261</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="308" parent="285" name="perm">
-      <ObjectId>123243</ObjectId>
-      <StateNumber>1077</StateNumber>
+      <ObjectId>123812</ObjectId>
+      <StateNumber>1265</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="309" parent="285" name="prix_chambre">
-      <ObjectId>123096</ObjectId>
-      <StateNumber>1055</StateNumber>
+      <ObjectId>123665</ObjectId>
+      <StateNumber>1243</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="310" parent="285" name="prix_conso">
-      <ObjectId>123181</ObjectId>
-      <StateNumber>1067</StateNumber>
+      <ObjectId>123750</ObjectId>
+      <StateNumber>1255</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
     <table id="311" parent="285" name="reservation">
-      <ObjectId>123158</ObjectId>
-      <StateNumber>1063</StateNumber>
+      <ObjectId>123727</ObjectId>
+      <StateNumber>1251</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>dev</OwnerName>
     </table>
@@ -5142,191 +5134,191 @@ true posixrules
       <DefaultExpression>nextval(&apos;categorie_id_categorie_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1053</StateNumber>
+      <StateNumber>1241</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123089</SequenceId>
+      <SequenceId>123658</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="313" parent="297" name="denomination">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1053</StateNumber>
+      <StateNumber>1241</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="314" parent="297" name="categorie_pkey">
       <ColNames>id_categorie</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123094</ObjectId>
+      <ObjectId>123663</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1053</StateNumber>
+      <StateNumber>1241</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="315" parent="297" name="categorie_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123095</ObjectId>
+      <ObjectId>123664</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1053</StateNumber>
-      <UnderlyingIndexId>123094</UnderlyingIndexId>
+      <StateNumber>1241</StateNumber>
+      <UnderlyingIndexId>123663</UnderlyingIndexId>
     </key>
     <column id="316" parent="298" name="id_chambre">
       <DefaultExpression>nextval(&apos;chambre_id_chambre_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1059</StateNumber>
+      <StateNumber>1247</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123128</SequenceId>
+      <SequenceId>123697</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="317" parent="298" name="id_hotel">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1059</StateNumber>
+      <StateNumber>1247</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="318" parent="298" name="id_categorie">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1059</StateNumber>
+      <StateNumber>1247</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="319" parent="298" name="numero_chambre">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1059</StateNumber>
+      <StateNumber>1247</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="320" parent="298" name="chambre_id_hotel_fkey">
       <ColNames>id_hotel</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123135</ObjectId>
-      <StateNumber>1059</StateNumber>
+      <ObjectId>123704</ObjectId>
+      <StateNumber>1247</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123112</RefTableId>
+      <RefTableId>123681</RefTableId>
     </foreign-key>
     <foreign-key id="321" parent="298" name="chambre_id_categorie_fkey">
       <ColNames>id_categorie</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123140</ObjectId>
-      <StateNumber>1059</StateNumber>
+      <ObjectId>123709</ObjectId>
+      <StateNumber>1247</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123090</RefTableId>
+      <RefTableId>123659</RefTableId>
     </foreign-key>
     <index id="322" parent="298" name="chambre_pkey">
       <ColNames>id_chambre</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123133</ObjectId>
+      <ObjectId>123702</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1059</StateNumber>
+      <StateNumber>1247</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="323" parent="298" name="chambre_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123134</ObjectId>
+      <ObjectId>123703</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1059</StateNumber>
-      <UnderlyingIndexId>123133</UnderlyingIndexId>
+      <StateNumber>1247</StateNumber>
+      <UnderlyingIndexId>123702</UnderlyingIndexId>
     </key>
     <column id="324" parent="299" name="id_classe">
       <DefaultExpression>nextval(&apos;classe_id_classe_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1049</StateNumber>
+      <StateNumber>1237</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123077</SequenceId>
+      <SequenceId>123646</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="325" parent="299" name="denomination">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1049</StateNumber>
+      <StateNumber>1237</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="326" parent="299" name="classe_pkey">
       <ColNames>id_classe</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123082</ObjectId>
+      <ObjectId>123651</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1049</StateNumber>
+      <StateNumber>1237</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="327" parent="299" name="classe_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123083</ObjectId>
+      <ObjectId>123652</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1049</StateNumber>
-      <UnderlyingIndexId>123082</UnderlyingIndexId>
+      <StateNumber>1237</StateNumber>
+      <UnderlyingIndexId>123651</UnderlyingIndexId>
     </key>
     <check id="328" parent="300" name="client_email_check">
       <ColNames>email</ColNames>
-      <ObjectId>123150</ObjectId>
+      <ObjectId>123719</ObjectId>
       <Predicate>(email)::text ~* &apos;^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$&apos;::text</Predicate>
-      <StateNumber>1061</StateNumber>
+      <StateNumber>1249</StateNumber>
     </check>
     <column id="329" parent="300" name="id_client">
       <DefaultExpression>nextval(&apos;client_id_client_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1061</StateNumber>
+      <StateNumber>1249</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123145</SequenceId>
+      <SequenceId>123714</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="330" parent="300" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1061</StateNumber>
+      <StateNumber>1249</StateNumber>
       <StoredType>varchar(320)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="331" parent="300" name="nom">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1061</StateNumber>
+      <StateNumber>1249</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="332" parent="300" name="prenom">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1061</StateNumber>
+      <StateNumber>1249</StateNumber>
       <StoredType>varchar(100)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="333" parent="300" name="fleure">
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>1061</StateNumber>
+      <StateNumber>1249</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="334" parent="300" name="tel">
       <Position>6</Position>
-      <StateNumber>1061</StateNumber>
+      <StateNumber>1249</StateNumber>
       <StoredType>varchar(20)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="335" parent="300" name="client_pkey">
       <ColNames>id_client</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123153</ObjectId>
+      <ObjectId>123722</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1061</StateNumber>
+      <StateNumber>1249</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <index id="336" parent="300" name="client_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123155</ObjectId>
-      <StateNumber>1061</StateNumber>
+      <ObjectId>123724</ObjectId>
+      <StateNumber>1249</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
@@ -5335,203 +5327,203 @@ true posixrules
     </index>
     <key id="337" parent="300" name="client_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123154</ObjectId>
+      <ObjectId>123723</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1061</StateNumber>
-      <UnderlyingIndexId>123153</UnderlyingIndexId>
+      <StateNumber>1249</StateNumber>
+      <UnderlyingIndexId>123722</UnderlyingIndexId>
     </key>
     <key id="338" parent="300" name="client_email_key">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123156</ObjectId>
-      <StateNumber>1061</StateNumber>
-      <UnderlyingIndexId>123155</UnderlyingIndexId>
+      <ObjectId>123725</ObjectId>
+      <StateNumber>1249</StateNumber>
+      <UnderlyingIndexId>123724</UnderlyingIndexId>
     </key>
     <column id="339" parent="301" name="id_conso">
       <DefaultExpression>nextval(&apos;conso_id_conso_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1065</StateNumber>
+      <StateNumber>1253</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123174</SequenceId>
+      <SequenceId>123743</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="340" parent="301" name="denomination">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1065</StateNumber>
+      <StateNumber>1253</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="341" parent="301" name="conso_pkey">
       <ColNames>id_conso</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123179</ObjectId>
+      <ObjectId>123748</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1065</StateNumber>
+      <StateNumber>1253</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="342" parent="301" name="conso_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123180</ObjectId>
+      <ObjectId>123749</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1065</StateNumber>
-      <UnderlyingIndexId>123179</UnderlyingIndexId>
+      <StateNumber>1253</StateNumber>
+      <UnderlyingIndexId>123748</UnderlyingIndexId>
     </key>
     <column id="343" parent="302" name="id_cc">
       <DefaultExpression>nextval(&apos;conso_client_id_cc_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1069</StateNumber>
+      <StateNumber>1257</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123196</SequenceId>
+      <SequenceId>123765</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="344" parent="302" name="id_conso">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1069</StateNumber>
+      <StateNumber>1257</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="345" parent="302" name="id_sejour">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1069</StateNumber>
+      <StateNumber>1257</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="346" parent="302" name="date_conso">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1069</StateNumber>
+      <StateNumber>1257</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
     <column id="347" parent="302" name="nombre">
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>1069</StateNumber>
+      <StateNumber>1257</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="348" parent="302" name="conso_client_id_conso_fkey">
       <ColNames>id_conso</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123203</ObjectId>
-      <StateNumber>1069</StateNumber>
+      <ObjectId>123772</ObjectId>
+      <StateNumber>1257</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123175</RefTableId>
+      <RefTableId>123744</RefTableId>
     </foreign-key>
     <foreign-key id="349" parent="302" name="conso_client_id_sejour_fkey">
       <ColNames>id_sejour</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123208</ObjectId>
-      <StateNumber>1069</StateNumber>
+      <ObjectId>123777</ObjectId>
+      <StateNumber>1257</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123158</RefTableId>
+      <RefTableId>123727</RefTableId>
     </foreign-key>
     <index id="350" parent="302" name="conso_client_pkey">
       <ColNames>id_cc</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123201</ObjectId>
+      <ObjectId>123770</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1069</StateNumber>
+      <StateNumber>1257</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="351" parent="302" name="conso_client_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123202</ObjectId>
+      <ObjectId>123771</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1069</StateNumber>
-      <UnderlyingIndexId>123201</UnderlyingIndexId>
+      <StateNumber>1257</StateNumber>
+      <UnderlyingIndexId>123770</UnderlyingIndexId>
     </key>
     <check id="352" parent="303" name="employe_email_check">
       <ColNames>email</ColNames>
-      <ObjectId>123225</ObjectId>
+      <ObjectId>123794</ObjectId>
       <Predicate>(email)::text ~* &apos;^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$&apos;::text</Predicate>
-      <StateNumber>1073</StateNumber>
+      <StateNumber>1261</StateNumber>
     </check>
     <column id="353" parent="303" name="id_employe">
       <DefaultExpression>nextval(&apos;employe_id_employe_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1073</StateNumber>
+      <StateNumber>1261</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123220</SequenceId>
+      <SequenceId>123789</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="354" parent="303" name="email">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1073</StateNumber>
+      <StateNumber>1261</StateNumber>
       <StoredType>varchar(320)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="355" parent="303" name="id_metier">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1073</StateNumber>
+      <StateNumber>1261</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="356" parent="303" name="id_localisation">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1073</StateNumber>
+      <StateNumber>1261</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="357" parent="303" name="fleure">
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>1073</StateNumber>
+      <StateNumber>1261</StateNumber>
       <StoredType>varchar(255)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="358" parent="303" name="tel">
       <Position>6</Position>
-      <StateNumber>1073</StateNumber>
+      <StateNumber>1261</StateNumber>
       <StoredType>varchar(20)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="359" parent="303" name="nom">
       <Position>7</Position>
-      <StateNumber>1073</StateNumber>
+      <StateNumber>1261</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <foreign-key id="360" parent="303" name="employe_id_metier_fkey">
       <ColNames>id_metier</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123237</ObjectId>
-      <StateNumber>1073</StateNumber>
+      <ObjectId>123806</ObjectId>
+      <StateNumber>1261</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123214</RefTableId>
+      <RefTableId>123783</RefTableId>
     </foreign-key>
     <foreign-key id="361" parent="303" name="employe_id_localisation_fkey">
       <ColNames>id_localisation</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123232</ObjectId>
-      <StateNumber>1073</StateNumber>
+      <ObjectId>123801</ObjectId>
+      <StateNumber>1261</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123084</RefTableId>
+      <RefTableId>123653</RefTableId>
     </foreign-key>
     <index id="362" parent="303" name="employe_pkey">
       <ColNames>id_employe</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123228</ObjectId>
+      <ObjectId>123797</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1073</StateNumber>
+      <StateNumber>1261</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <index id="363" parent="303" name="employe_email_key">
       <ColNames>email</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123230</ObjectId>
-      <StateNumber>1073</StateNumber>
+      <ObjectId>123799</ObjectId>
+      <StateNumber>1261</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
@@ -5540,218 +5532,218 @@ true posixrules
     </index>
     <key id="364" parent="303" name="employe_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123229</ObjectId>
+      <ObjectId>123798</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1073</StateNumber>
-      <UnderlyingIndexId>123228</UnderlyingIndexId>
+      <StateNumber>1261</StateNumber>
+      <UnderlyingIndexId>123797</UnderlyingIndexId>
     </key>
     <key id="365" parent="303" name="employe_email_key">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123231</ObjectId>
-      <StateNumber>1073</StateNumber>
-      <UnderlyingIndexId>123230</UnderlyingIndexId>
+      <ObjectId>123800</ObjectId>
+      <StateNumber>1261</StateNumber>
+      <UnderlyingIndexId>123799</UnderlyingIndexId>
     </key>
     <column id="366" parent="304" name="id_perm">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1077</StateNumber>
+      <StateNumber>1265</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="367" parent="304" name="id_employe">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1077</StateNumber>
+      <StateNumber>1265</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="368" parent="304" name="employe_perm_id_perm_fkey">
       <ColNames>id_perm</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123256</ObjectId>
-      <StateNumber>1077</StateNumber>
+      <ObjectId>123825</ObjectId>
+      <StateNumber>1265</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123243</RefTableId>
+      <RefTableId>123812</RefTableId>
     </foreign-key>
     <foreign-key id="369" parent="304" name="employe_perm_id_employe_fkey">
       <ColNames>id_employe</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123261</ObjectId>
-      <StateNumber>1077</StateNumber>
+      <ObjectId>123830</ObjectId>
+      <StateNumber>1265</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123221</RefTableId>
+      <RefTableId>123790</RefTableId>
     </foreign-key>
     <index id="370" parent="304" name="employe_perm_pkey">
       <ColNames>id_perm
 id_employe</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123254</ObjectId>
+      <ObjectId>123823</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1077</StateNumber>
+      <StateNumber>1265</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="371" parent="304" name="employe_perm_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123255</ObjectId>
+      <ObjectId>123824</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1077</StateNumber>
-      <UnderlyingIndexId>123254</UnderlyingIndexId>
+      <StateNumber>1265</StateNumber>
+      <UnderlyingIndexId>123823</UnderlyingIndexId>
     </key>
     <column id="372" parent="305" name="id_hotel">
       <DefaultExpression>nextval(&apos;hotel_id_hotel_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1057</StateNumber>
+      <StateNumber>1245</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123111</SequenceId>
+      <SequenceId>123680</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="373" parent="305" name="nom">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1057</StateNumber>
+      <StateNumber>1245</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <column id="374" parent="305" name="id_classe">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1057</StateNumber>
+      <StateNumber>1245</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="375" parent="305" name="id_localisation">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1057</StateNumber>
+      <StateNumber>1245</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="376" parent="305" name="hotel_id_classe_fkey">
       <ColNames>id_classe</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123118</ObjectId>
-      <StateNumber>1057</StateNumber>
+      <ObjectId>123687</ObjectId>
+      <StateNumber>1245</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123078</RefTableId>
+      <RefTableId>123647</RefTableId>
     </foreign-key>
     <foreign-key id="377" parent="305" name="hotel_id_localisation_fkey">
       <ColNames>id_localisation</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123123</ObjectId>
-      <StateNumber>1057</StateNumber>
+      <ObjectId>123692</ObjectId>
+      <StateNumber>1245</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123084</RefTableId>
+      <RefTableId>123653</RefTableId>
     </foreign-key>
     <index id="378" parent="305" name="hotel_pkey">
       <ColNames>id_hotel</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123116</ObjectId>
+      <ObjectId>123685</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1057</StateNumber>
+      <StateNumber>1245</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="379" parent="305" name="hotel_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123117</ObjectId>
+      <ObjectId>123686</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1057</StateNumber>
-      <UnderlyingIndexId>123116</UnderlyingIndexId>
+      <StateNumber>1245</StateNumber>
+      <UnderlyingIndexId>123685</UnderlyingIndexId>
     </key>
     <column id="380" parent="306" name="id_localisation">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1051</StateNumber>
+      <StateNumber>1239</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="381" parent="306" name="denomination">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1051</StateNumber>
+      <StateNumber>1239</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="382" parent="306" name="localisation_pkey">
       <ColNames>id_localisation</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123087</ObjectId>
+      <ObjectId>123656</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1051</StateNumber>
+      <StateNumber>1239</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="383" parent="306" name="localisation_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123088</ObjectId>
+      <ObjectId>123657</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1051</StateNumber>
-      <UnderlyingIndexId>123087</UnderlyingIndexId>
+      <StateNumber>1239</StateNumber>
+      <UnderlyingIndexId>123656</UnderlyingIndexId>
     </key>
     <column id="384" parent="307" name="id_metier">
       <DefaultExpression>nextval(&apos;metier_id_metier_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1071</StateNumber>
+      <StateNumber>1259</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123213</SequenceId>
+      <SequenceId>123782</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="385" parent="307" name="denomination">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1071</StateNumber>
+      <StateNumber>1259</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="386" parent="307" name="metier_pkey">
       <ColNames>id_metier</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123218</ObjectId>
+      <ObjectId>123787</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1071</StateNumber>
+      <StateNumber>1259</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="387" parent="307" name="metier_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123219</ObjectId>
+      <ObjectId>123788</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1071</StateNumber>
-      <UnderlyingIndexId>123218</UnderlyingIndexId>
+      <StateNumber>1259</StateNumber>
+      <UnderlyingIndexId>123787</UnderlyingIndexId>
     </key>
     <column id="388" parent="308" name="id_perm">
       <DefaultExpression>nextval(&apos;perm_id_perm_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1075</StateNumber>
+      <StateNumber>1263</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123242</SequenceId>
+      <SequenceId>123811</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="389" parent="308" name="denomination">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1075</StateNumber>
+      <StateNumber>1263</StateNumber>
       <StoredType>varchar(320)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
     <index id="390" parent="308" name="perm_pkey">
       <ColNames>id_perm</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123247</ObjectId>
+      <ObjectId>123816</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1075</StateNumber>
+      <StateNumber>1263</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <index id="391" parent="308" name="perm_denomination_key">
       <ColNames>denomination</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123249</ObjectId>
-      <StateNumber>1075</StateNumber>
+      <ObjectId>123818</ObjectId>
+      <StateNumber>1263</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
       <CollationNames>default</CollationNames>
@@ -5760,205 +5752,205 @@ id_employe</ColNames>
     </index>
     <key id="392" parent="308" name="perm_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123248</ObjectId>
+      <ObjectId>123817</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1075</StateNumber>
-      <UnderlyingIndexId>123247</UnderlyingIndexId>
+      <StateNumber>1263</StateNumber>
+      <UnderlyingIndexId>123816</UnderlyingIndexId>
     </key>
     <key id="393" parent="308" name="perm_denomination_key">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123250</ObjectId>
-      <StateNumber>1075</StateNumber>
-      <UnderlyingIndexId>123249</UnderlyingIndexId>
+      <ObjectId>123819</ObjectId>
+      <StateNumber>1263</StateNumber>
+      <UnderlyingIndexId>123818</UnderlyingIndexId>
     </key>
     <column id="394" parent="309" name="id_classe">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1055</StateNumber>
+      <StateNumber>1243</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="395" parent="309" name="id_categorie">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1055</StateNumber>
+      <StateNumber>1243</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="396" parent="309" name="prix">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1055</StateNumber>
+      <StateNumber>1243</StateNumber>
       <StoredType>numeric(7,2 digit)|0s</StoredType>
       <TypeId>1700</TypeId>
     </column>
     <foreign-key id="397" parent="309" name="prix_chambre_id_classe_fkey">
       <ColNames>id_classe</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123101</ObjectId>
-      <StateNumber>1055</StateNumber>
+      <ObjectId>123670</ObjectId>
+      <StateNumber>1243</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123078</RefTableId>
+      <RefTableId>123647</RefTableId>
     </foreign-key>
     <foreign-key id="398" parent="309" name="prix_chambre_id_categorie_fkey">
       <ColNames>id_categorie</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123106</ObjectId>
-      <StateNumber>1055</StateNumber>
+      <ObjectId>123675</ObjectId>
+      <StateNumber>1243</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123090</RefTableId>
+      <RefTableId>123659</RefTableId>
     </foreign-key>
     <index id="399" parent="309" name="prix_chambre_pkey">
       <ColNames>id_classe
 id_categorie</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123099</ObjectId>
+      <ObjectId>123668</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1055</StateNumber>
+      <StateNumber>1243</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="400" parent="309" name="prix_chambre_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123100</ObjectId>
+      <ObjectId>123669</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1055</StateNumber>
-      <UnderlyingIndexId>123099</UnderlyingIndexId>
+      <StateNumber>1243</StateNumber>
+      <UnderlyingIndexId>123668</UnderlyingIndexId>
     </key>
     <column id="401" parent="310" name="id_conso">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1067</StateNumber>
+      <StateNumber>1255</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="402" parent="310" name="id_hotel">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1067</StateNumber>
+      <StateNumber>1255</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="403" parent="310" name="prix">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1067</StateNumber>
+      <StateNumber>1255</StateNumber>
       <StoredType>numeric(7,2 digit)|0s</StoredType>
       <TypeId>1700</TypeId>
     </column>
     <foreign-key id="404" parent="310" name="prix_conso_id_conso_fkey">
       <ColNames>id_conso</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123186</ObjectId>
-      <StateNumber>1067</StateNumber>
+      <ObjectId>123755</ObjectId>
+      <StateNumber>1255</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123175</RefTableId>
+      <RefTableId>123744</RefTableId>
     </foreign-key>
     <foreign-key id="405" parent="310" name="prix_conso_id_hotel_fkey">
       <ColNames>id_hotel</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123191</ObjectId>
-      <StateNumber>1067</StateNumber>
+      <ObjectId>123760</ObjectId>
+      <StateNumber>1255</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123112</RefTableId>
+      <RefTableId>123681</RefTableId>
     </foreign-key>
     <index id="406" parent="310" name="prix_conso_pkey">
       <ColNames>id_conso
 id_hotel</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123184</ObjectId>
+      <ObjectId>123753</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1067</StateNumber>
+      <StateNumber>1255</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="407" parent="310" name="prix_conso_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123185</ObjectId>
+      <ObjectId>123754</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1067</StateNumber>
-      <UnderlyingIndexId>123184</UnderlyingIndexId>
+      <StateNumber>1255</StateNumber>
+      <UnderlyingIndexId>123753</UnderlyingIndexId>
     </key>
     <column id="408" parent="311" name="id_sejour">
       <DefaultExpression>nextval(&apos;reservation_id_sejour_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1063</StateNumber>
+      <StateNumber>1251</StateNumber>
       <StoredType>integer|0s</StoredType>
-      <SequenceId>123157</SequenceId>
+      <SequenceId>123726</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="409" parent="311" name="id_chambre">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>1063</StateNumber>
+      <StateNumber>1251</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <column id="410" parent="311" name="date_debut">
       <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>1063</StateNumber>
+      <StateNumber>1251</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
     <column id="411" parent="311" name="date_fin">
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>1063</StateNumber>
+      <StateNumber>1251</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
     <column id="412" parent="311" name="date_arrivee">
       <Position>5</Position>
-      <StateNumber>1063</StateNumber>
+      <StateNumber>1251</StateNumber>
       <StoredType>date|0s</StoredType>
       <TypeId>1082</TypeId>
     </column>
     <column id="413" parent="311" name="paiement">
       <Position>6</Position>
-      <StateNumber>1063</StateNumber>
+      <StateNumber>1251</StateNumber>
       <StoredType>numeric(8,2 digit)|0s</StoredType>
       <TypeId>1700</TypeId>
     </column>
     <column id="414" parent="311" name="id_client">
       <NotNull>1</NotNull>
       <Position>7</Position>
-      <StateNumber>1063</StateNumber>
+      <StateNumber>1251</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
     <foreign-key id="415" parent="311" name="reservation_id_chambre_fkey">
       <ColNames>id_chambre</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123164</ObjectId>
-      <StateNumber>1063</StateNumber>
+      <ObjectId>123733</ObjectId>
+      <StateNumber>1251</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123129</RefTableId>
+      <RefTableId>123698</RefTableId>
     </foreign-key>
     <foreign-key id="416" parent="311" name="reservation_id_client_fkey">
       <ColNames>id_client</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123169</ObjectId>
-      <StateNumber>1063</StateNumber>
+      <ObjectId>123738</ObjectId>
+      <StateNumber>1251</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>123146</RefTableId>
+      <RefTableId>123715</RefTableId>
     </foreign-key>
     <index id="417" parent="311" name="reservation_pkey">
       <ColNames>id_sejour</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123162</ObjectId>
+      <ObjectId>123731</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1063</StateNumber>
+      <StateNumber>1251</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
     <key id="418" parent="311" name="reservation_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>123163</ObjectId>
+      <ObjectId>123732</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1063</StateNumber>
-      <UnderlyingIndexId>123162</UnderlyingIndexId>
+      <StateNumber>1251</StateNumber>
+      <UnderlyingIndexId>123731</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

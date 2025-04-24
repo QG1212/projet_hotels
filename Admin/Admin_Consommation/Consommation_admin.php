@@ -5,12 +5,12 @@ require_once("../../Serveur/database/constants.php");
 session_start();
 $db=dbConnect();
 
-if (!isset($_SESSION['perm']) || !in_array(2, $_SESSION['perm'])) { // perm 4 pour gestion consomation
+if (!isset($_SESSION['perm']) || !in_array(4, $_SESSION['perm']) && !in_array(1, $_SESSION['perm'])) { // perm 4 pour gestion consomation
     echo "pas la perm";
     exit;
 }
 
-//employe_id ne permet pas de savoir à quelle hotel il appartient à moin de faire une requete sql qui recupère sa localisation avec son id
+//employe_id ne permet pas de savoir à quelle hotel il appartient à moins de faire une requete sql qui recupère sa localisation avec son id
 /*
 switch ($_SESSION['employe_id']){
     case 5:

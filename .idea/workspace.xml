@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f7f25f19-7893-406f-a141-39edec036723" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a6b84be8-e21f-4130-ab63-0f5672b2dccf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a6b84be8-e21f-4130-ab63-0f5672b2dccf.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a6b84be8-e21f-4130-ab63-0f5672b2dccf/storage_v2/_src_/database/projet_hotel.gajxlw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a6b84be8-e21f-4130-ab63-0f5672b2dccf/storage_v2/_src_/database/projet_hotel.gajxlw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/Admin_Consommation/Consommation_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_Consommation/Consommation_admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/Admin_Perm/Admin_perm.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_Perm/Admin_perm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Admin/Admin_Reservation/Reservation_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_Reservation/Reservation_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/Admin_log/admin_log.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/Admin_log/admin_log.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,23 +31,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/to1ca/PhpstormProjects/TP_php/GitHub/projet_hotels",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/to1ca/PhpstormProjects/TP_php/GitHub/projet_hotels&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -64,7 +65,8 @@
       <option name="presentableId" value="Default" />
       <updated>1745322236982</updated>
       <workItem from="1745322238086" duration="1971000" />
-      <workItem from="1745325097712" duration="2864000" />
+      <workItem from="1745325097712" duration="3873000" />
+      <workItem from="1745426971665" duration="3501000" />
     </task>
     <servers />
   </component>
