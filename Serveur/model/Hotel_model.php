@@ -39,4 +39,18 @@ class Hotel
      }
  }
 
+    /**
+     * @param $pdo
+     * @param $id_localisation int localisation de l'hotel
+     * @return string nom de l'hotel
+     */
+ static function getNomHotel($pdo,$id_hotel)
+ {
+     $stmt = $pdo->prepare("select nom from hotel 
+                                where id_hotel=:loc;");
+     $stmt->bindParam(":loc",$id_hotel);
+     $stmt->execute();
+     return $stmt->fetch()[0];
+ }
+
 }

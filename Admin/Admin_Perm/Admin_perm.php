@@ -5,7 +5,10 @@ require_once("../../Serveur/model/login_model.php");
 
 session_start();
 $pdo=dbConnect();
-
+if (!isset($_SESSION['perm'])) {
+    echo "pas la perm";
+    exit;
+}
 $id_employe = $_SESSION['employe_id'];
 //var_dump($id_employe);
 

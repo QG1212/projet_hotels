@@ -3,20 +3,29 @@ session_start();
 require_once('../../Serveur/database/constants.php');
 require_once('../../Serveur/model/Reservation_model.php');
 require_once('../../Serveur/model/Hotel_model.php');
+require_once('../../Serveur/model/lien.php');
 
 //connection à la db
 $db=dbConnect();
 
 // recuperer l'id de l'hôtel de l'admin connecté
 //$id_hotel = isset($_SESSION['id_hotel']) ? $_SESSION['id_hotel'] : null;
-//Comme l'id de l'hotel n'est pas dans la session et que certain employé ne sont associé à aucun hotel masi au siege
+//Comme l'id de l'hotel n'est pas dans la session et que certain employé ne sont associé à aucun hotel mais au siege
 //récupération de l'id Hotel
 $id_hotel=Hotel::getEmployeHotel($db,$_SESSION['id_loc']);
+//lien auquelle l'employé a accés
+$lien=lien::getLien($_SESSION['perm']);
 
 if(!isset($_SESSION['id_loc']))
     echo"Probleme";
 if (!$id_hotel) {
     echo "Erreur : aucun hôtel associé.";
+    exit;
+}
+
+
+if (!isset($_SESSION['perm']) || !in_array(3, $_SESSION['perm']) && !in_array(1, $_SESSION['perm'])) { // perm 3 pour gestion reservation
+    echo "pas la perm";
     exit;
 }
 

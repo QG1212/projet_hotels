@@ -14,5 +14,4 @@ if(isset($_POST['classes']) && isset($_POST['categories']) && isset($_POST['pric
 
 $array_price = Chambre::price($db);
 
-
 require_once("eddit_room_vue.php");
