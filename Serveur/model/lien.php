@@ -10,6 +10,8 @@ class lien
     static function getLien($droits){
         $lien="";
         $all_lien=[
+                "Le droit 0 n'existe pas",
+            
                 "<a href=\"../Admin_Reservation/Reservation_admin.php\"><i class=\"bi bi-calendar2-week\"></i> Reservation</a>
                 <a href=\"../Admin_Consommation/Consommation_admin.php\"><i class=\"bi bi-cup-straw\"></i> Prix Consomation</a>
                 <a href=\"../formulaire_chambre/eddit_room.php\"><i class=\"fas fa-bed\"></i> Prix Chambre</a>",
@@ -17,7 +19,11 @@ class lien
                 "<a href=\"../Admin_Reservation/Reservation_admin.php\"><i class=\"bi bi-calendar2-week\"></i> Reservation</a>
                 <a href=\"../Admin_Consommation/Consommation_admin.php\"><i class=\"bi bi-cup-straw\"></i> Prix Consomation</a>",
 
-                "<a href=\"../Admin_Reservation/Reservation_admin.php\"><i class=\"bi bi-calendar2-week\"></i> Reservation</a>"
+                "<a href=\"../Admin_Reservation/Reservation_admin.php\"><i class=\"bi bi-calendar2-week\"></i> Reservation</a>",
+
+                "<a href=\"../Admin_Consommation/Consommation_admin.php\"><i class=\"bi bi-cup-straw\"></i> Prix Consomation</a>",
+
+                ""
         ];
         foreach($droits as $droit){
             $lien.=$all_lien[$droit];
