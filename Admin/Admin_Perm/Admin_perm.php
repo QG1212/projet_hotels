@@ -19,6 +19,6 @@ $email = Employe::GetEmployeEmail2($pdo, $id_employe);
 var_dump($email);
 
 $array_perm = Employe::GetEmployePerm($pdo,$id_employe);
-var_dump($array_perm);  
+var_dump($array_perm);
 
 require("admin_perm_vue.php");
