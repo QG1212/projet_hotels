@@ -38,21 +38,23 @@
         } 
         else {
             echo "<h3 class='mb-4'>Prix des consommations de l'hôtel de " . $hotel . " :</h3>";
-            echo "<form action='Consommation_admin.php' method='POST'>";
+            echo "<form action='Consommation_admin.php' method='POST' id='consoForm'>";
             echo "<div class='container'>";
 
             foreach ($consoList as $conso) {
-                echo "<div class='row align-items-center mb-3'>";
-                echo "<div class='col-8'>";
+                $id = $conso['id_conso'];
+                echo "<div class='row align-items-center mb-3' id='conso_$id'>";
+                echo "<div class='col-6'>";
                 echo "<label class='form-label fw-bold'>" . $conso['denomination'] . "</label>";
                 echo "</div>";
-                echo "<div class='col-4 d-flex align-items-center'>";
-                echo "<input class='form-control prix'  value='" . $conso['prix'] . "' name='" . $conso['id_conso'] . "'> €  ";
-                echo "<button type='submit' class='btn btn-success mt-3' name='delete'".$conso['id_conso'].">delete</button>";
+                echo "<div class='col-3 d-flex align-items-center'>";
+                echo "<input class='form-control prix' value='" . $conso['prix'] . "' name='" . $id . "'> €";
                 echo "</div>";
-                echo "</div><";
+                echo "<div class='col-3'>";
+                echo "<button type='button' class='btn btn-danger' onclick='removeConso(\"$id\")'>Supprimer</button>";
+                echo "</div>";
+                echo "</div>";
             }
-
             echo "<button type='submit' class='btn btn-success mt-3'>Valider les modifications</button>";
             echo "</div>";
             echo "</form>";
@@ -75,6 +77,8 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Script de la suppression d'une conso -->
+<script src="Consomation.js"></script>
 </body>
 
 

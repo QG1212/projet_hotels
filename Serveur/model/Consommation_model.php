@@ -41,12 +41,12 @@ class Consomation
         $requested->execute();
         return $requested->fetchALL();}
 
-    static function add_consommation($db,$hotel,$name,$price)
-    {
+    static function add_consommation($db,$hotel,$name,$price){
         $query= "SELECT COUNT( id_conso) AS count FROM conso ";
         $queried= $db->query($query);
-        $id= $queried->fetchColumn();
-
+        $id= $queried->fetchColumn();// fetch column permet de recuperer l'id qui est insert
+        //mais ici tu ne fais pas d'insert
+        //Etape 1 : on regarde si la conso existe
         $request1 = "INSERT INTO conso(id_conso, denomination) VALUES($id,:name);";
 
         $requested1 = $db->prepare($request1);
@@ -70,11 +70,12 @@ class Consomation
         $requested1->bindParam(':id', $id);
         $requested1->bindParam(':hotel', $hotel);
         $requested1->execute();
-
+        /* A quoi sert cette suppression ?
         $request2 = "DELETE FROM conso WHERE id_conso=:id;";
         $requested2 = $db->prepare($request2);
         $requested2->bindParam(':id', $id);
         $requested2->bindParam(':hotel', $hotel);
         $requested2->execute();
-        ;}
+        */
+        }
 }

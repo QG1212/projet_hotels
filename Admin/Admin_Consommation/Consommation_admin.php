@@ -11,26 +11,6 @@ if (!isset($_SESSION['perm']) || !in_array(4, $_SESSION['perm']) && !in_array(1,
 }
 
 //employe_id ne permet pas de savoir à quelle hotel il appartient à moins de faire une requete sql qui recupère sa localisation avec son id
-/*
-switch ($_SESSION['employe_id']){
-    case 5:
-    $hotel= "Caen";
-        break;
-    case 7:
-    $hotel= "Brest";
-        break;
-    case 8:
-    $hotel= "Paris";
-        break;
-    case 6:
-    $hotel= "Nantes";
-        break;
-
-    default:
-        $hotel="";
-            break;
-}
-*/
 //on récupère l'hotel grace à l'id localisation de l'employe
 $hotel=Hotel::getEmployeHotel($db,$_SESSION['id_loc']);
 
@@ -41,7 +21,13 @@ foreach ($consoList as $conso){
         Consomation::set_consommation($db,$conso['id_conso'],$_POST[$conso['id_conso']],$hotel);
     }
     if (isset($_POST['delete'.$conso['id_conso']])){
-        Consomation::remove_consommation($db,$hotel,$conso['id_conso']);
+
+    }
+}
+if (isset($_POST['deleted_consos'])) {//si des consos ont été suppr
+    foreach ($_POST['deleted_consos'] as $id_conso_supprimee) {//on traverse la tableau des suppressions
+        //ce tableau contient tous les ids des consos suppr
+        Consomation::remove_consommation($db,$hotel,$id_conso_supprimee);
     }
 }
 
