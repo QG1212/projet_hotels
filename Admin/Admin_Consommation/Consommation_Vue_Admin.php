@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../Css/admin_log.css">
+
 </head>
 
 <body>
@@ -29,15 +30,15 @@
 </div>
 
 <!-- Contenu principal -->
-<div class="main-content">
-    <div class="form-container">
-        <h1>Liste des consommations</h1>
+<div class="main-content flex-column m-1">
+    <div class="form-container mb-1 p-4">
+        <h1 >Liste des consommations</h1>
         <?php
         if ($hotel == null) {
             echo "ERROR: hotel was not found";
         } 
         else {
-            echo "<h3 class='mb-4'>Prix des consommations de l'hôtel de " . $hotel . " :</h3>";
+            echo "<h3 class='mb-3'>Prix des consommations de l'hôtel de " . $hotel . " :</h3>";
             echo "<form action='Consommation_admin.php' method='POST' id='consoForm'>";
             echo "<div class='container'>";
 
@@ -51,23 +52,43 @@
                 echo "<input class='form-control prix' value='" . $conso['prix'] . "' name='" . $id . "'> €";
                 echo "</div>";
                 echo "<div class='col-3'>";
-                echo "<button type='button' class='btn btn-danger' onclick='removeConso(\"$id\")'>Supprimer</button>";
+                echo "<button type='button' class='btn btn-danger w-100' onclick='removeConso(\"$id\")'>Supprimer</button>";
                 echo "</div>";
                 echo "</div>";
             }
-            echo "<button type='submit' class='btn btn-success mt-3'>Valider les modifications</button>";
+            echo "<button type='submit' class='btn btn-success mt-3 w-100'>Valider les modifications</button>";
             echo "</div>";
             echo "</form>";
         }
-        echo "<br><br>
-            <h3>Ajouter une consommation:</h3>
-            <form action='Consommation_admin.php' method='POST'>
-            Nom: <input type='text' class='form-control prix' name='nom'>
-            Prix: <input type='number' class='form-control prix' name='prix'>€
-            <button type='submit' class='btn btn-success mt-3'>Insérer</button>
-            </form>
-        "
         ?>
+    </div>
+    <div class="form-container">
+
+        <h3>Ajouter une consommation:</h3>
+        <form action="Consommation_admin.php" method="POST">
+            <div class="row g-3 align-items-end mb-3">
+                <div class="col-md-4">
+                    <select name="id_conso" class="form-select">
+                        <option value="0" selected><-- Nouvelle Consommation --></option>
+                    </select>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="form-floating">
+                        <input id="nom" type="text" class="form-control" name="nom" placeholder="Nom">
+                        <label for="nom">Nom</label>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-floating">
+                        <input id="prix" type="number" class="form-control" name="prix" placeholder="Prix en €" step="0.01" required>
+                        <label for="prix">Prix en €</label>
+                    </div>
+                </div>
+                <div class="col-md-2 text-end">
+                    <button type="submit" class="btn btn-success w-100">Insérer</button>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
 

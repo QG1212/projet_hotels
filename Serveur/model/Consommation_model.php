@@ -77,5 +77,14 @@ class Consomation
         $requested2->bindParam(':hotel', $hotel);
         $requested2->execute();
         */
+    }
+    static function getSelectConsommation($db){
+        $stmt = $db->prepare("select id_conso,denomination from conso");
+        $stmt->execute();
+        $select="";
+        while($conso = $stmt->fetch()) {
+            $select.="<option value=\"".$conso["id_conso"]."\">Hôtel Bleu & Blanc - ".$conso["denomination"]."</option>";
         }
+        return $select;
+    }
 }
