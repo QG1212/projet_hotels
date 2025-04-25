@@ -62,4 +62,14 @@ class Employe
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         return $user['email'];
     }
+    static function GetEmployePermDenomination($db,$id_employe){
+        $stmt=$db->prepare("select denomination from employe_perm
+                            inner join employe using(id_employe)
+                            inner join perm using(id_perm)
+                            where id_employe=:id_employe;");
+        $stmt->bindParam(':id_employe',$id_employe);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
