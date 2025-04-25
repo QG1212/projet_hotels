@@ -53,21 +53,27 @@
                     <tbody>
                         <tr>
                             <th scope="row">*</th>
-                            <td>39.00</td>
-                            <td>59.00</td>
-                            <td>69.00</td>
+                            <?php
+                                for($i=0;$i<3;$i++){
+                            $price = $array_price[$i]["prix"]. "\n";
+                            echo "<td> $price </td>";
+                            } ?>
                         </tr>
                         <tr>
                             <th scope="row">**</th>
-                            <td>39.00</td>
-                            <td>59.00</td>
-                            <td>69.00</td>
+                            <?php
+                            for($i=3;$i<6;$i++){
+                                $price = $array_price[$i]["prix"]. "\n";
+                                echo "<td> $price </td>";
+                            } ?>
                         </tr>
                         <tr>
                             <th scope="row">***</th>
-                            <td>39.00</td>
-                            <td>59.00</td>
-                            <td>69.00</td>
+                            <?php
+                            for($i=6;$i<9;$i++){
+                                $price = $array_price[$i]["prix"]. "\n";
+                                echo "<td> $price </td>";
+                            } ?>
                         </tr>
                     </tbody>
                 </table>
@@ -75,25 +81,25 @@
 
             <form action="eddit_room.php" method="post">
                 <div class="mb-3 form-floating">
-                    <select id="class" class="form-select">
-                        <option>*</option>
-                        <option>**</option>
-                        <option>***</option>
+                    <select id="class" class="form-select" name="classes">
+                        <option value="1">*</option>
+                        <option value="2">**</option>
+                        <option value="3">***</option>
                     </select>
                     <label for="class" class="form-label">Nouvelle classe :</label>
                 </div>
 
                 <div class="mb-3 form-floating">
-                    <select id="categorie" class="form-select">
-                        <option>Simple</option>
-                        <option>Double</option>
-                        <option>Double avec salle de bain</option>
+                    <select id="categorie" class="form-select" name="categories">
+                        <option value="1">Simple</option>
+                        <option value="2">Double</option>
+                        <option value="3">Double avec salle de bain</option>
                     </select>
                     <label for="categorie">Nouvelle catégorie :</label>
                 </div>
 
                 <div class="mb-3 form-floating">
-                    <input type="number" class="form-control" placeholder="Prix en €" id="prix" required step="0.01">
+                    <input type="number" class="form-control" placeholder="Prix en €" id="prix" required step="0.01" name="price">
                     <label for="prix" class="form-label">Nouveau prix :</label>
                 </div>
 

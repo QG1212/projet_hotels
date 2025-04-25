@@ -26,9 +26,24 @@
 </div>
 
 <!-- Contenu principal -->
-<div class="main-content">q
+<div class="main-content">
     <div class="form-container">
-        <h2> Admin</h2>
+        <h1> Bienvenue sur votre page admin</h1>
+        <h2> vos information :</h2>
+        <p>nom : <?php echo $nom ?> </p>
+        <p>Téléphone : <?php echo $tel ?></p>
+        <p> Email : <?php echo $email ?> </p>
+        <p>Droit :
+        <ul>
+            <?php
+                for($i = 0;  $i < sizeof($array_perm); $i++){
+                    $perm = $array_perm[$i]["denomination"];
+                    echo "<li>".$perm."</li>";
+                }
+            ?>
+        </ul>
+
+        </p>
     </div>
 </div>
 
