@@ -13,7 +13,7 @@ if (!isset($_SESSION['perm']) || !in_array(4, $_SESSION['perm']) && !in_array(1,
 //employe_id ne permet pas de savoir à quelle hotel il appartient à moins de faire une requete sql qui recupère sa localisation avec son id
 //on récupère l'hotel grace à l'id localisation de l'employe
 $hotel=Hotel::getEmployeHotel($db,$_SESSION['id_loc']);
-
+$nomHotel=Hotel::getNomHotel($db,$_SESSION['id_loc']);
 $consoList= Consomation::get_all_consommation($db,$hotel);
 
 foreach ($consoList as $conso){
@@ -31,10 +31,10 @@ if (isset($_POST['deleted_consos'])) {//si des consos ont été suppr
     }
 }
 
-if(isset($_POST['nom']) && isset($_POST['prix'])){
-    Consomation::add_consommation($db,$hotel,$_POST['nom'],$_POST['prix']);
+if(isset($_POST['prix']) and isset($_POST['id_conso'])){
+    Consomation::add_consommation($db,$hotel,$_POST['prix'],$_POST['id_conso'],$_POST['nom']);
 }
-
+$select=Consomation::getSelectConsommation($db,$hotel);
 
 $consoList= Consomation::get_all_consommation($db,$hotel);
 require "Consommation_Vue_Admin.php";

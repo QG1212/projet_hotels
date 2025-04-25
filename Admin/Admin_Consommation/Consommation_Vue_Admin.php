@@ -38,7 +38,7 @@
             echo "ERROR: hotel was not found";
         } 
         else {
-            echo "<h3 class='mb-3'>Prix des consommations de l'hôtel de " . $hotel . " :</h3>";
+            echo "<h3 class='mb-3'>Prix des consommations de " . $nomHotel . " :</h3>";
             echo "<form action='Consommation_admin.php' method='POST' id='consoForm'>";
             echo "<div class='container'>";
 
@@ -70,6 +70,9 @@
                 <div class="col-md-4">
                     <select name="id_conso" class="form-select">
                         <option value="0" selected><-- Nouvelle Consommation --></option>
+                        <?php
+                        echo $select
+                        ?>
                     </select>
                 </div>
                 <div class="col-md-4 ">
