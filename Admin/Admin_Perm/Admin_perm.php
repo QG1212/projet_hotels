@@ -2,6 +2,7 @@
 require_once("../../Serveur/database/constants.php");
 require_once("../../Serveur/model/Employe_model.php");
 require_once("../../Serveur/model/login_model.php");
+require_once('../../Serveur/model/lien.php');
 
 session_start();
 $pdo=dbConnect();
@@ -24,4 +25,6 @@ $email = Employe::GetEmployeEmail2($pdo, $id_employe);
 $array_perm = Employe::GetEmployePermDenomination($pdo,$id_employe);
 //var_dump($array_perm);
 
+//lien auquelle l'employé a accés
+$lien=lien::getLien($_SESSION['perm']);
 require("admin_perm_vue.php");

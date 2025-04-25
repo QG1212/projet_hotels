@@ -31,8 +31,9 @@
                 <a href="../../index.php"><i class="bi bi-person-badge"></i> Accueil Client</a>
                 <a href="../Admin_log/admin_log.php"><i class="bi bi-box-arrow-in-left"></i> Déconnexion</a>
                 <a href="../Admin_Perm/Admin_perm.php"><i class="bi bi-house-door"></i> Permissions</a>
-                <a href="../Admin_Reservation/Reservation_admin.php"><i class="bi bi-calendar2-week"></i> Réservation</a>
-                <a href="../Admin_Consommation/Consommation_admin.php"><i class="bi bi-cup-straw"></i> Consommation Client</a>
+                <?php
+                echo $lien;
+                ?>
             </div>
 
         <!-- Contenu principal (2/3) -->
