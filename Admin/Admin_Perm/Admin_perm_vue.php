@@ -20,15 +20,31 @@
     <h4>Admin Panel</h4>
     <a href="../../index.php"><i class="bi bi-person-badge"></i> Accueil Client</a>
     <a href="../Admin_log/admin_log.php"><i class="bi bi-box-arrow-in-left"></i> Deconnexion </a>
-    <a href="../Admin_Perm/Admin_perm.php"><i class="bi bi-house-door"></i>Permissons</a>
-    <a href="../Admin_Reservation/Reservation_admin.php"><i class="bi bi-calendar2-week"></i> Reservation</a>
-    <a href="../Admin_Consommation/Consommation_admin.php"><i class="bi bi-cup-straw"></i>Consomation Client</a>
+    <a href="../Admin_Perm/Admin_perm.php"><i class="bi bi-house-door"></i> Permissons</a>
+    <?php
+    echo $lien;
+    ?>
 </div>
 
 <!-- Contenu principal -->
-<div class="main-content">q
+<div class="main-content">
     <div class="form-container">
-        <h2> Admin</h2>
+        <h1> Bienvenue sur votre page admin</h1>
+        <h2> vos information :</h2>
+        <p>nom : <?php echo $nom ?> </p>
+        <p>Téléphone : <?php echo $tel ?></p>
+        <p> Email : <?php echo $email ?> </p>
+        <p>Droit :
+        <ul>
+            <?php
+                for($i = 0;  $i < sizeof($array_perm); $i++){
+                    $perm = $array_perm[$i]["denomination"];
+                    echo "<li>".$perm."</li>";
+                }
+            ?>
+        </ul>
+
+        </p>
     </div>
 </div>
 
