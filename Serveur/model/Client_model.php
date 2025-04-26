@@ -97,7 +97,8 @@ class Client_Model{
      * @return array la liste des clients
      * retourne la liste des clients dans un hotel précis à une date précise
      */
-    function getallClient($pdo, $id_hotel, $date) {
+    static function getAllClient($pdo, $id_hotel, $date): array
+    {
         $request= "SELECT * FROM Client c
          INNER JOIN reservation r ON r.id_client = c.id_client
          INNER JOIN chambre ch ON r.id_chambre = ch.id_chambre
