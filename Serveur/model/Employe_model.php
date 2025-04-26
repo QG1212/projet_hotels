@@ -31,7 +31,7 @@ class Employe
         $stmt->execute();
         $perm=[];
         while($user = $stmt->fetch(PDO::FETCH_ASSOC)){
-            $perm[] = $user['id_perm'];
+            $perm[] = $user['denomination'];
         }
         return $perm;
     }

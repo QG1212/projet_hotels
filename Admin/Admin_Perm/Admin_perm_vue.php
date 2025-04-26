@@ -29,9 +29,9 @@
     <div class="form-container">
         <h1> Bienvenue sur votre page admin</h1>
         <h2> vos information :</h2>
-        <p>nom : <?php $nom ?> </p>
-        <p>Téléphone : <?php $tel ?></p>
-        <p> Email : <?php $email ?> </p>
+        <p>nom : <?php echo $nom ?> </p>
+        <p>Téléphone : <?php echo $tel ?></p>
+        <p> Email : <?php echo $email ?> </p>
         <p>Droit :
         <ul>
             <?php
