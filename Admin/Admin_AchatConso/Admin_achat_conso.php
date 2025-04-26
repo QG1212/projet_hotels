@@ -1,7 +1,8 @@
 <?php
 
 use model\Reservation;
-
+require_once ("../../Serveur/database/constants.php");
+require_once ('../../Serveur/model/Hotel_model.php');
 require_once('../../Serveur/model/Consommation_model.php');
 require_once('../../Serveur/model/Client_model.php');
 require_once('../../Serveur/model/Reservation_model.php');
