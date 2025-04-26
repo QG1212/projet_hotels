@@ -78,4 +78,11 @@ class Consomation
         $requested2->execute();
         */
         }
+        static function assign_consommation($db,$date,$id_conso,$id_sejour){
+            $request="INSERT INTO conso_client(id_conso,id_sejour,date_conso,nombre) VALUES(:id_conso,:id_sejour,:date,:nombre);";
+            $requested = $db->prepare($request);
+            $requested->bindParam(':id_conso', $id_conso);
+            $requested->bindParam(':id_sejour', $id_sejour);
+            $requested->bindParam(':date', $date);
+        }
 }

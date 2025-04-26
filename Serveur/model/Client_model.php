@@ -89,5 +89,24 @@ class Client_Model{
         $stmt->bindParam(':id_client', $id_client);
         $stmt->execute();
     }
+
+    /**
+     * @param $date date la date où on fait la recherche
+     * @param $id_hotel int l'id de l'hotel où on fait la recherche
+     * @param $pdo DatabaseObject la base de données
+     * @return array la liste des clients
+     * retourne la liste des clients dans un hotel précis à une date précise
+     */
+    function getallClient($pdo, $id_hotel, $date) {
+        $request= "SELECT * FROM Client c
+         INNER JOIN reservation r ON r.id_client = c.id_client
+         INNER JOIN chambre ch ON r.id_chambre = ch.id_chambre
+         WHERE id_hotel = :hotel AND :date BETWEEN r.date_debut AND r.date_fin;";
+        $requested=$pdo->prepare($request);
+        $requested->bindParam(':hotel', $id_hotel);
+        $requested->bindParam(':date', $date);
+        $requested->execute();
+        return $requested->fetchAll(PDO::FETCH_ASSOC);
+    }
     }
 ?>
