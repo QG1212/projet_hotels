@@ -22,6 +22,7 @@
     <a href="../../index.php"><i class="bi bi-person-badge"></i> Accueil Client</a>
     <a href="../Admin_log/admin_log.php"><i class="bi bi-box-arrow-in-left"></i> Deconnexion </a>
     <a href="../Admin_Perm/Admin_perm.php"><i class="bi bi-house-door"></i> Permissons</a>
+    <a href="../Admin_AchatConso/Admin_achat_conso.php"><i class="bi bi-cart4"></i> Achat conso</a>
     <?php
         echo $lien;
     ?>
@@ -34,7 +35,7 @@
         <?php
         if ($hotel == null) {
             echo "ERROR: hotel was not found";
-        } 
+        }
         else {
             echo "<h3 class='mb-3'>Prix des consommations de " . $nomHotel . " :</h3>";
             echo "<form action='Consommation_admin.php' method='POST' id='consoForm'>";

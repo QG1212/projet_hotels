@@ -27,4 +27,4 @@ if(isset($date)){
     }
 }
 
-require_once('Admin_achat_conso_view.php');
+require_once('Admin_achat_conso_vue.php');
