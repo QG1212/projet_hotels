@@ -29,7 +29,6 @@ $changement_hotel="<div class=\"form-container mb-1 p-4 static\">
                         </form>
                    </div>";
 
-$oui="no";
 if(isset($_POST['date'])){
     $date= $_POST['date'];
     $clients = Client_Model::getAllClient($db, $id_hotel,$date);
@@ -41,7 +40,7 @@ if(isset($_POST['date'])){
             $consommation = $_POST['conso'];
             $reservation = $_POST['reservation'];
             $nombre = $_POST["nombre"];
-            $oui=Consomation::assign_consommation($db,$date,$consommation,$reservation,$nombre);
+            Consomation::assign_consommation($db,$date,$consommation,$reservation,$nombre);
 
         }
     }

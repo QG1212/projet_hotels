@@ -81,5 +81,9 @@ else{
         echo "<h4>Données valides, les consommations devraient etre ajoutée au client</h4>";
     }
 }
-echo $oui;
+?>
+    </div>
+</div>
+</body>
+
 

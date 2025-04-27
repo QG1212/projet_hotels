@@ -155,7 +155,6 @@ class Consomation
             $requested->bindParam(':date', $date);
             $requested->bindParam(':nombre', $nombre);
             $requested->execute();
-            return "Fonction Ajout";
         }
 
 
