@@ -15,7 +15,7 @@ if (!isset($_SESSION['perm']) || !in_array(4, $_SESSION['perm']) && !in_array(1,
 //on récupère l'hotel grace à l'id localisation de l'employe
 //id de l'hotel
 $id_hotel=Hotel::getEmployeHotel($db,$_SESSION['id_loc']);
-if(isset($_POST['Hotel_pdg'])){
+if(isset($_POST['Hotel_pdg']) and $_POST['Hotel_pdg']!=0){
     //si le pdg change d'hotel
     $id_hotel = $_POST['Hotel_pdg'];
 }

@@ -13,7 +13,7 @@ $db=dbConnect();
 //Comme l'id de l'hotel n'est pas dans la session et que certain employé ne sont associé à aucun hotel mais au siege
 //récupération de l'id Hotel
 $id_hotel=Hotel::getEmployeHotel($db,$_SESSION['id_loc']);
-if(isset($_POST['Hotel_pdg'])){
+if(isset($_POST['Hotel_pdg']) and $_POST['Hotel_pdg']!=0){
     //si le pdg change d'hotel
     $id_hotel = $_POST['Hotel_pdg'];
 }

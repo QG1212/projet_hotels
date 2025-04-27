@@ -10,7 +10,7 @@ if(empty($_SESSION["user_id"])){
 $pdo=dbConnect();
 $chambre="";
 $retour="<a href='Reservation_E1.php'><button class=\"btn btn-secondary m-3\"> Retour à l'étape 1</button></a>";
-
+$error="";
 if(!empty($_POST["hotel"]) && !empty($_POST["date_debut"]) && !empty($_POST["date_fin"])) {
     $debut=$_POST["date_debut"];$fin=$_POST["date_fin"];
     $chambre=Chambre::GetSelectChambreDisponible($pdo,$_POST["hotel"],$_POST["date_debut"],$_POST["date_fin"]);
