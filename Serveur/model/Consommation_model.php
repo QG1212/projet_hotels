@@ -153,7 +153,9 @@ class Consomation
             $requested->bindParam(':id_conso', $id_conso);
             $requested->bindParam(':id_sejour', $id_sejour);
             $requested->bindParam(':date', $date);
-            $requested->bindParam(':date', $nombre);
+            $requested->bindParam(':nombre', $nombre);
+            $requested->execute();
+            return "Fonction Ajout";
         }
 
 

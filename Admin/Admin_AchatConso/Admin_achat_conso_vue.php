@@ -67,7 +67,7 @@ else{
                 echo "</select>";
 
                 echo "<h3>Consommation:</h3>
-        <select  required name='conso''>";
+        <select  required name='conso'>";
                 foreach ($consommations as $consommation) {
                     echo "<option value='".$consommation["id_conso"]."'>".$consommation["denomination"]."</option>";
                 }
@@ -81,4 +81,5 @@ else{
         echo "<h4>Données valides, les consommations devraient etre ajoutée au client</h4>";
     }
 }
+echo $oui;
 
