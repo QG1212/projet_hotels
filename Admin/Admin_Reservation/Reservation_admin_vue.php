@@ -21,17 +21,20 @@
     <a href="../../index.php"><i class="bi bi-person-badge"></i> Accueil Client</a>
     <a href="../Admin_log/admin_log.php"><i class="bi bi-box-arrow-in-left"></i> Deconnexion </a>
     <a href="../Admin_Perm/Admin_perm.php"><i class="bi bi-house-door"></i> Permissons</a>
-    <a href="../Admin_AchatConso/Admin_achat_conso.php"><i class="bi bi-cart4"></i> Achat conso</a>
     <?php
     echo $lien;
     ?>
 </div>
 
 <!-- Contenu principal -->
-<div class="main-content">
-
+<div class="main-content d-inline">
+    <?php
+        if(in_array(1, $_SESSION['perm'])){
+            echo $changement_hotel;
+        }
+    ?>
     <div class="form-container">
-        <h1 class="text-center">Liste des réservations</h1>
+        <h1 class="text-center">Liste des réservations : <?php echo $hotel; ?></h1>
         <?php if (empty($reservations)): ?>
             <p>Aucune réservation trouvée.</p>
         <?php else: ?>

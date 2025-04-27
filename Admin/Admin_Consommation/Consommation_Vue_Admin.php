@@ -20,9 +20,8 @@
 <div class="sidebar">
     <h4>Admin Panel</h4>
     <a href="../../index.php"><i class="bi bi-person-badge"></i> Accueil Client</a>
-    <a href="../Admin_log/admin_log.php"><i class="bi bi-box-arrow-in-left"></i> Deconnexion </a>
-    <a href="../Admin_Perm/Admin_perm.php"><i class="bi bi-house-door"></i> Permissons</a>
-    <a href="../Admin_AchatConso/Admin_achat_conso.php"><i class="bi bi-cart4"></i> Achat conso</a>
+    <a href="../Admin_log/admin_log.php"><i class="bi bi-box-arrow-in-left"></i> Déconnexion </a>
+    <a href="../Admin_Perm/Admin_perm.php"><i class="bi bi-house-door"></i> Permissions</a>
     <?php
         echo $lien;
     ?>

@@ -6,8 +6,16 @@ class Hotel
      * @return string un code html qui contient tous les hotels sous forme d'option
      * A mettre par la suite dans un select
      */
- static function getSelectHotels($pdo){
-     $stmt = $pdo->prepare("select id_hotel, nom, classe.denomination from hotel natural join classe;");
+ static function getSelectHotels($pdo,$id=0): string
+ {
+     if($id!=0){
+         $stmt = $pdo->prepare("select id_hotel, nom, classe.denomination from hotel natural join classe where id_hotel!=:id;");
+         $stmt->bindParam(":id",$id);
+     }
+     else{
+         $stmt = $pdo->prepare("select id_hotel, nom, classe.denomination from hotel natural join classe;");
+     }
+
      $stmt->execute();
      $select="";
      while($hotel = $stmt->fetch()) {
@@ -23,7 +31,8 @@ class Hotel
      * Si l'employé est associée au siege la fonction renvoi l'hotel de Caen
      *
      */
- static function getEmployeHotel($pdo,$id_localisation){
+ static function getEmployeHotel($pdo,$id_localisation): int
+ {
      if($id_localisation==1){
          return 1;
      }
@@ -44,7 +53,7 @@ class Hotel
      * @param $id_localisation int localisation de l'hotel
      * @return string nom de l'hotel
      */
- static function getNomHotel($pdo,$id_hotel)
+ static function getNomHotel($pdo,$id_hotel): string
  {
      $stmt = $pdo->prepare("select nom from hotel 
                                 where id_hotel=:loc;");
