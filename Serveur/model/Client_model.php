@@ -99,7 +99,7 @@ class Client_Model{
      */
     static function getAllClient($pdo, $id_hotel, $date): array
     {
-        $request= "SELECT * FROM Client c
+        $request= "SELECT DISTINCT c.nom, c.prenom,c.id_client FROM Client c 
          INNER JOIN reservation r ON r.id_client = c.id_client
          INNER JOIN chambre ch ON r.id_chambre = ch.id_chambre
          WHERE id_hotel = :hotel AND :date BETWEEN r.date_debut AND r.date_fin;";

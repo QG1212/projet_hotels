@@ -42,7 +42,7 @@ else{
     <!-- demande la date à laquelle la conso doit etre ajoutée-->
             <h3>Date:</h3>
             <input required type='date' name='date' ";
-    if (isset($_POST["date"])){"value='".$_POST["date"]."'" ;}
+    if (isset($_POST["date"])){echo"value='".$_POST["date"]."'" ;}
     echo">";
     if(isset($_POST['date'])){
         echo "<h3>Client:</h3>";
@@ -57,24 +57,29 @@ else{
         }
         echo ">";
         foreach ($clients as $client) {
-            echo "<option value='$client->id'>$client->prenom $client->nom</option>";}
+            echo "<option value='".$client['id_client']."'>".$client["prenom"]." ".$client["nom"]."</option>";}
             echo "</select>";
             if (isset($_POST['client'])) {
                 echo "<h3>Reservation:</h3>
         <select required name='reservation''>";
         foreach ($reservations as $reservation) {
-            echo "<option value='$reservation->id'>$reservation->date_debut-$reservation->date_fin</option>";
+            echo "<option value='".$reservation["id_sejour"]."'>".date("d m y",strtotime($reservation["date_debut"]))." - ".date("d m y",strtotime($reservation["date_fin"]))."</option>";
         }
                 echo "</select>";
 
                 echo "<h3>Consommation:</h3>
         <select  required name='conso''>";
                 foreach ($consommations as $consommation) {
-                    echo "<option value='$consommation->id_conso'>$consommation->denomination</option>";
+                    echo "<option value='".$consommation["id_conso"]."'>".$consommation["denomination"]."</option>";
                 }
                 echo "</select>";
+                echo "<h4>Nombre:</h4>";
+                echo "<input required type='number' name='nombre'> ";
             }
     }}
-    echo "<br><input type='submit'></form>";
+    echo "<br><br><input type='submit'></form>";
+    if (isset($_POST['conso']) && isset($_POST['reservation'])&& isset($_POST['nombre']) && isset($_POST['date']) && isset($_POST['client'])) {
+        echo "<h4>Données valides, les consommations devraient etre ajoutée au client</h4>";
+    }
 }
 

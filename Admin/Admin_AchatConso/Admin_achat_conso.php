@@ -24,7 +24,8 @@ if(isset($date)){
         if(isset($_POST['consommation']) && isset($_POST['reservation'])){
             $consommation = $_POST['consommation'];
             $reservation = $_POST['reservation'];
-            Consomation::assign_consommation($db,$date,$consommation,$reservation);
+            $nombre = $_POST["nombre"];
+            Consomation::assign_consommation($db,$date,$consommation,$reservation,$nombre);
         }
     }
 }

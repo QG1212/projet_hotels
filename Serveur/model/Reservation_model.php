@@ -39,21 +39,13 @@ class Reservation
 
     static function GetReservationsatDate($pdo,$idClient,$date)
     {
-        $stmt = $pdo->prepare("select id_sejour,id_chambre,date_debut,date_fin,paiement,hotel.nom hotel from reservation
-                                inner join chambre using(id_chambre)
-                                inner join hotel using(id_hotel)
+        $stmt = $pdo->prepare("select DISTINCT id_sejour,date_debut,date_fin from reservation
                                 where id_client=:client and :date BETWEEN date_debut and date_fin
-                                order by date_debut desc;");
+                                order by date_debut DESC ;");
         $stmt->bindParam(":client",$idClient);
         $stmt->bindParam(":date",$date);
-        try {
             $stmt->execute();
-            //echo "Recherche de réservation du client :".$idClient."<br>";
             return $stmt->fetchAll();
-        } catch (PDOException $e) {
-            die("Erreur lors de la Réservation: " . $e->getMessage());
-        }
-
     }
 
     static function GetReservation($pdo,$idReservation)
