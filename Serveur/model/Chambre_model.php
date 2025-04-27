@@ -63,6 +63,14 @@ class Chambre
         return $stmt->fetch()["prix"] * $nbJour;
     }
 
+    /**
+     * @param $pdo database
+     * @param $idCategorie categorie dont on cherche le prix
+     * @param int $nbJour Nombre de jours par default 1
+     * @param $idHotel int l'id de l'hotel
+     * @return mixed Le prix de la chambre
+     * donne le prix d'une categorie ans un hotel pour un sejour d'un certain nombre de jours
+     */
     static function GetPrixCategorie($pdo, $idCategorie, $idHotel, $nbJour = 1)
     {
         $stmt = $pdo->prepare("Select prix from prix_chambre
@@ -118,21 +126,28 @@ class Chambre
         }
         return $select;
     }
-
+    /**
+     * @param $pdo \mysql_xdevapi\DatabaseObject
+     * change la classse d'une chambre
+     */
     static function UpdateClass($pdo)
     {
         $select = self::GetSelectClass();
         $chambre = self::GetSelectChambre();
-        $stmt = $pdo->prepare("UPADTE chambre SET id_hotel=$select WHERE id_chambre=:$chambre;");
+        $stmt = $pdo->prepare("UPDATE chambre SET id_hotel=$select WHERE id_chambre=:$chambre;");
         $stmt->execute();
         return $stmt->fetch();
     }
 
+    /**
+     * @param $pdo \mysql_xdevapi\DatabaseObject
+     * change la categorie d'une chambre
+     */
     static function UpdateCategorie($pdo)
     {
         $select = self::GetSelectCategorie();
         $chambre = self::GetSelectChambre();
-        $stmt = $pdo->prepare("UPADTE chambre SET id_categorie=$select WHERE id_chambre=:$chambre;");
+        $stmt = $pdo->prepare("UPDATE chambre SET id_categorie=$select WHERE id_chambre=:$chambre;");
         $stmt->execute();
         return $stmt->fetch();
     }
@@ -157,6 +172,11 @@ class Chambre
         return $stmt->fetch();
     }
 
+    /**
+     * @param $pdo \mysql_xdevapi\DatabaseObject
+     * @return bool le prix
+     * donne le prix de toutes les chambre par classe et categorie
+     */
     static function price($pdo)
     {
         $stmt = $pdo->prepare("SELECT prix FROM prix_chambre

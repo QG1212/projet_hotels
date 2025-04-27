@@ -37,31 +37,44 @@ if ($hotel == null) {
     echo "ERROR: hotel was not found";
 }
 else{
+    echo "<h2>".$nomHotel."</h2>";
     echo "<form method='POST' action='Admin_achat_conso.php'>
-            <h2>Date:</h2>
-            <input type='date' name='date'>";
+    <!-- demande la date à laquelle la conso doit etre ajoutée-->
+            <h3>Date:</h3>
+            <input required type='date' name='date' ";
+    if (isset($_POST["date"])){"value='".$_POST["date"]."'" ;}
+    echo">";
     if(isset($_POST['date'])){
-        echo "<h2>Client:</h2>
-        <select name='client''>";
+        echo "<h3>Client:</h3>";
+    if($clients== NULL){
+
+        echo "<h4>erreur: pas de client à cette date</h4>";
+    }
+    else {
+        echo"<select required name='client'";
+        if (isset($_POST["client"])){
+            echo"value='".$_POST["client"]."'" ;
+        }
+        echo ">";
         foreach ($clients as $client) {
-            echo "<option value='$client->id'>$client->nom</option>";}
+            echo "<option value='$client->id'>$client->prenom $client->nom</option>";}
             echo "</select>";
             if (isset($_POST['client'])) {
-                echo "<h2>Reservation:</h2>
-        <select name='reservation''>";
+                echo "<h3>Reservation:</h3>
+        <select required name='reservation''>";
         foreach ($reservations as $reservation) {
             echo "<option value='$reservation->id'>$reservation->date_debut-$reservation->date_fin</option>";
         }
                 echo "</select>";
 
-                echo "<h2>Consommation:</h2>
-        <select name='conso''>";
+                echo "<h3>Consommation:</h3>
+        <select  required name='conso''>";
                 foreach ($consommations as $consommation) {
                     echo "<option value='$consommation->id_conso'>$consommation->denomination</option>";
                 }
                 echo "</select>";
             }
-    }
-    echo "<input type='submit'></form>";
+    }}
+    echo "<br><input type='submit'></form>";
 }
 

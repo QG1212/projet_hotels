@@ -2,6 +2,12 @@
 
 class Consomation
 {
+    /**
+     * @param $booking int id de la réservation
+     * @param $db DatabaseObject la base de données
+     * @return array les consommations
+     * donne toutes les consommations d'une réservation
+     */
     static function get_consomation($db, $booking)
     {
         $request = "select id_cc, conso_client.id_conso, conso_client.id_sejour, date_conso, nombre, prix_conso.prix,prix_conso.prix*nombre sous_total, conso.denomination
@@ -17,6 +23,13 @@ class Consomation
         $requested->execute();
         return $requested->fetchALL();}
 
+    /**
+     * @param $db DatabaseObject la base de données
+     * @param $product int id de la consommation
+     * @param $hotel int l'id de l'hotel
+     * @param $prix mixed le nouveau prix de la consommation
+     * change le prix d'une consommation d'un hotel
+     */
     static function set_consommation($db, $product,$prix,$hotel)
     {
             $request = "UPDATE prix_conso
@@ -28,7 +41,12 @@ class Consomation
             $requested->bindParam(':hotel', $hotel);
             $requested->execute();
     }
-
+    /**
+     * @param $db DatabaseObject la base de données
+     * @param $hotel int id de l'hotel ou la conso est ajouté
+     * @return array toutes les consos
+     * renvoie toutes les consommations d'un hotel
+     */
     static function get_all_consommation($db,$hotel)
     {
         $request = "SELECT  p.prix, c.denomination,c.id_conso
@@ -66,7 +84,7 @@ class Consomation
             $AjoutConso=$db->prepare("INSERT INTO conso(id_conso, denomination) values (default,:name);");
             $AjoutConso->bindParam(':name', $name);
             $AjoutConso->execute();
-            //récupération de l'id de la conso qu el'on vient de crée
+            //récupération de l'id de la conso que l'on vient de créer
             $idConso=$db->lastInsertId();
 
         }
@@ -80,9 +98,14 @@ class Consomation
         $requested2->bindParam(':id', $idConso);
         $requested2->bindParam(':price', $price);
         $requested2->execute();
-
     }
 
+    /**
+     * @param $db DatabaseObject la base de données
+     * @param $hotel int l'id de l'hotel où on enlève la consommation
+     * @param $id int l'id de la conso qu'on souhaite retirer
+     * sert à enlever une consommation précise dans un hotel précis
+     */
     static function remove_consommation($db,$hotel,$id)
     {
         $request1 = "DELETE FROM prix_conso WHERE id_conso=:id AND id_hotel=:hotel;";
@@ -117,7 +140,13 @@ class Consomation
         }
         return $select;
     }
-
+    /**
+     * @param $date date la date de la consommation
+     * @param $id_conso int l'id de la consommation
+     * @param $id_sejour int l'id du sejour
+     * @param $db DatabaseObject la base de données
+     * assigne une consommation à un client donné, à une date et une réservation donnée
+     */
     static function assign_consommation($db,$date,$id_conso,$id_sejour){
             $request="INSERT INTO conso_client(id_conso,id_sejour,date_conso,nombre) VALUES(:id_conso,:id_sejour,:date,:nombre);";
             $requested = $db->prepare($request);

@@ -12,6 +12,8 @@ $db=dbConnect();
 //id de l'hotel
 $hotel=Hotel::getEmployeHotel($db,$_SESSION['id_loc']);
 
+$nomHotel=Hotel::getNomHotel($db,$hotel);
+
 $date= $_POST['date'];
 if(isset($date)){
     $clients = Client_Model::getAllClient($db,$hotel,$date);
