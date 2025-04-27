@@ -7,18 +7,13 @@ session_start();
 $pdo=dbConnect();
 
 $id_employe = $_SESSION['employe_id'];
-var_dump($id_employe);
 
 $nom = Employe::getEmployeName($pdo,$id_employe);
-var_dump($nom);
 
 $tel = Employe::getEmployeTel($pdo,$id_employe);
-var_dump($tel);
 
 $email = Employe::GetEmployeEmail2($pdo, $id_employe);
-var_dump($email);
 
 $array_perm = Employe::GetEmployePerm($pdo,$id_employe);
-var_dump($array_perm);
 
 require("admin_perm_vue.php");
