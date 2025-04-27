@@ -29,6 +29,11 @@
 
 <!-- Contenu principal -->
 <div class="main-content flex-column m-1">
+    <?php
+    if(in_array(1, $_SESSION['perm'])){
+        echo $changement_hotel;
+    }
+    ?>
     <div class="form-container mb-1 p-4">
         <h1 >Ajouter une consommation à un client</h1>
 <?php

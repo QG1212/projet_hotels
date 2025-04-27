@@ -20,7 +20,7 @@ if(isset($_POST['Hotel_pdg']) and $_POST['Hotel_pdg']!=0){
 $nomHotel=Hotel::getNomHotel($db,$id_hotel);
 //formulaire de changement hotel du pdg
 $changement_hotel="<div class=\"form-container mb-1 p-4 static\">
-                        <form method=\"post\" action=\"Reservation_admin.php\" class=\"d-flex align-items-center gap-3\">
+                        <form method=\"post\" action=\"Admin_achat_conso.php\" class=\"d-flex align-items-center gap-3\">
                             <select name=\"Hotel_pdg\" class=\"form-select w-auto\">
                             <option value=\"0\" selected>Vous êtes sur l'hôtel ".$nomHotel."</option>
                             ".Hotel::getSelectHotels($db, $id_hotel)."
