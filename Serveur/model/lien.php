@@ -14,14 +14,17 @@ class lien
             
                 "<a href=\"../Admin_Reservation/Reservation_admin.php\"><i class=\"bi bi-calendar2-week\"></i> Reservation</a>
                 <a href=\"../Admin_Consommation/Consommation_admin.php\"><i class=\"bi bi-cup-straw\"></i> Prix Consomation</a>
-                <a href=\"../formulaire_chambre/eddit_room.php\"><i class=\"fas fa-bed\"></i> Prix Chambre</a>",
+                <a href=\"../formulaire_chambre/eddit_room.php\"><i class=\"fas fa-bed\"></i> Prix Chambre</a>
+                <a href=\"../Admin_AchatConso/Admin_achat_conso.php\"><i class=\"bi bi-cup-straw\"></i> Ajout Consomation</a>",
 
                 "<a href=\"../Admin_Reservation/Reservation_admin.php\"><i class=\"bi bi-calendar2-week\"></i> Reservation</a>
-                <a href=\"../Admin_Consommation/Consommation_admin.php\"><i class=\"bi bi-cup-straw\"></i> Prix Consomation</a>",
+                <a href=\"../Admin_Consommation/Consommation_admin.php\"><i class=\"bi bi-cup-straw\"></i> Prix Consomation</a>
+                <a href=\"../Admin_AchatConso/Admin_achat_conso.php\"><i class=\"bi bi-cup-straw\"></i> Prix Consomation</a>",
 
                 "<a href=\"../Admin_Reservation/Reservation_admin.php\"><i class=\"bi bi-calendar2-week\"></i> Reservation</a>",
 
-                "<a href=\"../Admin_Consommation/Consommation_admin.php\"><i class=\"bi bi-cup-straw\"></i> Prix Consomation</a>",
+                "<a href=\"../Admin_Consommation/Consommation_admin.php\"><i class=\"bi bi-cup-straw\"></i> Prix Consomation</a>
+                <a href=\"../Admin_AchatConso/Admin_achat_conso.php\"><i class=\"bi bi-cup-straw\"></i> Ajout Consomation</a>",
 
                 ""
         ];
