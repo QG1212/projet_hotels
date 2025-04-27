@@ -12,7 +12,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../Css/admin_log.css">
-
+    <style>
+    html, body {
+        height: auto;
+        overflow-x: hidden;
+    }
+    </style>
 </head>
 
 <body>
@@ -29,10 +34,24 @@
 
 <!-- Contenu principal -->
 <div class="main-content flex-column m-1">
-    <div class="form-container mb-1 p-4">
-        <h1 >Liste des consommations</h1>
+    <?php
+    if(in_array(1, $_SESSION['perm'])){
+        echo $changement_hotel;
+    }
+    ?>
+    <div class="form-container mb-1 p-3 " <?php
+    //gestion de la taille de la liste des consomations en fonctions de si il y a le formulaire changement hotel
+        if(in_array(1, $_SESSION['perm'])){
+            echo "style=\"max-height: 280px; overflow-y: auto;\"";
+        }
+        else{
+            echo "style=\"max-height: 400px; overflow-y: auto;\"";
+        }
+        ?>
+    >
+        <h1 class="text-center">Liste des consommations</h1>
         <?php
-        if ($hotel == null) {
+        if ($id_hotel == null) {
             echo "ERROR: hotel was not found";
         }
         else {
@@ -60,7 +79,7 @@
         }
         ?>
     </div>
-    <div class="form-container">
+    <div class="form-container static pb-1 pt-2">
 
         <h3>Ajouter une consommation:</h3>
         <form action="Consommation_admin.php" method="POST">
