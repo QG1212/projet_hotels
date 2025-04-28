@@ -10,6 +10,10 @@ require_once("../../Serveur/model/lien.php");
 session_start();
 $db=dbConnect();
 
+if (!isset($_SESSION['perm']) || !in_array(1, $_SESSION['perm']) && !in_array(2, $_SESSION['perm']) && !in_array(4, $_SESSION['perm'])) { // perm 4 pour gestion consomation
+    echo "pas la perm";
+    exit;
+}
 //id de l'hotel
 $id_hotel=Hotel::getEmployeHotel($db,$_SESSION['id_loc']);
 if(isset($_POST['Hotel_pdg']) and $_POST['Hotel_pdg']!=0){
